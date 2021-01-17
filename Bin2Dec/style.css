@@ -1,0 +1,19 @@
+fieldset  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    border: none;
+    margin-top: 11%;         
+    
+}
+
+fieldset legend {
+    text-align: center;
+    font: normal 5rem arial;
+}
+
+fieldset input {
+    margin-bottom: 10px;
+}
