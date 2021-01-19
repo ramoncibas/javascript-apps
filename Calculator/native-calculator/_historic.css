@@ -31,11 +31,13 @@
 
 .inputRes {
     width: 100%;
-    height: 50px;
+    height: 80px;
+
     background: none;
     border: none;
-    font: normal 12pt arial;    
 
+    font: normal 12pt Arial;    
+    padding-left: 10px;
 }
 
 .inputRes:hover {

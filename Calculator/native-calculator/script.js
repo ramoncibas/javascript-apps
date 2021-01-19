@@ -5,7 +5,7 @@ function addValue(elementId) {
         inputValues.value += elementId
     } else {
         alert('Quantidade de digitos ultrapassada')
-    }
+    }    
 }
 
 // Passando o operar matemático para o Input
@@ -75,8 +75,9 @@ function calculateResult() {
             // historic(resultadoFinal,expression)
             document.getElementById('putValues').value = resultadoFinal
         }        
-    }     
+    }         
 }
+
 // Deletando/Removendo o ultimo valor inserido dentro do Input
 function removeLastNumber() {
     let inputValues = document.getElementById('putValues')
@@ -101,14 +102,24 @@ function historic() {
         section.classList.add("sectionUnder")
         historic.classList.add("historic") 
         
-        //Criando elemento input
+        // Criando elemento input
         let input = document.createElement('input')
         input.setAttribute(`class`, `name`)                
-        
-        //Passando valores para o historico
+                
+        // Passando valores para o historico
         input.setAttribute(`class`, `inputRes`)
-        input.value = `${n1} ${symbol} ${n2} = ${resultadoFinal}`
-        historic.appendChild(input)         
+        input.value = `${n1} ${symbol} ${n2} = ${resultadoFinal}`    
+        
+        // Passando valore para calculadora ao clicar no resultado
+        input.addEventListener("click", () => {            
+            let valor = `${n1}${symbol}${n2}`
+            clearAll()
+            addValue(valor)
+            closeHistoric()
+        })
+
+        historic.appendChild(input)     
+           
     }    
 }
 
