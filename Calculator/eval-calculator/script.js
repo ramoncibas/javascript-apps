@@ -45,7 +45,7 @@ function removeLastNumber() {
 }
 
 // Limpando todos os valores do input
-function clearAll() {  
+function clearAll() { 
     document.getElementById('putValues').value= '0'
     document.getElementById('dot').disable = false
     console.log('Clear input cliked.')    
@@ -61,5 +61,5 @@ function calculateResult() {
         }
     } catch (err) {    
         getNumber.value = 'Syntax error';    
-    }
+    }    
 }

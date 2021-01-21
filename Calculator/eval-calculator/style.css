@@ -1,8 +1,7 @@
-@import '_historic.css';
-
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 } 
 
 header input {
@@ -19,10 +18,10 @@ main {
 }
 
 section {
-    width: 300px;
+    width: 332px;
     margin: auto;
     position: relative;
-    padding-right: 2rem;
+    /* padding-right: 2rem; */
 
 }
 
@@ -39,7 +38,7 @@ button:hover {
 }
 
 #buttonsMenu {
-    width: 400px !important;    
+    width: 250px !important;
 }
 
 #buttonsMenu button {    
@@ -55,9 +54,8 @@ button:hover {
 }
 
 #mathOperations { 
-    position: absolute;
-    top: 0;
-    right: 0;        
+    float: right;
+    margin-top: -85px;
 }
 
 #mathOperations button {
@@ -91,8 +89,7 @@ button:hover {
 
 }
 
-#iqual {
-    width: 164px;
+#iqual {    
     background: rgba(0, 0, 255, 0.801) !important;
     
     transition: .3s;
