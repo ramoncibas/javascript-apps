@@ -12,15 +12,16 @@
     <header>
         <div class="lights">
             <div class="circle red"></div>
-            <div class="circle yellow"></div>
+            <!-- <div class="circle yellow"></div>
             <div class="circle blue"></div>
             <div class="circle green"></div>
             <div class="circle red"></div>
             <div class="circle yellow"></div>
             <div class="circle blue"></div>
-            <div class="circle green"></div>
+            <div class="circle green"></div> -->
         </div>
     </header>
+    
     <section>
         <div class="main">
             <div class="title">
@@ -30,9 +31,14 @@
                 <button id="play">On</button>
                 <button id="stop">Off</button>
 
-                <label for="quantity">Velocidade:</label>
-                <input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="De 1 até 5.">
-                <input type="submit" id="submit" name="submit" value="Iniciar" onclick="changeSpeed()">
+                <label for="speed">Velocidade:</label>
+                <input type="number" class="labeln" id="speed" min="1" max="5" placeholder="De 1 até 5.">
+                <input type="submit" class="btnsubmit" id="btnspeed" value="Iniciar" onclick="changeSpeed()">
+
+                <label for="quantity">Luzes:</label>
+                <input type="number" class="labeln" id="quantity" min="1" max="8" placeholder="De 1 até 7" value="Adicionar">
+                <input type="submit" class="btnsubmit" id="btnquantity" value="Add" onclick="changeQuantity()">
+                <input type="submit" class="btnsubmit" id="btnremove" value="Remover" onclick="removeLight()">
 
             </div>
         </div>

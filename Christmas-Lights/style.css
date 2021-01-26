@@ -1,3 +1,4 @@
+
 * {
     padding: 0;
     margin: 0;
@@ -13,25 +14,16 @@ body {
     overflow: hidden;
 }
 
-.main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+section {
+    background: rgba(67, 57, 70, 0.150);
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.376);
 
-    width: 100vw;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    margin: 1rem;
-    padding: 1rem;
-    
     color: white;
     font-family: 'Lato', sans-serif;
-    
-    transform: translate(-50%, -50%);        
 }
 
 .title {
@@ -75,7 +67,7 @@ body {
     padding: 10px;
 }
 
-.main #quantity {
+.main .labeln {
     width: 140px;
     height: 40px;
     
@@ -85,30 +77,38 @@ body {
     border: none;
     padding: 0 5px;
 }
-
-.main #submit {
+/* Buttons */
+.main .btnsubmit {
     background: none;
     height: 40px;
+    padding: 5px;
     
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 0 10px 10px 0;
     border: 2px solid rgb(184, 134, 222);
     
     outline: none;
     
-    color: white;
+    color: white;            
 }
 
-/* Buttons */
 button:hover,
-#submit:hover,
+.btnsubmit:hover,
 button:active,
-#submit:active {
-    background: rgb(184, 134, 222);
+.btnsubmit:active {
+    background: rgba(184, 134, 222, 0.267);
     
     outline: none;
     cursor: pointer;
     transition: 0.5s ease;
+}
+
+.switchOn {    
+    background-image: url(img/switch-on-dark.svg) !important;
+}
+
+.switchOff {    
+    color: rgba(184, 134, 222, 0.267) !important;
+    background-image: url(img/switch-off-light.svg) !important;    
 }
 
 /* Ligths */
