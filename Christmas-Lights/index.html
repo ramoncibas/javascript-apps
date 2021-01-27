@@ -10,41 +10,46 @@
 
 <body>
     <header>
-        <div class="lights">
+        <div id="lights">
             <div class="circle red"></div>
             <!-- <div class="circle yellow"></div>
-            <div class="circle blue"></div>
-            <div class="circle green"></div>
-            <div class="circle red"></div>
-            <div class="circle yellow"></div>
-            <div class="circle blue"></div>
-            <div class="circle green"></div> -->
-        </div>
-    </header>
+                <div class="circle blue"></div>
+                <div class="circle green"></div>
+                <div class="circle red"></div>
+                <div class="circle yellow"></div>
+                <div class="circle blue"></div>
+                <div class="circle green"></div> -->
+            </div>
+        </header>
+        
+        <section>
+            <div id="main">
+                <div class="title">
+                    <h1 id="christmas" class="lightsOn">Luzes de Natal</h1>
+                </div>
+
+                <div class="form">
+                    <button id="play">On</button>
+                    <button id="stop">Off</button>
+                    
+                    <div id="divspeed">
+                        <label for="speed">Velocidade:</label>
+                        <input type="number" class="labeln" id="speed" min="1" max="5" placeholder="De 1 até 5.">
+                        <input type="submit" class="btnsubmit" id="btnspeed" value="Iniciar" onclick="changeSpeed()">
+                    </div>
+
+                    <div id="divlight">
+                        <label for="quantity">Luzes:</label>
+                        <input type="number" class="labeln" id="quantity" min="1" max="8" placeholder="De 1 até 7" value="Adicionar">
+                        <input type="submit" class="btnlight" id="btnquantity" value="Adicionar" onclick="changeQuantity()">
+                        <input type="submit" class="btnsubmit" id="btnremove" value="Remover" onclick="removeLight()">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <script src="script.js"></script>
+    </body>
     
-    <section>
-        <div class="main">
-            <div class="title">
-                <h1 id="christmas" class="lightsOn">Luzes de Natal</h1>
-            </div>
-            <div class="buttons">
-                <button id="play">On</button>
-                <button id="stop">Off</button>
-
-                <label for="speed">Velocidade:</label>
-                <input type="number" class="labeln" id="speed" min="1" max="5" placeholder="De 1 até 5.">
-                <input type="submit" class="btnsubmit" id="btnspeed" value="Iniciar" onclick="changeSpeed()">
-
-                <label for="quantity">Luzes:</label>
-                <input type="number" class="labeln" id="quantity" min="1" max="8" placeholder="De 1 até 7" value="Adicionar">
-                <input type="submit" class="btnsubmit" id="btnquantity" value="Add" onclick="changeQuantity()">
-                <input type="submit" class="btnsubmit" id="btnremove" value="Remover" onclick="removeLight()">
-
-            </div>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+    </html>

@@ -18,7 +18,7 @@ section {
     background: rgba(67, 57, 70, 0.150);
     border-radius: 10px;
     padding: 15px;
-    width: 500px;
+    width: 900px;
     margin: auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.376);
 
@@ -34,22 +34,8 @@ section {
     margin-bottom: 2rem;
 }
 
-.lightsOn {
-    text-align: center;
-    text-shadow: 0 0 30px white;   
 
-    transition: 1s all ease;    
-}
-
-.lightsOff {
-    text-align: center;
-    color: #563260;
-    
-    transition: 1s all ease;    
-
-}
-
-.main button {
+#main button {
     height: 50px;
     width: 50px;
     margin: 0 12px;
@@ -63,11 +49,11 @@ section {
     
 }
 
-.main label {
+#main label {
     padding: 10px;
 }
 
-.main .labeln {
+#main .labeln {
     width: 140px;
     height: 40px;
     
@@ -77,8 +63,15 @@ section {
     border: none;
     padding: 0 5px;
 }
+
 /* Buttons */
-.main .btnsubmit {
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.btnsubmit {
     background: none;
     height: 40px;
     padding: 5px;
@@ -91,10 +84,24 @@ section {
     color: white;            
 }
 
+.btnlight {
+    background: none;
+    height: 40px;
+    padding: 5px;
+        
+    border: 2px solid rgb(184, 134, 222);
+    
+    outline: none;
+    
+    color: white;   
+}
+
 button:hover,
 .btnsubmit:hover,
+.btnlight:hover,
 button:active,
-.btnsubmit:active {
+.btnsubmit:active,
+.btnlight:active {
     background: rgba(184, 134, 222, 0.267);
     
     outline: none;
@@ -102,17 +109,8 @@ button:active,
     transition: 0.5s ease;
 }
 
-.switchOn {    
-    background-image: url(img/switch-on-dark.svg) !important;
-}
-
-.switchOff {    
-    color: rgba(184, 134, 222, 0.267) !important;
-    background-image: url(img/switch-off-light.svg) !important;    
-}
-
 /* Ligths */
-.lights {
+#lights {
     border-radius: 25px;
     
     height: 20vh;
@@ -178,6 +176,20 @@ button:active,
     position: absolute;
     
     border: none;
+}
+
+.lightsOn {
+    text-align: center;
+    text-shadow: 0 0 30px white;   
+
+    transition: 1s all ease;    
+}
+
+.lightsOff {
+    text-align: center;
+    color: #563260;
+    
+    transition: 1s all ease;    
 }
 
 /* Light colors */
