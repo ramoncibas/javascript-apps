@@ -1,4 +1,3 @@
-
 * {
     padding: 0;
     margin: 0;
@@ -23,13 +22,13 @@ section {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.376);
 
     color: white;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Cinzel', sans-serif;
 }
 
 .title {
     font-family: 'Cinzel', sans-serif;
     font-size: 2.5rem;
-    
+
     letter-spacing: 2px;
     margin-bottom: 2rem;
 }
@@ -39,26 +38,25 @@ section {
     height: 50px;
     width: 50px;
     margin: 0 12px;
-    
+
     background: none;
     color: white;
-    
+
     outline: none;
     border: 2px solid rgb(184, 134, 222);
     border-radius: 25px;
-    
 }
 
 #main label {
     padding: 10px;
 }
 
-#main .labeln {
+#main .inputValues {
     width: 140px;
     height: 40px;
-    
-    border-radius: 10px 0 0 10px;    
-    
+
+    border-radius: 10px 0 0 10px;
+
     outline: none;
     border: none;
     padding: 0 5px;
@@ -68,42 +66,44 @@ section {
 .form {
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
 }
 
 .btnsubmit {
     background: none;
     height: 40px;
     padding: 5px;
-    
+
     border-radius: 0 10px 10px 0;
     border: 2px solid rgb(184, 134, 222);
-    
+
     outline: none;
-    
-    color: white;            
+
+    color: white;
 }
 
 .btnlight {
     background: none;
     height: 40px;
     padding: 5px;
-        
+
     border: 2px solid rgb(184, 134, 222);
-    
+
     outline: none;
-    
-    color: white;   
+
+    color: white;
 }
 
-button:hover,
+#play:hover,
+#stop:hover,
 .btnsubmit:hover,
 .btnlight:hover,
-button:active,
+#play:active,
+#stop:active,
 .btnsubmit:active,
 .btnlight:active {
     background: rgba(184, 134, 222, 0.267);
-    
+
     outline: none;
     cursor: pointer;
     transition: 0.5s ease;
@@ -112,10 +112,10 @@ button:active,
 /* Ligths */
 #lights {
     border-radius: 25px;
-    
+
     height: 20vh;
     width: 100vw;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,7 +123,7 @@ button:active,
 
 .circle {
     position: relative;
-    
+
     display: flex;
     border-radius: 50%;
 
@@ -143,17 +143,17 @@ button:active,
 
     height: 15px;
     width: 15px;
-    
+
     left: 17.5px;
     top: -15px;
-    
+
     margin: 0;
     padding: 0;
-    
+
     display: inline-block;
-    
+
     background: rgb(68, 53, 73);
-    
+
     border-radius: 2px;
     border-bottom: 2px solid rgb(97, 81, 107);
 }
@@ -163,7 +163,7 @@ button:active,
     content: "";
     top: -20px;
     left: 30px;
-    
+
     width: 70px;
     height: 18px;
 
@@ -174,22 +174,22 @@ button:active,
 .circle:last-child::after {
     content: "";
     position: absolute;
-    
+
     border: none;
 }
 
 .lightsOn {
     text-align: center;
-    text-shadow: 0 0 30px white;   
+    text-shadow: 0 0 30px white;
 
-    transition: 1s all ease;    
+    transition: 1s all ease;
 }
 
 .lightsOff {
     text-align: center;
     color: #563260;
-    
-    transition: 1s all ease;    
+
+    transition: 1s all ease;
 }
 
 /* Light colors */
@@ -213,51 +213,50 @@ button:active,
     animation: glow-4 1s infinite;
 }
 
-
 /* Animations */
 @keyframes glow-1 {
-    
+
     0%,
     100% {
         box-shadow: 0 0 20px 5px #c0392b;
     }
-    
+
     50% {
         box-shadow: none;
     }
 }
 
 @keyframes glow-2 {
-    
+
     0%,
     100% {
         box-shadow: none;
     }
-    
+
     50% {
         box-shadow: 0 0 20px 5px #f1c40f;
     }
 }
 
 @keyframes glow-3 {
-    
+
     0%,
     100% {
         box-shadow: 0 0 20px 5px #74f7e1;
     }
-    
+
     50% {
         box-shadow: none;
     }
 }
 
 @keyframes glow-4 {
-    
+
     0%,
     100% {
         box-shadow: none;
     }
-    
+
     50% {
         box-shadow: 0 0 20px 5px #2ecc71;
     }
