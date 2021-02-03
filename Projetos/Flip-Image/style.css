@@ -10,62 +10,64 @@ body {
 
 header {
     text-align: center;
-}
-
-#container {
-    height: 100vh;
-    width: 500px;
-    margin: auto;    
+    margin-top: 6rem;
 }
 
 /* Container de Slides */
 #slideshow-container {
-    position: relative;  
-    display: flex;    
-    justify-content: center;    
+    position: relative;
+    display: flex;
+    justify-content: center;
 
     background: rgba(131, 115, 200, 0.287);
-    border-radius: 2rem;    
+    border-radius: 2rem;
+
+    max-width: 500px;
+    margin: auto;
 }
 
 .slide-image {
-    display: none;
-    margin: 1rem;  
+    margin: 1rem;
 }
 
-.slide-image img{
+.slide-image img {
     width: 200px;
-    
+
 }
 
-.slide-image p{    
+.slide-image p {
     text-align: center;
     width: 200px;
 }
 
 /* Next e Prev Botoes */
 #buttons {
-    position: absolute;    
-    top: 50%;    
+    position: absolute;
+    top: 50%;
     width: auto;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
 }
 
-button {    
+button {
     background: none;
-    border: none;    
+    border: none;
 
     width: 50px;
     height: 50px;
-    
-    cursor: pointer;    
+
+    cursor: pointer;
 }
 
 button img {
-    background-color: black;
     width: 50px;
     height: 50px;
+}
+
+#large-image img {
+    width: 200px;
+    margin-top: 5rem;
+}
+
+footer {
+    text-align: center;
 }

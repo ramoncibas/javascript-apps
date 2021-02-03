@@ -13,7 +13,7 @@
         <h1>Places</h1>
     </header>
     <main id="container">
-        <section>
+        <section id="slide-section">
             <div id="slideshow-container">
 
                 <div class="slide-image">
@@ -59,19 +59,21 @@
                 </div>
 
                 <div id="buttons">
-                    <button id="prev" onclick="nextAndPrev(-1)">
+                    <button class="prev" onclick="nextAndPrev(-1)">
                         <img src="../assets/images/previous.svg" alt="Botão voltar">
                     </button>
 
-                    <button id="next" onclick="nextAndPrev(1)">
+                    <button class="next" onclick="nextAndPrev(1)">
                         <img src="../assets/images/right-arrow.svg" alt="Botão proximo">
                     </button>
-                </div>
+                </div>        
             </div>
+        </section>
 
-            <div id="large-image"></div>
-
-
+        <section id="large-image-section">
+            <div id="large-image">
+                
+            </div>
         </section>
     </main>
     <footer>&copy; Ramon Cibas</footer>
