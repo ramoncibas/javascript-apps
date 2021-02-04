@@ -1,6 +1,7 @@
 function colorCycle() {
     let body = document.getElementsByTagName("body")[0]
-    let btn = document.querySelector("#btncolor input")    
+    let btn = document.querySelector("#btncolor input")
+    let rgb = document.querySelector("#res input")
     let section = document.querySelector("section")
 
     let backGround = randomRGB()
@@ -15,7 +16,9 @@ function colorCycle() {
         e.preventDefault();
   
         navigator.clipboard.writeText(backGround);
-    })        
+    })
+
+    rgb.value = backGround
 
     console.log(randomRGB())
 }
