@@ -10,7 +10,7 @@
 |------------------|-----------------------------------|-----------|
 | [Bin2Dec](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Bin2Dec)          | Conversor de binário para Decimal | Básico |
 | [Calculator](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Calculator)       | Calculadora                       | Básico |
-| [Christmas-Lights](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Christmas-Lights) | Luzes de Natal                    | Iniciante |
+| [Christmas-Lights](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Christmas-Lights) | Luzes de Natal                    | Básico |
 | [Dollar-and-Cents](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Dollar-and-Cents) | Conversor de Dólar e Cents       | Básico |
 | [Slide-Images](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Slides-Image) | Slider de imagens | Básico
 | [ColorCycle](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/ColorCycle) | Cores RGB aleatorias | Básico
