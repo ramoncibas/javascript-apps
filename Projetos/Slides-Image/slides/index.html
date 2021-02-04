@@ -2,77 +2,76 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flip Images</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="container.css" />
+    <link rel="stylesheet" href="button.css" />
 </head>
 
 <body>
     <header>
-        <h1>Places</h1>
+        <h1>PLACES</h1>
     </header>
     <main id="container">
         <section id="slide-section">
-            <div id="slideshow-container">
-
+            <div id="slide-container">
                 <div class="slide-image">
                     <img src="https://images.unsplash.com/photo-1535745122259-f1e187953c4c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGxhY2VzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
-                        alt="Imagem">
+                        alt="Imagem" />
 
                     <p>Cape Point, Cape Town, South Africa</p>
                 </div>
 
                 <div class="slide-image">
                     <img src="https://images.unsplash.com/photo-1524473994769-c1bbbf30e944?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8cGxhY2VzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
-                        alt="Imagem">
+                        alt="Imagem" />
 
                     <p>Taj Mahal, Agra, India</p>
                 </div>
 
                 <div class="slide-image">
                     <img src="https://images.unsplash.com/photo-1578115172582-b27c8cd114bb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-                        alt="Imagem">
+                        alt="Imagem" />
 
                     <p>Guatape, Guatapé, Antioquia, Colombia</p>
                 </div>
 
                 <div class="slide-image">
                     <img src="https://images.unsplash.com/photo-1548194118-f98de977a447?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8cGxhY2VzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
-                        alt="Imagem">
+                        alt="Imagem" />
 
                     <p>Medina, Fez, Morocco</p>
                 </div>
 
                 <div class="slide-image">
                     <img src="https://images.unsplash.com/photo-1549565396-99c901793c46?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fHBsYWNlc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
-                        alt="Imagem">
+                        alt="Imagem" />
 
                     <p>Medina, Fez, Morocco</p>
                 </div>
 
                 <div class="slide-image">
                     <img src="https://images.unsplash.com/photo-1593614418883-5e54d393bb7f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHBsYWNlc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
-                        alt="Imagem">
+                        alt="Imagem" />
 
                     <p>Sintra, Portugal</p>
                 </div>
-
-                <div id="buttons">
-                    <button class="prev" onclick="nextAndPrev(-1)">&#10094;</button>
-
-                    <button class="next" onclick="nextAndPrev(1)">&#10095;</button>
-                </div>        
             </div>
+            <div id="buttons">
+                <button class="prev" onclick="nextAndPrev(-1)">&#10094;</button>
+
+                <button class="next" onclick="nextAndPrev(1)">&#10095;</button>
+            </div>
+
         </section>
 
         <section id="large-image-section">
-            <div id="large-image">
-                
-            </div>
+            <div id="large-image"></div>
         </section>
     </main>
-    <footer>&copy; Ramon Cibas</footer>
+    <footer>&copy; ramon cibas</footer>
 
     <script src="script.js"></script>
 </body>

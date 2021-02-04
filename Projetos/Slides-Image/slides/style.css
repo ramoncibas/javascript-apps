@@ -5,79 +5,17 @@
 }
 
 body {
-    font: normal 10pt Arial;
+    background: rgba(0, 0, 0, 0.120);
 }
 
 header {
     text-align: center;
-    margin-top: 6rem;
-}
-
-/* Container de Slides */
-#slideshow-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-
-    background: rgba(131, 115, 200, 0.287);
-    border-radius: 2rem;
-
-    max-width: 500px;
-    margin: auto;
-}
-
-.slide-image {
-    margin: 1rem;
-}
-
-.slide-image img {
-    width: 200px;    
-
-}
-
-.slide-image p {
-    text-align: center;
-    width: 200px;
-}
-
-/* Next e Prev Botoes */
-#buttons {
-    position: absolute;
-    top: 50%;
-    width: auto;
-}
-
-#buttons .prev,
-#buttons .next {
-    background: none;
-    border: none;
-    margin-top: -22px;
-    width: 50px;
-    height: 50px;
-
-    color: white;
     font: bold 18pt arial;
-    
-    transition: 0.6s ease;
-    user-select: none;
-
-    cursor: pointer;
-}
-
-#buttons .next {
-    right: 0;
-}
-
-#buttons button img {
-    width: 50px;
-    height: 50px;
-}
-
-#large-image img {
-    width: 200px;
-    margin-top: 5rem;
+    letter-spacing: .5rem;
+    margin: 2rem;
 }
 
 footer {
     text-align: center;
+    font: italic 9pt arial;
 }
