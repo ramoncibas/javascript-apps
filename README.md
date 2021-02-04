@@ -11,7 +11,8 @@
 | [Bin2Dec](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Bin2Dec)          | Conversor de binário para Decimal | Iniciante |
 | [Calculator](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Calculator)       | Calculadora                       | Iniciante |
 | [Christmas-Lights](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Christmas-Lights) | Luzes de Natal                    | Iniciante |
-| [Dollar-and-Cents](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Dollar-and-Cents) | Conversor de Dólar e Cents.       | Iniciante |
+| [Dollar-and-Cents](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Dollar-and-Cents) | Conversor de Dólar e Cents       | Iniciante |
+| [Slide-Images](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Slides-Image) | Slider de imagens | Iniciante
 
 ## Planos para o futuro ✍
 Criar um site aonde possa ser hospedado todos os projetos, tendo assim fácil acesso a suas funcionalidades 😃.
