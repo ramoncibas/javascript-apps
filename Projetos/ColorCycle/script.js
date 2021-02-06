@@ -1,18 +1,19 @@
 function colorCycle() {
     let body = document.getElementsByTagName("body")[0]
-    let btn = document.querySelector("#btncolor input")
+    let btn = document.querySelector("#btncolor input")    
     let rgb = document.querySelector("#res input")
     let section = document.querySelector("section")
 
     let backGround = randomRGB()
 
     // mudando cores de fundo
-    btn.style.background = backGround
+    btn.style.background = backGround    
     body.style.background = backGround
+
     section.style.border = `thick outset ${randomRGB()}`
 
     // copiar cor rgb
-    btn.addEventListener('click', (e)=> {
+    btn.addEventListener('click', (e) => {
         e.preventDefault();
   
         navigator.clipboard.writeText(backGround);

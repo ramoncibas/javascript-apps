@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 
-body {    
-    font: normal 12pt arial;    
+body {
+    font: normal 12pt arial;
+    transition: 600ms;
 }
 
 section {
@@ -15,7 +16,7 @@ section {
     height: 500px;
 
     background: rgba(246, 242, 242, 0.952);
-    border-radius: 2rem;    
+    border-radius: 2rem;
 
     margin: 3rem auto;
 
@@ -28,6 +29,10 @@ section {
 h1 {
     position: absolute;
     top: 4rem;
+
+    font: 600 24pt arial;
+    letter-spacing: .2em;
+    animation: rainbow-text 7s infinite;
 }
 
 #res {
@@ -39,6 +44,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    flex-direction: column;
 }
 
 #btncolor input {
@@ -51,5 +58,36 @@ h1 {
 
     cursor: pointer;
 
-    margin-left: 1rem;
+    margin: 1rem 0;
+}
+
+#btncolor span {
+    font: normal 10pt arial;
+}
+
+@keyframes rainbow-text {
+    0% {
+        color: #ff0000;
+    }
+
+    20% {
+        color: #00ff00;
+    }
+
+    40% {
+        color: #ffff00;
+    }
+
+    60% {
+        color: #0000ff;
+    }
+
+    80% {
+        color: #00ffff;
+    }
+
+    100% {
+        color: #ff0000;
+    }
+
 }
