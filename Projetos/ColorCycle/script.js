@@ -3,6 +3,7 @@ function colorCycle() {
     let btn = document.querySelector("#btncolor input")    
     let rgb = document.querySelector("#res input")
     let section = document.querySelector("section")
+    let h1 = document.querySelector("section h1")
 
     let backGround = randomRGB()
 
@@ -10,6 +11,7 @@ function colorCycle() {
     btn.style.background = backGround    
     body.style.background = backGround
 
+    h1.style.color = randomRGB()
     section.style.border = `thick outset ${randomRGB()}`
 
     // copiar cor rgb
