@@ -1,19 +1,64 @@
-fieldset  {
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: normal 12pt arial;
+    background: #333;
+}
+
+section {
+    color: #fff;
+    max-width: 700px;
+    max-height: 700px;
+
+    margin: 4rem auto;
+    padding: 2rem;
+
+    border-radius: 1rem;
+    background: rgba(102, 102, 102, 0.924);
+
     display: flex;
     align-items: center;
     justify-content: center;
-
     flex-direction: column;
-    border: none;
-    margin-top: 11%;         
-    
 }
 
-fieldset legend {
+section h1 {
     text-align: center;
-    font: normal 5rem arial;
+
+    font-size: 3rem;
+
+    margin: 2rem 0;
 }
 
-fieldset input {
-    margin-bottom: 10px;
+section label {
+    font: normal 14pt arial;
+}
+
+section input {
+    margin: 10px 0;
+}
+
+section button {
+    background: #333;
+    padding: .5rem;
+
+    color: #fff;
+
+    border: none;
+    border-radius: 1rem;
+
+    cursor: pointer;
+
+    width: 100px;
+}
+
+section button:hover {
+    background: #fff;
+    color: #000;
+
+    transition: .5s;
 }
