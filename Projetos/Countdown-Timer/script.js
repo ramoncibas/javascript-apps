@@ -7,7 +7,7 @@ var timeInput = document.getElementById("time-date").value,
 function calculateTime(dates) {
     
     clearInterval(startTimer)
-
+       
     if (typeof (dates) == 'undefined') {
         date = new Date(newYear).getTime()
     } else {
@@ -28,7 +28,16 @@ function calculateTime(dates) {
         document.querySelector(".timer-day").innerHTML = days
         document.querySelector(".timer-hours").innerHTML = hours
         document.querySelector(".timer-minutes").innerHTML = minutes
-        document.querySelector(".timer-seconds").innerHTML = seconds        
+        document.querySelector(".timer-seconds").innerHTML = seconds
+
+        // texto inicial
+        if (now >= date) {
+            clearInterval(startTimer)
+            document.querySelector(".timer-day").innerHTML = "T"
+            document.querySelector(".timer-hours").innerHTML = "I"
+            document.querySelector(".timer-minutes").innerHTML = "M"
+            document.querySelector(".timer-seconds").innerHTML = "E"
+        }
     }
 
     // atualizando os segundos
