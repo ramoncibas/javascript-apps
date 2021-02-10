@@ -14,6 +14,7 @@
 | [Dollar-and-Cents](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Dollar-and-Cents) | Conversor de Dólar e Cents       | Iniciante |
 | [Slide-Images](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Slides-Image) | Slider de imagens | Iniciante
 | [ColorCycle](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/ColorCycle) | Cores RGB aleatorias | Iniciante
+| [Countdown-Timer](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Countdown-Timer) | Cronômetro | Iniciante
 
 ## Planos para o futuro ✍
 Criar um site aonde possa ser hospedado todos os projetos, tendo assim fácil acesso a suas funcionalidades 😃.
