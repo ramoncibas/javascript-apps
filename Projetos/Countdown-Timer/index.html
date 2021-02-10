@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div id="clock-input">
+            <input type="date" id="time-date" onchange="calcTime(this.value)">
+        </div>
+
+        <div id="container">
+            <div class="clock-column">
+                <p class="clock-timer clock-day">1</p>
+                <p class="clock-label">Days</p>
+            </div>
+
+            <div class="clock-column">
+                <p class="clock-timer clock-hours">1</p>
+                <p class="clock-label">Hours</p>
+            </div>
+
+            <div class="clock-column">
+                <p class="clock-timer clock-minutes">1</p>
+                <p class="clock-label">Minutes</p>
+            </div>
+
+            <div class="clock-column">
+                <p class="clock-timer clock-seconds">1</p>
+                <p class="clock-label">Seconds</p>
+            </div>
+
+        </div>
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

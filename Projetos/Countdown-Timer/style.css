@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 300 1rem 'Montserrat', sans-serif;
+
+    line-height: 1rem;
+    letter-spacing: .08rem;
+}
+
+section {
+    max-width: 700px;
+    max-height: 700px;
+
+    background: rgba(0, 0, 255, 0.15);
+
+    border-radius: 1rem;
+
+    margin: 5rem auto;
+    padding: 4rem;
+}
+
+#clock-input {
+    text-align: center;
+}
+
+#clock-input input {
+    padding: 5px;
+
+    border: 0;
+    border-radius: 3px;
+
+    font: normal 1rem monospace;
+    text-align: center;
+
+    color: #010101;
+    background-color: #fff;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 4rem 0;
+}
+
+.clock-column {
+    text-align: center;
+}
+
+.clock-label {
+    padding-top: 10px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #131313;
+
+    font-size: 1rem;
+
+    border-top: 1px solid rgba(19, 19, 19, 0.5);
+}
+
+.clock-timer {
+    color: #131313;
+
+    font-size: 3rem;
+    line-height: 1;
+}
