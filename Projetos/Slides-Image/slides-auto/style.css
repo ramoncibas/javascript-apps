@@ -5,15 +5,25 @@
 }
 
 body {
+    font: 300 1rem 'Montserrat', sans-serif;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #d48d0aa1;
+
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 header {
-    font: normal 12pt arial;
-    margin: 2rem;
+    margin: 2rem 0;
+}
+
+header hr {
+    border-color: #33333338;    
 }
 
 #slider {
@@ -43,5 +53,5 @@ header {
 
 footer {
     font: italic 9pt arial;
-    margin: .5rem;    
+    margin: .5rem;
 }

@@ -5,7 +5,18 @@
 }
 
 body {
-    font: normal 12pt arial;
+    font: 300 1rem 'Montserrat', sans-serif;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #d48d0aa1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
     transition: 600ms;
 }
 
@@ -17,8 +28,6 @@ section {
 
     background: rgba(246, 242, 242, 0.952);
     border-radius: 2rem;
-
-    margin: 3rem auto;
 
     display: flex;
     align-items: center;

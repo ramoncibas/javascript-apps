@@ -1,11 +1,11 @@
-function tickTok(params) {
+function digitalClock(params) {
     var hora = new Date().toLocaleTimeString('pt-br')
     document.getElementById("container").innerHTML = hora
     
     // atualizando o relogio a cada 1seg
     setInterval (() => {
-        tickTok()
+        digitalClock()
     }, 1000)
 }    
 
-window.addEventListener("DOMContentLoaded", tickTok)
+window.addEventListener("DOMContentLoaded", digitalClock)

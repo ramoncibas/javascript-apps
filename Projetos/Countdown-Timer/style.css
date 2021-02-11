@@ -10,7 +10,16 @@ body {
     line-height: 1rem;
     letter-spacing: .08rem;
 
-    background: rgba(255, 95, 3, 0.800);
+    background: #ff5f03cc;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
 }
 
 section {
@@ -21,17 +30,16 @@ section {
 
     border-radius: 1rem;
 
-    margin: 5rem auto;
     padding: 4rem;
 }
 
 section h1 {
     text-align: center;
-    margin: 2rem 0 4rem 0 ;
-    
-    color: #131313;    
+    margin: 2rem 0 4rem 0;
 
-    font-size: 3rem;    
+    color: #131313;
+
+    font-size: 3rem;
     line-height: 1;
     letter-spacing: .5rem;
 }
