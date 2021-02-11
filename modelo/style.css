@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 300 1rem 'Montserrat', sans-serif;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #d48d0aa1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+section {
+    width: 500px;
+    height: 500px;
+
+    border-radius: 1rem;
+
+    background: #c2c2cc98;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
