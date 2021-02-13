@@ -6,50 +6,60 @@
 
 body {
     background: rgba(255, 30, 0, 0.698);
-    font: normal 15pt Arial;
-}
+    font: 300 1rem 'Montserrat', sans-serif;
 
-header {
-    margin: 1rem 0;
-    color: #fff;
-    text-align: center;
+    width: 100vw;
+    height: 100vh;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 section {
     background: white;
+
     border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.555);
+
     padding: 15px;
+
     width: 500px;
-    margin: auto;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.376);
+}
+
+section h1 {
+    font-size: 2rem;
+        
+    margin: 1rem 0;
+    color: #000;
 }
 
 button {
     margin-top: 20px;
     padding: 10px;
+
     border: none;
     border-radius: .4rem;
 
     background: rgba(255, 30, 0, 0.655);
-    
-    color: #fff;    
+
+    color: #fff;
 }
 
 button:hover {
     background: rgba(255, 30, 0, 0.90);
-    
+
     cursor: pointer;
     transform: translateY(-2px);
 
     transition: .3s;
 }
 
-footer {
-    color: #fff;
-
+p.copy {
     text-align: center;
-    font: italic 10pt Arial;
-
+    font: italic 8pt Arial;
     margin-top: 1rem;
 }
 

@@ -5,9 +5,6 @@ function toCents() {
     if (inputValues == '') {
         alert('Digite um valor a ser convertido em ¢!')
 
-    } else if (inputValues > 1) {
-        alert('Valor maior que o esperado!')
-
     } else {
         function coins(number) {
             // Quarters 25 ¢, Dimes 10 ¢, Nickels 5 ¢, Pennies 1 ¢

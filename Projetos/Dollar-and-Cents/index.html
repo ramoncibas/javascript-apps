@@ -6,15 +6,12 @@
     <link rel="stylesheet" href="style.css">
     <title>Dollar and Cents</title>
 </head>
-<body>
-    <header>
-        <h1>Dolar e ¢ents</h1>
-    </header>
-    
+<body>    
     <section>
+        <h1>Dólar e ¢ents</h1>
         <div id="form">            
             <p>Dollar:
-                <input type="text" name="txtvalue" id="txtvalue" placeholder="U$: 0.58">
+                <input type="number" min="0" name="txtvalue" id="txtvalue" placeholder="U$: 0.58">
             </p>                                                 
         </div>
 
@@ -22,9 +19,9 @@
 
         <button onclick="toCents()">Converter Cents</button>        
         <button onclick="toDolar()">Converter Dolar</button>        
-    </section>
-    
-    <footer>&copy; RamonCibas</footer>
+        
+        <p class="copy">&copy; RamonCibas</p>
+    </section>        
     
     <script src="script.js"></script>
 </body>
