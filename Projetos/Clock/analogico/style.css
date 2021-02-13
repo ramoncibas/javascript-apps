@@ -1,0 +1,212 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 300 1rem 'Montserrat', sans-serif;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #d48d0aa1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+section {
+    width: 450px;
+    height: 450px;
+
+    border-radius: 1rem;
+    background: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section h1 {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.clock {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #8fd8ee;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: -3px -3px 7px #8fd8ee,
+        3px 3px 5px #8fd8ee;
+}
+
+.clock .porca-central {
+    height: 9px;
+    width: 9px;
+    background: #d1e26e;
+    border-radius: 50%;
+    z-index: 15;
+    position: absolute;
+}
+
+.pointers div {
+    position: absolute;
+    width: 2px;
+    height: 5px;
+    background: #404040;
+}
+
+.pointers div:nth-child(1) {
+    transform: rotate(30deg) translateY(-100px);
+}
+
+.pointers div:nth-child(2) {
+    transform: rotate(60deg) translateY(-100px);
+}
+
+.pointers div:nth-child(3) {
+    transform: rotate(90deg) translateY(-100px);
+}
+
+.pointers div:nth-child(4) {
+    transform: rotate(120deg) translateY(-100px);
+}
+
+.pointers div:nth-child(5) {
+    transform: rotate(150deg) translateY(-100px);
+}
+
+.pointers div:nth-child(6) {
+    transform: rotate(180deg) translateY(-100px);
+}
+
+.pointers div:nth-child(7) {
+    transform: rotate(210deg) translateY(-100px);
+}
+
+.pointers div:nth-child(8) {
+    transform: rotate(240deg) translateY(-100px);
+}
+
+.pointers div:nth-child(9) {
+    transform: rotate(270deg) translateY(-100px);
+}
+
+.pointers div:nth-child(10) {
+    transform: rotate(300deg) translateY(-100px);
+}
+
+.pointers div:nth-child(11) {
+    transform: rotate(330deg) translateY(-100px);
+}
+
+.pointers div:nth-child(12) {
+    transform: rotate(360deg) translateY(-100px);
+}
+
+.seconds-hand,
+.minutes-hand,
+.hours-hand {
+    position: absolute;
+}
+
+.seconds-hand,
+.seconds {
+    height: 180px;
+    width: 180px;
+    z-index: 6;
+}
+
+.minutes-hand,
+.minutes {
+    height: 140px;
+    width: 140px;
+    z-index: 5;
+}
+
+.hours-hand,
+.hour {
+    height: 110px;
+    width: 110px;
+    z-index: 4;
+}
+
+.seconds,
+.minutes,
+.hour {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.seconds:before {
+    position: absolute;
+    content: '';
+    height: 110px;
+    width: 3px;
+    background: #000;
+}
+
+.seconds:after {
+    position: absolute;
+    content: '';
+    height: 35px;
+    width: 7px;
+    background: #000;
+    top: 105px;
+    border-radius: 5px;
+}
+
+.minutes:before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    top: -15px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 60px solid #ff1900;
+}
+
+.minutes:after {
+    position: absolute;
+    content: '';
+    width: 3px;
+    top: 40px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-top: 30px solid #ff1900;
+}
+
+.hour:before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 35px solid #2600ff;
+}
+
+.hour:after {
+    position: absolute;
+    content: '';
+    width: 3px;
+    top: 34px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-top: 25px solid #2600ff;
+}
+
+.digital-hour {
+    margin-top: 2rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
