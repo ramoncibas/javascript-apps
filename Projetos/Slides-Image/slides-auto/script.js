@@ -4,13 +4,14 @@ let time = 2000,
     max = images.length;
 
 function nextImage() {
+    // removendo a classe
     images[currentImageIndex].classList.remove("selected")
-    
+    // alterando a posição da imagem
     currentImageIndex++
-    
+    // verifica se estiver no maximo, volta para o inicio
     if (currentImageIndex >= max)
         currentImageIndex = 0
-
+    // adiciona a classe para a proxima imagem
     images[currentImageIndex].classList.add("selected")
 }
 
