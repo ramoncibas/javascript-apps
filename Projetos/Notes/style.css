@@ -47,6 +47,27 @@ section h1 {
     color: #f50b0bda;
 }
 
+#container {
+    background: #ffff005b;
+
+    width: 680px;
+    height: 300px;
+}
+
+.note {
+    border: 2px solid #bb8901a1;
+}
+
+.note input {
+    background: rgb(255, 255, 2);
+    width: 100%;
+
+    border: none;
+}
+
+.note+.note {
+    margin-top: .5rem;
+}
 
 #pop-up-add {
     top: 2rem;
