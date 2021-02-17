@@ -8,13 +8,15 @@
 
     </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pop-up.css">
+    
 </head>
 
 <body>
     <section>
         <h1>Notas</h1>
         <div id="add-notes">
-            <button class="btn-add"><i>+</i> Add</button>
+            <button class="btn-add" onclick="addNote()"><i>+</i> Add</button>
         </div>
 
         <div id="container">
@@ -32,11 +34,6 @@
             </div>
         </div>
 
-        <div id="pop-up-bg">
-            <div id="pop-up-add"></div>
-        </div>
-
-
         <div id="notes">
             <div class="danger">
                 <p><strong>Danger!</strong> Somente texto ...</p>
@@ -53,6 +50,23 @@
 
         </div>
     </section>
+
+    
+    <div id="pop-up-bg">
+        <div id="pop-up-add">
+            
+            <div class="content">
+                <button class="btn-close" onclick="closePopUp()">X</button>
+
+
+
+
+
+                <button class="btn-save" onclick="saveNote()" >Salvar</button>
+            </div>            
+
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

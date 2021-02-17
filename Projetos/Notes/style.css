@@ -51,7 +51,9 @@ section h1 {
     background: #ffff005b;
 
     width: 680px;
-    height: 300px;
+    max-height: 400px;
+
+    cursor: pointer;
 }
 
 .note {
@@ -65,20 +67,12 @@ section h1 {
     border: none;
 }
 
-.note+.note {
-    margin-top: .5rem;
+.note label {
+    font-weight: 600;
 }
 
-#pop-up-add {
-    top: 2rem;
-    left: 2rem;
-
-    width: 300px;
-    height: 300px;
-    background: rgb(236, 0, 0);
-
-    border-radius: 1rem;
-    display: none;
+.note+.note {
+    margin-top: .5rem;
 }
 
 .btn-add {
@@ -155,3 +149,6 @@ section h1 {
     background-color: #0077ff75;
     border-left: 6px solid #0000ff;
 }
+
+
+
