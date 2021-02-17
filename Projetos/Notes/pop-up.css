@@ -86,3 +86,63 @@ body {
     background: #118011;
     transition: .3s ease-in;
 }
+
+.content-text h2{
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.content-text input{
+    border: 1px solid #c5c5c5;
+
+    width: 100%;
+    height: 30px;
+
+    padding: 10px;
+}
+
+.content-text textarea{
+    border: 1px solid #c5c5c5;
+    width: 100%;    
+}
+
+/* Tipos de notas */
+.danger,
+.success,
+.warning,
+.info {
+    width: 100%;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+
+    padding: .5rem;
+    cursor: pointer;
+
+    opacity: 0.5;
+}
+
+.danger {
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+}
+
+.success {
+    background-color: #7ff57f5d;
+    border-left: 6px solid #358f1f;
+}
+
+.warning {
+    background-color: #f5f56b94;
+    border-left: 6px solid #d9ff00;
+}
+
+.info {
+    background-color: #0077ff75;
+    border-left: 6px solid #0000ff;
+}
+
+.active {
+    opacity: 1;
+}

@@ -8,8 +8,7 @@
 
     </title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="pop-up.css">
-    
+    <link rel="stylesheet" href="pop-up.css">    
 </head>
 
 <body>
@@ -34,21 +33,7 @@
             </div>
         </div>
 
-        <div id="notes">
-            <div class="danger">
-                <p><strong>Danger!</strong> Somente texto ...</p>
-            </div>
-            <div class="success">
-                <p><strong>Success!</strong> Somente texto ...</p>
-            </div>
-            <div class="warning">
-                <p><strong>Warning!</strong> Somente texto ...</p>
-            </div>
-            <div class="info">
-                <p><strong>Info!</strong> Somente texto ...</p>
-            </div>
-
-        </div>
+       
     </section>
 
     
@@ -58,9 +43,29 @@
             <div class="content">
                 <button class="btn-close" onclick="closePopUp()">X</button>
 
+                <div class="content-text">
+                    <h2>Adicione uma Nota</h2>
+                    <input type="text" name="txtpopup" id="txtpopup" placeholder="Titulo:">
 
+                    <textarea name="" id="" cols="45" rows="5"></textarea>
+                </div>
 
-
+                <div id="notes">
+                    <p>Selecione o tipo:</p>
+                    <div class="danger active">
+                        <p><strong>Danger!</strong> Somente texto ...</p>
+                    </div>
+                    <div class="success">
+                        <p><strong>Success!</strong> Somente texto ...</p>
+                    </div>
+                    <div class="warning">
+                        <p><strong>Warning!</strong> Somente texto ...</p>
+                    </div>
+                    <div class="info">
+                        <p><strong>Info!</strong> Somente texto ...</p>
+                    </div>
+        
+                </div>
 
                 <button class="btn-save" onclick="saveNote()" >Salvar</button>
             </div>            
