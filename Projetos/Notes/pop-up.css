@@ -104,6 +104,8 @@ body {
 .content-text textarea{
     border: 1px solid #c5c5c5;
     width: 100%;    
+    
+    padding: 10px;
 }
 
 /* Tipos de notas */
