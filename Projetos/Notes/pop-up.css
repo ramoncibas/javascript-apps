@@ -1,8 +1,8 @@
 body {
-    position: relative;
+    position: relative;    
 }
 
-/* Pop-up */
+/* Pop-up add anotações */
 #pop-up-bg {
     position: absolute;
 
@@ -159,4 +159,69 @@ body {
 
 .active {
     opacity: 1;
+}
+
+/* pop-over anotações */
+#popover-note {
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.590);
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;   
+    
+    display: none;
+}
+
+#content {
+    position: relative;
+
+    width: 600px;
+    height: 550px;
+
+    border-radius: 1rem;
+
+    background: #ffffff;
+    z-index: 2;
+
+    padding: 4rem 2rem;
+}
+
+#content-notes input {
+    border: 1px solid #c5c5c5;
+    
+    padding: 20px;
+    width: 100%;
+
+    font-size: 1.5rem;
+}
+
+#content-notes input::-webkit-input-placeholder {
+    font-size: 1.5rem;
+}
+
+#content-notes textarea {
+    width: 100%;
+    padding: 10px;
+
+    font-size: 1rem;
+    
+    border: 1px solid #c5c5c5;
+    margin: 10px 0;
+
+    resize: none;
+}
+
+#buttons .btn-close {    
+    top: 1rem;
+}
+#buttons .btn-save {    
+    width: 100%;
 }

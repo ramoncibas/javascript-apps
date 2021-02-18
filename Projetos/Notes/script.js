@@ -47,6 +47,17 @@ function saveNote() {
             let p = document.createElement("p")
 
             div.setAttribute("class", `note ${noteOfType}`)
+
+            div.addEventListener("click",() => {                
+                document.getElementById("popover-note").style.display = "flex"
+
+                let input = document.getElementById("txtpopover")
+                let txtarea = document.getElementById("txtarea-popover")
+                
+                input.value = title_popup
+                txtarea.value = txt_popup
+            })
+
             content.appendChild(div)
 
             h4.textContent = title_popup
@@ -64,6 +75,9 @@ function saveNote() {
 
 // fehando popup
 function closePopUp() {
-    let popup = document.getElementById("pop-up-bg")
-    popup.style.display = 'none'
+    document.getElementById("pop-up-bg").style.display = "none"   
+}
+
+function closePopOver() {
+    document.getElementById("popover-note").style.display = "none"
 }

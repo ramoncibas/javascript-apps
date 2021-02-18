@@ -52,9 +52,11 @@ section h1 {
     background: #ffff005b;
 
     width: 680px;
-    max-height: 400px;
+    max-height: 300px;
 
     cursor: pointer;
+    
+    overflow: auto;
 }
 
 .note+.note {
