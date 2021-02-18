@@ -23,7 +23,7 @@ body {
     position: relative;
 
     width: 400px;
-    height: 450px;
+    height: 550px;
 
     border-radius: 1rem;
 
@@ -108,11 +108,29 @@ body {
     padding: 10px;
 }
 
+#txtpopup,
+#txtnote::-webkit-input-placeholder{
+    color:#C4C;    
+    text-transform: uppercase;
+    font-style: bold;
+}
+
 /* Tipos de notas */
+.notes-type {
+    padding: 5px;
+    margin: 10px 0;
+
+    border: 1px solid #c5c5c5;    
+    
+    font-weight: 600;
+}
+
 .danger,
 .success,
 .warning,
 .info {
+    border-style: none;
+    
     width: 100%;
     height: 45px;
 

@@ -16,9 +16,22 @@ function addNote() {
 function saveNote() {
     let title_popup = document.getElementById("txtpopup").value
     let txt_popup = document.getElementById("txtnote").value
-    
+        
     createNote(title_popup, txt_popup)        
     closePopUp()
+}
+
+function selectNote(event) {
+    const button = event.currentTarget
+
+    const buttons = document.querySelectorAll("#notes button")
+    buttons.forEach(removeActiveClass)
+
+    function removeActiveClass(button) {
+        button.classList.remove("active")        
+    }
+
+    button.classList.add("active")    
 }
 
 // criando elemento dentro do campo notas
@@ -29,6 +42,7 @@ function createNote(title, text) {
     let input = document.createElement("input")
 
     div.setAttribute("class", "note")
+    //div.classList.add(type)
     content.appendChild(div)
 
     label.textContent = title

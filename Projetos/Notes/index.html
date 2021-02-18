@@ -47,23 +47,27 @@
                     <h2>Adicione uma Nota</h2>
                     <input type="text" name="txtpopup" id="txtpopup" placeholder="Titulo:">
 
-                    <textarea id="txtnote" cols="45" rows="5"></textarea>
+                    <textarea id="txtnote" cols="45" rows="5" placeholder="Deixe um lembrete..."></textarea>
                 </div>
 
                 <div id="notes">
-                    <p>Selecione o tipo:</p>
-                    <div class="danger active">
+                    <p class="notes-type">Selecione o tipo de anotação:</p>                    
+                    
+                    <button class="danger" onclick="selectNote(event)" class="active">
                         <p><strong>Danger!</strong> Somente texto ...</p>
-                    </div>
-                    <div class="success">
+                    </button>
+
+                    <button class="success" onclick="selectNote(event)">
                         <p><strong>Success!</strong> Somente texto ...</p>
-                    </div>
-                    <div class="warning">
+                    </button>
+
+                    <button class="warning" onclick="selectNote(event)">
                         <p><strong>Warning!</strong> Somente texto ...</p>
-                    </div>
-                    <div class="info">
+                    </button>
+                    
+                    <button class="info" onclick="selectNote(event)">
                         <p><strong>Info!</strong> Somente texto ...</p>
-                    </div>
+                    </button>
         
                 </div>
 
