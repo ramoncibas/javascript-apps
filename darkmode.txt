@@ -1,0 +1,109 @@
+
+function darkMode() {
+    let dark = document.querySelector("#darkmode")
+    let btn_close = document.querySelector(".btn-close")
+    let btn_save = document.querySelector(".btn-save")
+    let popup = document.querySelector("#pop-up-add")
+
+    let section = document.getElementsByTagName("section")[0]
+    let body = document.body
+
+    if (dark.checked == true) {        
+        body.classList.add("dark-mode-contrast")
+        section.classList.add("dark-mode")
+        popup.classList.add("dark-mode")
+        btn_save.classList.add("dark-mode-btn")
+        btn_close.classList.add("dark-mode-btn")
+    } else {
+        body.classList.remove("dark-mode-contrast")
+        section.classList.remove("dark-mode")
+        popup.classList.remove("dark-mode")
+        btn_save.classList.remove("dark-mode-btn")
+        btn_close.classList.remove("dark-mode-btn")        
+    }
+    
+}
+
+
+body {
+    position: relative;
+}
+
+.switch {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #c8c8c8;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #333;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #fff;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* dark mode */
+
+.dark-mode {
+    background: #111111 !important;
+    
+}
+
+.dark-mode-contrast {
+    background: #0f0f0f !important;
+}
+
+.dark-mode-btn{
+    background: #333 !important;
+}
+
+
+        <label class="switch">
+            <input type="checkbox" id="darkmode" onclick="darkMode()">            
+            <span class="slider round"></span>
+        </label>

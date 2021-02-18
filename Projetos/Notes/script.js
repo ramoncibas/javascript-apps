@@ -1,26 +1,20 @@
-// abrindo o pop-up para adicionar a nota
+var noteOfType;
+
+// abrindo o pop-up para adicionar a anotação
 function addNote() {
     let popup = document.getElementById("pop-up-bg")
     let title_popup = document.getElementById("txtpopup")
     let txt_popup = document.getElementById("txtnote")
 
-    popup.style.display = 'flex'   
-    
+    popup.style.display = 'flex'
+
     if (title_popup != "" || txt_popup != "") {
         title_popup.value = ''
-        txt_popup.value = ''        
+        txt_popup.value = ''
     }
 }
 
-// salvando a nota
-function saveNote() {
-    let title_popup = document.getElementById("txtpopup").value
-    let txt_popup = document.getElementById("txtnote").value
-        
-    createNote(title_popup, txt_popup)        
-    closePopUp()
-}
-
+// selecionando o tipo de anotação
 function selectNote(event) {
     const button = event.currentTarget
 
@@ -28,29 +22,44 @@ function selectNote(event) {
     buttons.forEach(removeActiveClass)
 
     function removeActiveClass(button) {
-        button.classList.remove("active")        
+        button.classList.remove("active")
     }
 
-    button.classList.add("active")    
+    button.classList.add("active")
+
+    noteOfType = button.className    
 }
 
-// criando elemento dentro do campo notas
-function createNote(title, text) {
-    let content = document.getElementById("container")
-    let div = document.createElement("div")
-    let label = document.createElement("label")
-    let input = document.createElement("input")
+// salvando anotação
+function saveNote() {
+    if (noteOfType == undefined) {
+        alert('Selecione o tipo da Nota!')
 
-    div.setAttribute("class", "note")
-    //div.classList.add(type)
-    content.appendChild(div)
+    } else {        
+        // criando elemento dentro do campo notas
+        function createNote() {
+            let title_popup = document.getElementById("txtpopup").value
+            let txt_popup = document.getElementById("txtnote").value
 
-    label.textContent = title
-    div.appendChild(label)
+            let content = document.getElementById("container")
+            let div = document.createElement("div")
+            let h4 = document.createElement("h4")
+            let p = document.createElement("p")
 
-    input.value = text
-    input.readOnly = true
-    div.appendChild(input)
+            div.setAttribute("class", `note ${noteOfType}`)
+            content.appendChild(div)
+
+            h4.textContent = title_popup
+            div.appendChild(h4)
+
+            p.setAttribute("class", "content-note")
+            p.innerText = txt_popup
+            div.appendChild(p)
+        }
+
+        createNote()
+        closePopUp()
+    }
 }
 
 // fehando popup

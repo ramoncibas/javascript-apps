@@ -47,6 +47,7 @@ section h1 {
     color: #f50b0bda;
 }
 
+/* Notas da home */
 #container {
     background: #ffff005b;
 
@@ -56,25 +57,20 @@ section h1 {
     cursor: pointer;
 }
 
-.note {
-    border: 2px solid #bb8901a1;
-}
-
-.note input {
-    background: rgb(255, 255, 2);
-    width: 100%;
-
-    border: none;
-}
-
-.note label {
-    font-weight: 600;
-}
-
 .note+.note {
     margin-top: .5rem;
 }
 
+.content-note {
+    max-width: 680px;
+    padding: 5px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: '.';
+}
+
+/* Botao adicionar notas */
 .btn-add {
     position: absolute;
     top: 2rem;
@@ -100,7 +96,6 @@ section h1 {
     cursor: pointer;
 
     transition: .3s ease-in;
-
 }
 
 .btn-add i {
@@ -111,4 +106,3 @@ section h1 {
     background: #0a810a9f;
     transition: .3s ease-in;
 }
-

@@ -18,21 +18,7 @@
             <button class="btn-add" onclick="addNote()"><i>+</i> Add</button>
         </div>
 
-        <div id="container">
-            <div class="note">
-                <label for="txtnote">Titulo:</label>
-                <br>
-                <input type="text" value="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur at minima tenetur dolores repudiandae.">
-
-            </div>
-
-            <div class="note">
-                <label for="txtnote">Titulo:</label>
-                <br>
-                <input type="text" value="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur at minima tenetur dolores repudiandae.">
-            </div>
-        </div>
-
+        <div id="container"></div>
        
     </section>
 
@@ -53,20 +39,24 @@
                 <div id="notes">
                     <p class="notes-type">Selecione o tipo de anotação:</p>                    
                     
-                    <button class="danger" onclick="selectNote(event)" class="active">
-                        <p><strong>Danger!</strong> Somente texto ...</p>
+                    <button class="danger" onclick="selectNote(event)">
+                        <h4>Danger!</h4>
+                        <p>Somente texto ...</p>
                     </button>
 
                     <button class="success" onclick="selectNote(event)">
-                        <p><strong>Success!</strong> Somente texto ...</p>
+                        <h4>Success!</h4>
+                        <p>Somente texto ...</p>
                     </button>
 
                     <button class="warning" onclick="selectNote(event)">
-                        <p><strong>Warning!</strong> Somente texto ...</p>
+                        <h4>Warning!</h4>
+                        <p>Somente texto ...</p>                    
                     </button>
-                    
+
                     <button class="info" onclick="selectNote(event)">
-                        <p><strong>Info!</strong> Somente texto ...</p>
+                        <h4>Info!</h4>
+                        <p>Somente texto ...</p>
                     </button>
         
                 </div>
