@@ -75,9 +75,6 @@ function saveNote() {
 
 // fehando popup
 function closePopUp() {
-    document.getElementById("pop-up-bg").style.display = "none"   
-}
-
-function closePopOver() {
+    document.getElementById("pop-up-bg").style.display = "none"
     document.getElementById("popover-note").style.display = "none"
 }
