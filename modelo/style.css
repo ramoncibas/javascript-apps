@@ -6,26 +6,28 @@
 
 body {
     font: 300 1rem 'Montserrat', sans-serif;
+}
+
+main {
+    background: #d48d0aa1;
 
     width: 100vw;
     height: 100vh;
 
-    background: #d48d0aa1;
-    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
 
-section {
+#container {
     width: 500px;
     height: 500px;
 
     border-radius: 1rem;
 
-    background: #c2c2cc98;
-    
+    background: #ffffff;
+
     display: flex;
     justify-content: center;
     align-items: center;
