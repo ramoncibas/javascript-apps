@@ -16,6 +16,7 @@
                 <label>Selecione o tipo de converção:</label>
 
                 <select class="select-option" id="select1">
+                    <option value="" selected disabled>Selecione</option>
                     <option value="dec">Decimal</option>
                     <option value="bin">Binario</option>
                     <option value="hex">Hexadecimal</option>
@@ -23,7 +24,7 @@
 
                 <input type="text" maxlength="8" name="txtbin" id="txtbin" placeholder="11100101" />
 
-                <button class="btn-convert" onclick="convertValues()">Converter</button>
+                <button class="btn-convert">Converter</button>
             </div>
             <div id="res">
                 <h2></h2>
