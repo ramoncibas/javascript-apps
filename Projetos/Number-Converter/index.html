@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bin | Hex | Decimal</title>
+</head>
+
+<body>
+    <main>
+        <div id="container">
+            <h1>Conversor</h1>
+            <div class="res-convert">
+                <label>Selecione o tipo de converção:</label>
+
+                <select class="select-option" id="select1">
+                    <option value="dec">Decimal</option>
+                    <option value="bin">Binario</option>
+                    <option value="hex">Hexadecimal</option>
+                </select>
+
+                <input type="text" maxlength="8" name="txtbin" id="txtbin" placeholder="11100101" />
+
+                <button class="btn-convert" onclick="convertValues()">Converter</button>
+            </div>
+            <div id="res">
+                <h2></h2>
+            </div>
+
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

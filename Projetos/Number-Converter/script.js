@@ -1,6 +1,6 @@
-function bin2dec() {
+function convertValues() {
     let txtbin = document.querySelector('input#txtbin')
-    let txtdec = document.querySelector('input#txtdec')
+    let res = document.querySelector('#res h2')
 
     if (txtbin.value.length > 8) {
         alert('Máximo de 8 digitos!')
@@ -17,6 +17,6 @@ function bin2dec() {
                 decimal += Math.pow(2, c)
             }
         }
-        txtdec.value = decimal
+        res.textContent = decimal
     }
 }
