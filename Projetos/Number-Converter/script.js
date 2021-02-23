@@ -4,24 +4,28 @@ const btn_convert = document.querySelector(".btn-convert")
 
 select1.addEventListener("change", (e) => {    
     let txtbin = document.querySelector("input#txtbin")
+    let res = document.querySelector("#res h2")
 
     if (e.target.value == "dec") {
         btn_convert.addEventListener("click", bin2Dec)
 
         console.log('decimal')
         txtbin.value = ""
+        res.textContent = ""
 
     } else if (e.target.value == "bin") {
         btn_convert.addEventListener("click", convertBin)
 
         console.log('binario')
         txtbin.value = ""
+        res.textContent = ""
 
     } else {
         btn_convert.addEventListener("click", convertHex)
 
         console.log('hexadecimal')
         txtbin.value = ""
+        res.textContent = ""
 
     }
 })
