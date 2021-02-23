@@ -1,4 +1,6 @@
 var noteOfType;
+var input_popover = document.getElementById("txtpopover")
+var txtarea_popover = document.getElementById("txtarea-popover")
 
 // abrindo o pop-up para adicionar a anotação
 function addNote() {
@@ -27,7 +29,7 @@ function selectNote(event) {
 
     button.classList.add("active")
 
-    noteOfType = button.className    
+    noteOfType = button.className
 }
 
 // salvando anotação
@@ -35,41 +37,69 @@ function saveNote() {
     if (noteOfType == undefined) {
         alert('Selecione o tipo da Nota!')
 
-    } else {        
-        // criando elemento dentro do campo notas
-        function createNote() {
-            let title_popup = document.getElementById("txtpopup").value
-            let txt_popup = document.getElementById("txtnote").value
-
-            let content = document.getElementById("container")
-            let div = document.createElement("div")
-            let h4 = document.createElement("h4")
-            let p = document.createElement("p")
-
-            div.setAttribute("class", `note ${noteOfType}`)
-
-            div.addEventListener("click",() => {                
-                document.getElementById("popover-note").style.display = "flex"
-
-                let input = document.getElementById("txtpopover")
-                let txtarea = document.getElementById("txtarea-popover")
-                
-                input.value = title_popup
-                txtarea.value = txt_popup
-            })
-
-            content.appendChild(div)
-
-            h4.textContent = title_popup
-            div.appendChild(h4)
-
-            p.setAttribute("class", "content-note")
-            p.innerText = txt_popup
-            div.appendChild(p)
-        }
-
+    } else {
         createNote()
         closePopUp()
+    }
+}
+
+// criando elemento dentro do campo notas
+function createNote() {
+    var title_popup = document.getElementById("txtpopup").value
+    var txt_popup = document.getElementById("txtnote").value
+
+    let content = document.getElementById("container")
+    let div = document.createElement("div")
+    let h4 = document.createElement("h4")
+    let p = document.createElement("p")
+
+    div.setAttribute("class", `note ${noteOfType}`)
+    div.addEventListener("click", () => {
+        document.getElementById("popover-note").style.display = "flex"
+
+        input_popover.value = h4.textContent
+        txtarea_popover.value = p.textContent
+    })
+    content.appendChild(div)
+
+    h4.textContent = title_popup
+    div.appendChild(h4)
+
+    p.setAttribute("class", "content-note")
+    p.innerText = txt_popup
+    div.appendChild(p)
+
+    var notes = localStorage['notes'] ? JSON.parse(localStorage['notes']) : []
+    notes.push({
+        noteTitle: h4.textContent,
+        noteText: p.textContent,
+        noteType: noteOfType
+    })
+    localStorage.setItem('notes', JSON.stringify(notes))
+}
+
+// editando a anotacao
+function editNote(data) {
+    var title_note = document.querySelector(".note h4").textContent
+    var txt_note = document.querySelector(".note p").textContent
+
+    const btn_save = document.getElementById("btnsave")
+
+    if (data != title_note || data != txt_note) {
+        btn_save.style.display = "inline-block"
+        btn_save.addEventListener("click", saveEditedNote)
+
+        console.log('run')
+    } else {
+        console.log('syntax error')
+    }
+
+    function saveEditedNote() {
+        let title_note = document.querySelector(".note h4")
+        let txt_note = document.querySelector(".note p")
+
+        title_note.innerText = input_popover.value
+        txt_note.innerText = txtarea_popover.value
     }
 }
 
@@ -78,3 +108,9 @@ function closePopUp() {
     document.getElementById("pop-up-bg").style.display = "none"
     document.getElementById("popover-note").style.display = "none"
 }
+
+// recuperando anotações salvas no localstorage
+window.addEventListener("load", () => {    
+    let storage = JSON.parse(localStorage.getItem("notes"))
+    console.log(storage)    
+})

@@ -224,4 +224,5 @@ body {
 }
 #buttons .btn-save {    
     width: 100%;
+    display: none;
 }

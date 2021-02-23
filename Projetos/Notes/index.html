@@ -71,14 +71,14 @@
         <div id="content">        
 
             <div id="content-notes">                
-                <input type="text" id="txtpopover" placeholder="Titulo:">
-                <textarea id="txtarea-popover" rows="20"></textarea>
+                <input type="text" id="txtpopover" placeholder="Titulo:" onchange="editNote(this.value)">
+                <textarea id="txtarea-popover" rows="20" onchange="editNote(this.value)"></textarea>
             </div>
 
             <div id="buttons">
                 <button class="btn-close" onclick="closePopUp()">X</button>
             
-                <button class="btn-save" onclick="editNote()">Salvar</button>
+                <button class="btn-save" id="btnsave">Salvar</button>
             </div>
         </div>
     </div>
