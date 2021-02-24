@@ -48,6 +48,7 @@ function createNote() {
     var title_popup = document.getElementById("txtpopup").value
     var txt_popup = document.getElementById("txtnote").value
 
+    // criando elementos
     let content = document.getElementById("container")
     let div = document.createElement("div")
     let h4 = document.createElement("h4")
@@ -69,6 +70,7 @@ function createNote() {
     p.innerText = txt_popup
     div.appendChild(p)
 
+    // passando anotaçoes para o localstorage
     var notes = localStorage['notes'] ? JSON.parse(localStorage['notes']) : []
     notes.push({
         noteTitle: h4.textContent,
@@ -94,6 +96,7 @@ function editNote(data) {
         console.log('syntax error')
     }
 
+    // salvando a anotação editada
     function saveEditedNote() {
         let title_note = document.querySelector(".note h4")
         let txt_note = document.querySelector(".note p")

@@ -1,3 +1,4 @@
+// função que recebe valores aleatorios de cores RGB e aplica nos respectivos elementos
 function colorCycle() {
     let body = document.getElementsByTagName("body")[0]
     let btn = document.querySelector("#btncolor input")    
@@ -38,4 +39,5 @@ function run() {
     },2000)
 }
 
+// passando a funcao ao carregar a janela
 window.addEventListener("load", run)

@@ -11,6 +11,7 @@ function currentSlide(e) {
     showSlides(slideIndex = e)
 }
 
+// funcao mostrar slides
 function showSlides(e) {
     let slides = document.getElementsByClassName('slide-image')
     let namePlaces = document.getElementsByTagName("p")

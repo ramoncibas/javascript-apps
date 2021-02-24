@@ -30,6 +30,7 @@ select1.addEventListener("change", (e) => {
     }
 })
 
+//convertendo valores de binario para decimal
 function bin2Dec() {
     let txtbin = document.querySelector("input#txtbin")
     let res = document.querySelector("#res h2")
@@ -54,6 +55,7 @@ function bin2Dec() {
 
 }
 
+// convertendo valores de decimal para binario
 function convertBin() {
     let txtbin = document.querySelector("input#txtbin")
     let res = document.querySelector("#res h2")
@@ -72,6 +74,7 @@ function convertBin() {
     }
 }
 
+// convertendo valores de decimal para hexadecimal
 function convertHex() {
     let txtbin = document.querySelector("input#txtbin")
     let res = document.querySelector("#res h2")
@@ -89,3 +92,4 @@ function convertHex() {
         res.textContent = `${optValue}: ${hexadecimal}`
     }
 }
+

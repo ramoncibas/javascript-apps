@@ -15,6 +15,7 @@ let numbersAndNumerals = [
 
 ]
 
+// convertendo valores numericos para algarismo romanos
 function convert() {
     let romanLetter = ''
 
@@ -26,6 +27,7 @@ function convert() {
         if (numbersAndNumerals[i].number <= number) {
             number -= numbersAndNumerals[i].number
             romanLetter += numbersAndNumerals[i].roman
+            
             i--;
         }
     }

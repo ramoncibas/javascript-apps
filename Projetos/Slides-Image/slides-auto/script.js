@@ -15,6 +15,7 @@ function nextImage() {
     images[currentImageIndex].classList.add("selected")
 }
 
+// passando o intervalo de "refresh" de cada bannar/slide
 function start () {
     setInterval(() => {
         nextImage()

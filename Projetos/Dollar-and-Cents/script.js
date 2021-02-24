@@ -1,3 +1,4 @@
+// trasfroma o valor digitado em centavos de dolar
 function toCents() {
     let inputValues = document.querySelector('input#txtvalue').value
     let res = document.querySelector('div#res')
@@ -37,6 +38,7 @@ function toCents() {
     }
 }
 
+// divide o valor que o usuario informar e retorna o respectivo valor jutamente com sua cedula
 function toDolar() {
     let inputValues = document.querySelector('input#txtvalue').value
     let res = document.querySelector('div#res')
@@ -67,6 +69,8 @@ function toDolar() {
 
             washington = Math.floor(res / 1)
 
+
+            // retornando valores para o html
             return `
                 <p class="p_output"> President Dolls:
                 <br>P. Benjami F. Dolls <strong>(U$100)</strong> = ${bFranklin}
