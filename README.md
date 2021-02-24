@@ -8,7 +8,7 @@
 
 | Nome             | Descrição                         | Nível     |
 |------------------|-----------------------------------|-----------|
-| [Bin2Dec](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Bin2Dec)          | Conversor de binário para Decimal | Iniciante |
+| [Number-Converter](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Bin2Dec)          | Conversor de Binário, Decimal e Hexadecimal | Iniciante |
 | [Calculator](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Calculator)       | Calculadora                       | Iniciante |
 | [Christmas-Lights](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Christmas-Lights) | Luzes de Natal                    | Iniciante |
 | [Dollar-and-Cents](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Dollar-and-Cents) | Conversor de Dólar e Cents       | Iniciante |
