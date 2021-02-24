@@ -106,7 +106,6 @@ button.btn-convert {
     height: 40px;
 
     transition: .5s ease-in;
-
 }
 
 button.btn-convert:hover {
@@ -118,5 +117,4 @@ button.btn-convert:hover {
 
 #res h2 {
     margin-top: 2rem;
-
 }

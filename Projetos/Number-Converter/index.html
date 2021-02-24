@@ -17,12 +17,13 @@
 
                 <select class="select-option" id="select1">
                     <option value="" selected disabled>Selecione</option>
-                    <option value="dec">Decimal</option>
-                    <option value="bin">Binario</option>
-                    <option value="hex">Hexadecimal</option>
+                    <option value="dec">Binario para Decimal</option>
+                    <option value="bin">Decimal para Binario</option>
+                    <option value="hex">Decimal para Hexadecimal</option>
                 </select>
 
-                <input type="text" maxlength="8" name="txtbin" id="txtbin" placeholder="11100101" />
+                <input type="text" maxlength="8" name="txtbin" id="txtbin" placeholder="11100101"
+                    onchange="maxNumber(this.value)" />
 
                 <button class="btn-convert">Converter</button>
             </div>
