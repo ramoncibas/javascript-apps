@@ -4,25 +4,51 @@
     box-sizing: border-box;
 } 
 
-header input {
-    width: 100%;
-    height: 100px;
-    border: 1px solid #000;
-    padding: 10px;
-
-    font: normal 50pt Arial;    
+body {
+    font: 300 12pt 'Montserrat', sans-serif;
 }
 
 main {
-    margin: 5px;
+    width: 100vw;
+    height: 100vh;
+
+    background: #333;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
-section {
-    width: 332px;
-    margin: auto;
+#container {
     position: relative;
-    /* padding-right: 2rem; */
+    color: #fff;
+    width: 333px;
+    height: 590px;
 
+    border-radius: 1rem;
+    background: #c5c5c5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.res input {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    border-radius: 1rem 1rem 0 0;
+    border: 1px solid #c5c5c5;
+
+    font-size: 2rem;
+    color: #333;
+    padding: 10px;
 }
 
 button {
@@ -31,70 +57,83 @@ button {
     margin-bottom: 5px;
 
     border: none;
-}
+    font-weight: 600;
+    font-size: 1rem;
 
-button:hover {
-    cursor: pointer;    
+    cursor: pointer; 
+    border-radius: 3px;   
 }
 
 #buttonsMenu {
-    width: 250px !important;
+    position: absolute;
+    top: 85px;
+    right: 0;
 }
 
-#buttonsMenu button {    
-    background: rgba(218, 84, 6, 0.815); 
-    font: bold 12pt Arial;
+#buttonsMenu button {
+    background: #da5406d0; 
     color: #fff;
 
-    transition: .3s;
+    transition: .3s ease-out;
 }
 
-#buttonsMenu button:hover {    
-    background: rgba(218, 84, 6, 0.959); 
-}
+#mathOperations {
+    position: absolute;
+    top: 170px;
+    right: 0;
 
-#mathOperations { 
-    float: right;
-    margin-top: -85px;
-}
-
-#mathOperations button {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: rgba(241, 3, 3, 0.616);
+    align-content: center;
+    flex-direction: column;    
+}
 
-    font: bold 12pt Arial;
+#mathOperations button,
+.percentage,
+.dot{
+    background: #f103039d;
     color: #fff;
 
-    transition: .3s;
+    transition: .3s ease-out;
 }
 
-#mathOperations button:hover {
-    background: rgba(241, 3, 3, 0.746);
+#numbers {
+    position: absolute;
+    top: 170px;
+    left: 0;
+    width: 300px;
+}
+
+
+#iqual {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    margin: 0;
     
-}
+    border-radius: 0 0 1rem 1rem;
 
-#numbers button {
-    background: rgba(0, 0, 0, 0.815);
-    font: bold 12pt Arial;
     color: #fff;
+    font-size: 1.5rem;
 
-    transition: .3s;
+    background: #3d3de6;
+    transition: .3s ease-out;
 }
 
-#numbers button:hover {
-    background: rgba(0, 0, 0, 0.883);
-
+/* hover */
+#buttonsMenu button:hover{
+    background: #db9108;
+    transition: .3s ease-out;
 }
 
-#iqual {    
-    background: rgba(0, 0, 255, 0.801) !important;
-    
-    transition: .3s;
+#mathOperations button:hover,
+.percentage:hover,
+.dot:hover{
+    background: #d80d0d;
+    transition: .3s ease-out;
 }
-
-#iqual:hover {
-    background: rgba(0, 0, 255, 0.897) !important;
+#iqual button:hover {
+    background: #0400ff;
+    transition: .3s ease-out;
 }
