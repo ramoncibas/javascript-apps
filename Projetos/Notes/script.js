@@ -1,6 +1,6 @@
 var typeOfNote;
 // abrindo o pop-up para adicionar a anotação
-function showPopUp() {
+const showPopUp = function () {
     let title_popup = document.getElementById("txtinput")
     let txt_popup = document.getElementById("txtarea")
 
@@ -16,67 +16,72 @@ function showPopUp() {
     }
 
     // passando a funcao onde pega o tipo de anotacao para todos os botoes do popup
-    for(e of btn_typeNote) {
-        e.addEventListener("click", function(event) {
+    for (e of btn_typeNote) {
+        e.addEventListener("click", function (event) {
             const button = event.currentTarget
 
             const buttons = document.querySelectorAll("#notes button")
             buttons.forEach(removeActiveClass)
-        
+
             function removeActiveClass(button) {
                 button.classList.remove("active")
             }
-        
+
             button.classList.add("active")
-        
-            typeOfNote = button.className         
-        })        
-    }        
+
+            typeOfNote = button.className
+        })
+    }
 
     btn_saveNote.addEventListener("click", saveNote)
 }
 
 // salvando anotação
-const saveNote = function() { 
+const saveNote = function () {
     let title = document.getElementById("txtinput").value
     let text = document.getElementById("txtarea").value
     let status = false
-    
+
     const noteSave = {
         noteTitle: title,
         noteText: text,
         noteType: typeOfNote,
-        noteId: null   
+        noteId: null
     }
     if (noteSave.noteType == undefined) {
         alert("Selecione o tipo da Nota!")
 
-    } else {        
+    } else {
         createNote(noteSave, status)
-        closePopUp()
+        closePopUp("popup")
     }
 }
 
 // criando elemento dentro do campo notas
-const createNote = function ({noteTitle, noteText, noteType, noteId}, noteStatus) {
+const createNote = function ({
+    noteTitle,
+    noteText,
+    noteType,
+    noteId
+}, noteStatus) {
     // criando elementos
     let content = document.getElementById("container")
     let div = document.createElement("div")
     let h4 = document.createElement("h4")
     let p = document.createElement("p")
-    let randomId = Math.floor(Math.random() * 9999)    
+    let randomId = Math.floor(Math.random() * 9999)
 
     // atribuindo valores aos elementos
-    div.id = "div" + randomId    
+    div.id = "div" + randomId
     div.setAttribute("class", `note ${noteType}`)
-    div.addEventListener("click", function () {  
+    div.addEventListener("click", function () {
         // passando o id correspondente da anotação                          
         if (noteId == "" || noteId == undefined) {
             let divId = this.id
             showPopOver(divId)
         } else {
-            showPopOver(noteId)                        
-        }        
+            showPopOver(noteId)
+        }
     })
     content.appendChild(div)
 
@@ -105,44 +110,52 @@ const createNote = function ({noteTitle, noteText, noteType, noteId}, noteStatus
 
 // mostrar o popover
 function showPopOver(divId) {
-    var both_element = document.querySelectorAll("#content-notes textarea")
+    var both_element = document.querySelectorAll("#content-notes textarea")    
+
     var title_popover = document.querySelector(".title")
     var text_popover = document.querySelector(".text")
 
-    document.getElementById("popover-note").style.display = "flex"
+    document.getElementById("popover-note").style.display = "flex"    
 
-    let title_note = document.querySelector(`#${divId} h4`)
-    let txt_note = document.querySelector(`#${divId} p`)
+    let noteTitle = document.querySelector(`#${divId} h4`)
+    let noteText = document.querySelector(`#${divId} p`)
 
-    title_popover.value = title_note
-    text_popover.value = txt_note
-        
+    title_popover.value = noteTitle
+    text_popover.value = noteText
+
     for (e of both_element) {
         e.addEventListener("change", function () {
             title = this.value
-            text = this.value            
+            text = this.value
             editNote(title, text)
         })
     }
     
+
     // editando a anotacao
     const editNote = function (title, text) {
-        // mostrar botao de salvar
         const btn_save = document.getElementById("btnsave")
-        if (title != title_note.textContent || text != txt_note.textContent) {
+        const btn_delete = document.getElementById("btndelete")
+
+        // passando funcionalidades aos botoes do popover
+        if (title != title_note.textContent || text != txt_note.textContent) {            
+            btn_delete.classList.remove("fullsize")
             btn_save.style.display = "inline-block"
-            btn_save.addEventListener("click", saveEditedNote)            
+            
+            btn_save.addEventListener("click", saveEditedNote)
         }
 
         // salvando a anotação editada
-        function saveEditedNote() {
+        saveEditedNote = function() {
             title_note.textContent = title
-            txt_note.textContent = text            
+            txt_note.textContent = text
 
-            closePopUp()
-        }
-    }
+            closePopUp("popover")
+        }        
+    }        
 }
+
+
 
 // fehando popup/popover
 const closePopUp = function () {
@@ -163,14 +176,14 @@ window.addEventListener("DOMContentLoaded", () => {
                 noteText: "",
                 noteType: "",
                 noteId: ""
-            }            
+            }
 
             // passando os respectivos valores do localStorage para o objeto notes
             for (var i in notas) {
                 notes.noteTitle = notas[i]["noteTitle"]
                 notes.noteText = notas[i]["noteText"]
-                notes.noteType = notas[i]["noteType"] 
-                notes.noteId = notas[i]["noteId"]               
+                notes.noteType = notas[i]["noteType"]
+                notes.noteId = notas[i]["noteId"]
                 console.log(notes)
                 // criando a nota com os respectivos valores do localStorage
                 createNote(notes, noteStatus)
