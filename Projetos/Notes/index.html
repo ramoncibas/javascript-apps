@@ -8,24 +8,21 @@
 
     </title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="pop-up.css">    
+    <link rel="stylesheet" href="pop-up.css">
 </head>
 
 <body>
-    <section>
+    <main id="notes-container">
         <h1>Notas</h1>
-        <div id="add-notes">
-            <button class="btn-add" onclick="showPopUp()"><i>+</i> Add</button>
-        </div>
+        <button class="btn-add" onclick="showPopUp()"><i>+</i> Add</button>
 
         <div id="container"></div>
-       
-    </section>
+    </main>
 
-    
+
     <div id="pop-up-bg">
         <div id="pop-up-add">
-            
+
             <div class="content">
                 <button class="btn-close" onclick="closePopUp()">X</button>
 
@@ -37,8 +34,8 @@
                 </div>
 
                 <div id="notes">
-                    <p class="notes-type">Selecione o tipo de anotação:</p>                    
-                    
+                    <p class="notes-type">Selecione o tipo de anotação:</p>
+
                     <button class="danger">
                         <h4>Danger!</h4>
                         <p>Somente texto ...</p>
@@ -51,34 +48,35 @@
 
                     <button class="warning">
                         <h4>Warning!</h4>
-                        <p>Somente texto ...</p>                    
+                        <p>Somente texto ...</p>
                     </button>
 
                     <button class="info">
                         <h4>Info!</h4>
                         <p>Somente texto ...</p>
                     </button>
-        
+
                 </div>
 
                 <button class="btn-save">Salvar</button>
-            </div>            
+            </div>
 
         </div>
     </div>
 
     <div id="popover-note">
-        <div id="content">        
+        <div id="content">
+            <button class="btn-close" onclick="closePopUp()">X</button>
 
-            <div id="content-notes">                
+            <div id="content-notes">
                 <textarea class="title" rows="1" onchange="editNote(event)"></textarea>
                 <textarea class="text" rows="20" onchange="editNote(event)"></textarea>
             </div>
 
             <div id="buttons">
-                <button class="btn-close" onclick="closePopUp()">X</button>
-            
-                <button class="btn-save" id="btnsave">Salvar</button>
+                <button class="btn-popover-delete fullsize" id="btndelete">Deletar</button>
+                <button class="btn-popover-save" id="btnsave">Salvar</button>
+
             </div>
         </div>
     </div>

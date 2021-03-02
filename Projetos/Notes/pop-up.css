@@ -1,5 +1,5 @@
 body {
-    position: relative;    
+    position: relative;
 }
 
 /* Pop-up add anotações */
@@ -175,8 +175,8 @@ body {
     justify-content: center;
     align-items: center;
 
-    flex-direction: column;   
-    
+    flex-direction: column;
+
     display: none;
 }
 
@@ -208,18 +208,63 @@ body {
 
 #content-notes textarea.title {
     border: 1px solid #c5c5c5;
-    
+
     padding: 20px;
     width: 100%;
 
     font-size: 1.5rem;
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
 
-#buttons .btn-close {    
+/* Buttons popover */
+#buttons {
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.btn-close {
     top: 1rem;
 }
-#buttons .btn-save {    
+
+.btn-popover-save,
+.btn-popover-delete {
     width: 100%;
+    height: 50px;
+
+    border: none;
+
+    color: #fff;
+    font-size: 12pt;
+    cursor: pointer;
+
+    transition: .3s ease-in;    
+}
+
+.btn-popover-save {
+    background: #0c9c0c;
+    border-radius: 0 .5rem .5rem 0;
     display: none;
+}
+
+.btn-popover-save:hover {
+    background: #118011;
+    transition: .3s ease-in;
+}
+
+.btn-popover-delete {
+    background: #c85656;
+    border-radius: .5rem 0 0 .5rem;  
+        
+}
+
+.btn-popover-delete:hover {
+    background: #eb2222e1;
+    transition: .3s ease-in;
+}
+
+.fullsize {
+    width: 100%;
+    border-radius: .5rem;
 }
