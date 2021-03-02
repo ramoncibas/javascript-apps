@@ -194,29 +194,26 @@ body {
     padding: 4rem 2rem;
 }
 
-#content-notes input {
+#content-notes textarea {
+    border: 1px solid #c5c5c5;
+    resize: none;
+}
+
+#content-notes textarea.text {
+    width: 100%;
+    padding: 10px;
+
+    font-size: 1rem;
+}
+
+#content-notes textarea.title {
     border: 1px solid #c5c5c5;
     
     padding: 20px;
     width: 100%;
 
     font-size: 1.5rem;
-}
-
-#content-notes input::-webkit-input-placeholder {
-    font-size: 1.5rem;
-}
-
-#content-notes textarea {
-    width: 100%;
-    padding: 10px;
-
-    font-size: 1rem;
-    
-    border: 1px solid #c5c5c5;
-    margin: 10px 0;
-
-    resize: none;
+    text-transform: uppercase;    
 }
 
 #buttons .btn-close {    

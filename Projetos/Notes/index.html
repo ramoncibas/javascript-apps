@@ -15,7 +15,7 @@
     <section>
         <h1>Notas</h1>
         <div id="add-notes">
-            <button class="btn-add" onclick="addNote()"><i>+</i> Add</button>
+            <button class="btn-add" onclick="showPopUp()"><i>+</i> Add</button>
         </div>
 
         <div id="container"></div>
@@ -31,37 +31,37 @@
 
                 <div class="content-text">
                     <h2>Adicione uma Nota</h2>
-                    <input type="text" name="txtpopup" id="txtpopup" placeholder="Titulo:">
+                    <input type="text" id="txtinput" placeholder="Titulo:">
 
-                    <textarea id="txtnote" cols="45" rows="5" placeholder="Deixe um lembrete..."></textarea>
+                    <textarea cols="45" rows="5" id="txtarea" placeholder="Deixe um lembrete..."></textarea>
                 </div>
 
                 <div id="notes">
                     <p class="notes-type">Selecione o tipo de anotação:</p>                    
                     
-                    <button class="danger" onclick="selectNote(event)">
+                    <button class="danger">
                         <h4>Danger!</h4>
                         <p>Somente texto ...</p>
                     </button>
 
-                    <button class="success" onclick="selectNote(event)">
+                    <button class="success">
                         <h4>Success!</h4>
                         <p>Somente texto ...</p>
                     </button>
 
-                    <button class="warning" onclick="selectNote(event)">
+                    <button class="warning">
                         <h4>Warning!</h4>
                         <p>Somente texto ...</p>                    
                     </button>
 
-                    <button class="info" onclick="selectNote(event)">
+                    <button class="info">
                         <h4>Info!</h4>
                         <p>Somente texto ...</p>
                     </button>
         
                 </div>
 
-                <button class="btn-save" onclick="saveNote()" >Salvar</button>
+                <button class="btn-save">Salvar</button>
             </div>            
 
         </div>
@@ -71,8 +71,8 @@
         <div id="content">        
 
             <div id="content-notes">                
-                <input type="text" id="txtpopover" placeholder="Titulo:" onchange="editNote(this.value)">
-                <textarea id="txtarea-popover" rows="20" onchange="editNote(this.value)"></textarea>
+                <textarea class="title" rows="1" onchange="editNote(event)"></textarea>
+                <textarea class="text" rows="20" onchange="editNote(event)"></textarea>
             </div>
 
             <div id="buttons">

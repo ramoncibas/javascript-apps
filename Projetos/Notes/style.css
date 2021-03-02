@@ -48,9 +48,7 @@ section h1 {
 }
 
 /* Notas da home */
-#container {
-    background: #ffff005b;
-
+#container {    
     width: 680px;
     max-height: 300px;
 
