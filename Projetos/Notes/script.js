@@ -1,119 +1,183 @@
-var noteOfType;
-var input_popover = document.getElementById("txtpopover")
-var txtarea_popover = document.getElementById("txtarea-popover")
-
+var typeOfNote;
 // abrindo o pop-up para adicionar a anotação
-function addNote() {
-    let popup = document.getElementById("pop-up-bg")
-    let title_popup = document.getElementById("txtpopup")
-    let txt_popup = document.getElementById("txtnote")
+function showPopUp() {
+    let title_popup = document.getElementById("txtinput")
+    let txt_popup = document.getElementById("txtarea")
 
-    popup.style.display = 'flex'
+    const btn_typeNote = document.querySelectorAll("#notes button")
+    const btn_saveNote = document.querySelector(".content .btn-save")
 
-    if (title_popup != "" || txt_popup != "") {
-        title_popup.value = ''
-        txt_popup.value = ''
-    }
-}
+    document.getElementById("pop-up-bg").style.display = "flex"
 
-// selecionando o tipo de anotação
-function selectNote(event) {
-    const button = event.currentTarget
-
-    const buttons = document.querySelectorAll("#notes button")
-    buttons.forEach(removeActiveClass)
-
-    function removeActiveClass(button) {
-        button.classList.remove("active")
+    // limpando o campo ao adicionar outra anotacao
+    if (title_popup.value != "" || txt_popup.value != "") {
+        title_popup.value = ""
+        txt_popup.value = ""
     }
 
-    button.classList.add("active")
+    // passando a funcao onde pega o tipo de anotacao para todos os botoes do popup
+    for(e of btn_typeNote) {
+        e.addEventListener("click", function(event) {
+            const button = event.currentTarget
 
-    noteOfType = button.className
+            const buttons = document.querySelectorAll("#notes button")
+            buttons.forEach(removeActiveClass)
+        
+            function removeActiveClass(button) {
+                button.classList.remove("active")
+            }
+        
+            button.classList.add("active")
+        
+            typeOfNote = button.className         
+        })        
+    }        
+
+    btn_saveNote.addEventListener("click", saveNote)
 }
 
 // salvando anotação
-function saveNote() {
-    if (noteOfType == undefined) {
-        alert('Selecione o tipo da Nota!')
+const saveNote = function() { 
+    let title = document.getElementById("txtinput").value
+    let text = document.getElementById("txtarea").value
+    let status = false
+    
+    const noteSave = {
+        noteTitle: title,
+        noteText: text,
+        noteType: typeOfNote,
+        noteId: null   
+    }
+    if (noteSave.noteType == undefined) {
+        alert("Selecione o tipo da Nota!")
 
-    } else {
-        createNote()
+    } else {        
+        createNote(noteSave, status)
         closePopUp()
     }
 }
 
 // criando elemento dentro do campo notas
-function createNote() {
-    var title_popup = document.getElementById("txtpopup").value
-    var txt_popup = document.getElementById("txtnote").value
-
+const createNote = function ({noteTitle, noteText, noteType, noteId}, noteStatus) {
     // criando elementos
     let content = document.getElementById("container")
     let div = document.createElement("div")
     let h4 = document.createElement("h4")
     let p = document.createElement("p")
+    let randomId = Math.floor(Math.random() * 9999)    
 
-    div.setAttribute("class", `note ${noteOfType}`)
-    div.addEventListener("click", () => {
-        document.getElementById("popover-note").style.display = "flex"
-
-        input_popover.value = h4.textContent
-        txtarea_popover.value = p.textContent
+    // atribuindo valores aos elementos
+    div.id = "div" + randomId    
+    div.setAttribute("class", `note ${noteType}`)
+    div.addEventListener("click", function () {  
+        // passando o id correspondente da anotação                          
+        if (noteId == "" || noteId == undefined) {
+            let divId = this.id
+            showPopOver(divId)
+        } else {
+            showPopOver(noteId)                        
+        }        
     })
     content.appendChild(div)
 
-    h4.textContent = title_popup
+    h4.textContent = noteTitle
     div.appendChild(h4)
 
     p.setAttribute("class", "content-note")
-    p.innerText = txt_popup
+    p.innerText = noteText
     div.appendChild(p)
 
-    // passando anotaçoes para o localstorage
-    var notes = localStorage['notes'] ? JSON.parse(localStorage['notes']) : []
-    notes.push({
-        noteTitle: h4.textContent,
-        noteText: p.textContent,
-        noteType: noteOfType
-    })
-    localStorage.setItem('notes', JSON.stringify(notes))
-}
-
-// editando a anotacao
-function editNote(data) {
-    var title_note = document.querySelector(".note h4").textContent
-    var txt_note = document.querySelector(".note p").textContent
-
-    const btn_save = document.getElementById("btnsave")
-
-    if (data != title_note || data != txt_note) {
-        btn_save.style.display = "inline-block"
-        btn_save.addEventListener("click", saveEditedNote)
-
-        console.log('run')
+    //passando anotaçoes para o localstorage somente quando criar a nota pela primeira vez
+    if (noteStatus == false) {
+        var notes = localStorage["notes"] ? JSON.parse(localStorage["notes"]) : []
+        notes.push({
+            noteTitle: h4.textContent,
+            noteText: p.textContent,
+            noteType: noteType,
+            noteId: div.id
+        })
+        localStorage.setItem("notes", JSON.stringify(notes))
     } else {
-        console.log('syntax error')
+        console.log("Window Load")
     }
 
-    // salvando a anotação editada
-    function saveEditedNote() {
-        let title_note = document.querySelector(".note h4")
-        let txt_note = document.querySelector(".note p")
+}
 
-        title_note.innerText = input_popover.value
-        txt_note.innerText = txtarea_popover.value
+// mostrar o popover
+function showPopOver(divId) {
+    var both_element = document.querySelectorAll("#content-notes textarea")
+    var title_popover = document.querySelector(".title")
+    var text_popover = document.querySelector(".text")
+
+    document.getElementById("popover-note").style.display = "flex"
+
+    let title_note = document.querySelector(`#${divId} h4`)
+    let txt_note = document.querySelector(`#${divId} p`)
+
+    title_popover.value = title_note
+    text_popover.value = txt_note
+        
+    for (e of both_element) {
+        e.addEventListener("change", function () {
+            title = this.value
+            text = this.value            
+            editNote(title, text)
+        })
+    }
+    
+    // editando a anotacao
+    const editNote = function (title, text) {
+        // mostrar botao de salvar
+        const btn_save = document.getElementById("btnsave")
+        if (title != title_note.textContent || text != txt_note.textContent) {
+            btn_save.style.display = "inline-block"
+            btn_save.addEventListener("click", saveEditedNote)            
+        }
+
+        // salvando a anotação editada
+        function saveEditedNote() {
+            title_note.textContent = title
+            txt_note.textContent = text            
+
+            closePopUp()
+        }
     }
 }
 
-// fehando popup
-function closePopUp() {
+// fehando popup/popover
+const closePopUp = function () {
     document.getElementById("pop-up-bg").style.display = "none"
     document.getElementById("popover-note").style.display = "none"
 }
 
-// recuperando anotações salvas no localstorage
-window.addEventListener("load", () => {    
-    let storage = JSON.parse(localStorage.getItem("notes"))
-    console.log(storage)    
+window.addEventListener("DOMContentLoaded", () => {
+    // verificando se tem alguma coisa no localStorage para ser renderizado
+    if (localStorage.length >= 1) {
+        var noteStatus = true
+
+        // pegando os itens do localstorage
+        const getItems = function () {
+            let notas = localStorage.getItem("notes") ? JSON.parse(localStorage.getItem("notes")) : [];
+            const notes = {
+                noteTitle: "",
+                noteText: "",
+                noteType: "",
+                noteId: ""
+            }            
+
+            // passando os respectivos valores do localStorage para o objeto notes
+            for (var i in notas) {
+                notes.noteTitle = notas[i]["noteTitle"]
+                notes.noteText = notas[i]["noteText"]
+                notes.noteType = notas[i]["noteType"] 
+                notes.noteId = notas[i]["noteId"]               
+                console.log(notes)
+                // criando a nota com os respectivos valores do localStorage
+                createNote(notes, noteStatus)
+            }
+        }
+        getItems()
+    } else {
+        console.log("Empty localStorage")
+    }
 })
