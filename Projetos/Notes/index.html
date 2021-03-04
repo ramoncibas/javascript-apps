@@ -4,16 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notas
-
-    </title>
+    <title>Anotações</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="pop-up.css">
 </head>
 
 <body>
     <main id="notes-container">
-        <h1>Notas</h1>
+        <h1>Anotações</h1>
         <button class="btn-add" onclick="showPopUp()"><i>+</i> Add</button>
 
         <div id="container"></div>
@@ -27,7 +25,7 @@
                 <button class="btn-close" onclick="closePopUp('popup')">X</button>
 
                 <div class="content-text">
-                    <h2>Adicione uma Nota</h2>
+                    <h2>Adicione uma Anotação</h2>
                     <input type="text" id="txtinput" placeholder="Titulo:">
 
                     <textarea cols="45" rows="5" id="txtarea" placeholder="Deixe um lembrete..."></textarea>
@@ -74,7 +72,7 @@
             </div>
 
             <div id="buttons">
-                <button class="btn-popover-delete fullsize" id="btndelete">Deletar</button>
+                <button class="btn-popover-delete" id="btndelete">Deletar</button>
                 <button class="btn-popover-save" id="btnsave">Editar</button>
 
             </div>
