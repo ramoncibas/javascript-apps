@@ -112,36 +112,61 @@ function showPopOver(title, text, type, divId) {
     let popoverText = document.querySelector(".text")
     let txtarea = document.querySelectorAll("#content-notes textarea")
     const btn_delete = document.getElementById("btndelete")
+    let popoverValues = {
+        popTitle: '',
+        popText: ''
+    }
 
     // atribuindo valores ao popup correspondete ao click do usuario
     popoverTitle.value = title
     popoverText.value = text
 
+    // passando valores para  funcao de editar a nota
+    popoverTitle.addEventListener("change", event => {
+        popoverValues.popTitle = event.target.value
+        editNote(popoverValues)
+    })
+    popoverText.addEventListener("change", event => {
+        popoverValues.popText = event.target.value
+        editNote(popoverValues)
+    })
+
+    // atribuindo a funcao "deleteNote" ao botao "delete"
     btn_delete.addEventListener("click", deleteNote)
 
-    for (e of txtarea) {
-        e.addEventListener("change", e => {
-            const btn_save = document.getElementById("btnsave")
+    function editNote({ popTitle, popText }) {
+        const btn_save = document.getElementById("btnsave")
 
-            // passando funcionalidades aos botoes do popover
-            if (e != popoverTitle.value || e != popoverText.value) {
-                btn_delete.classList.remove("fullsize")
-                btn_save.style.display = "inline-block"
+        // passando funcionalidades aos botoes do popover
+        if (title != "" || text != "") {
+            btn_delete.classList.remove("fullsize")
+            btn_save.style.display = "inline-block"
 
-                btn_save.addEventListener("click", saveEditedNote)
+            btn_save.addEventListener("click", saveEditedNote)
 
-            } else {
-                btn_save.style.display = "none"
-            }
+        } else {
+            btn_save.style.display = "none"
+        }
 
-            // salvando a anotação editada
-            function saveEditedNote() {
-                // code...
-            }
-        })
+        // salvando a anotação editada no localStorage
+        function saveEditedNote() {
+            let notesEdit = JSON.parse(localStorage.getItem("notes")).filter(item => item.noteId !== divId)
+
+            notesEdit.push({
+                noteTitle: popTitle,
+                noteText: popText,
+                noteType: type,
+                noteId: divId
+            })
+
+            localStorage.setItem("notes", JSON.stringify(notesEdit))
+            location.reload(false)
+
+            console.log("Save edit note")
+        }
     }
 
-    // funcao deletar anotação
+    // funcao deletear anotação
     function deleteNote() {
         // remove o item de acordo com o id
         const data = JSON.parse(localStorage.getItem("notes")).filter(item => item.noteId !== divId)
@@ -150,15 +175,17 @@ function showPopOver(title, text, type, divId) {
         // refresh page
         location.reload(false)
 
-        closePopUp()
+        closePopUp("popover")
     }
 }
 
-
 // fehando popup/popover
-const closePopUp = function () {
-    document.getElementById("pop-up-bg").style.display = "none"
-    document.getElementById("popover-note").style.display = "none"
+const closePopUp = function (e) {
+    if (e == "popup") {
+        document.getElementById("pop-up-bg").style.display = "none"
+    } else if (e == "popover") {
+        document.getElementById("popover-note").style.display = "none"
+    }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
