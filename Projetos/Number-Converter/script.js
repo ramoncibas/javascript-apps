@@ -2,6 +2,7 @@ var optValue;
 const btn_convert = document.querySelector(".btn-convert")
 const select1 = document.querySelector("#select1")
 
+// validação de valor maximo de caracteres
 function maxNumber(e) {
     let txtbin = document.querySelector("input#txtbin")
     if (e.length > 8) {
@@ -16,6 +17,7 @@ function maxNumber(e) {
     }
 }
 
+// passando evento ao select, retornando o valor selecionado
 select1.addEventListener("change", (e) => {
     let txtbin = document.querySelector("input#txtbin")
     let res = document.querySelector("#res h2")
@@ -48,7 +50,7 @@ select1.addEventListener("change", (e) => {
     }
 })
 
-//convertendo valores de binario para decimal
+// convertendo valores de binario para decimal
 function bin2Dec() {
     let txtbin = document.querySelector("input#txtbin")
 

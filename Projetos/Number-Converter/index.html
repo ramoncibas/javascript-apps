@@ -22,7 +22,7 @@
                     <option value="hex">Decimal para Hexadecimal</option>
                 </select>
 
-                <input type="text" maxlength="8" name="txtbin" id="txtbin" placeholder="11100101"
+                <input type="text" maxlength="8" pattern="[0-9]{8}\.?" name="txtbin" id="txtbin" placeholder="11100101"
                     onchange="maxNumber(this.value)" />
 
                 <button class="btn-convert">Converter</button>
