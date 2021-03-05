@@ -16,8 +16,9 @@
 | [ColorCycle](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/ColorCycle) | Cores RGB aleatorias | Iniciante |
 | [Countdown-Timer](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Countdown-Timer) | Cronômetro | Iniciante |
 | [Clock](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Clock/digital) | Relógio digital e Analógico| Iniciante | 
-| [Notes](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Notes) | Notas informativas | Iniciante |
 | [Roman-Numerals](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Roman-Numbers) | Conversor para Algarismos Romanos | Iniciante |
+| [Input-Validation](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Input-validation) | Validando campos de formulário com Regex| Iniciante |
+| [Notes](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Notes) | Notas informativas | Iniciante |
 
 ## Planos para o futuro ✍
 Criar um site aonde possa ser hospedado todos os projetos, tendo assim fácil acesso a suas funcionalidades 😃.
