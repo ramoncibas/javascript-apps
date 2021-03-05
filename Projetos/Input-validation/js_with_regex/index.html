@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Campos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div id="container">
+            <form action="#">
+                <h1>Validando Campos Js + CSS & Regex</h1>
+
+                <label>Nome</label>
+                <input 
+                    type="text" 
+                    placeholder="Usuario exemplo"
+                    pattern="^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)"
+                >
+                <span data-validation-value class="invalid">nome invalido.</span>
+
+                <label>Email</label>
+                <input 
+                    type="email" 
+                    placeholder="exemplo@exemplo.com"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"
+                >
+                <span data-validation-value>e-mail invalido.</span>
+
+                <label>Telefone</label>
+                <input 
+                    type="tel" 
+                    placeholder="(00) 99999-9999"                     
+                    onkeypress="mask(this, maskPhone)" 
+                    onblur="mask(this, maskPhone)"
+                >
+                <!-- <span data-validation-value>telefone invalido.</span> -->
+
+                <label>Data de Nascimento</label>
+                <input 
+                    type="date"                     
+                >
+                <!-- <span data-validation-value>data de nascimento invalida.</span> -->
+
+                <label>Adicione uma url</label>
+                <input 
+                    type="url" 
+                    placeholder="https://exemplo.com.br"
+                    pattern="(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})"
+                >
+                <span data-validation-value>URL invalida.</span>
+
+                <label>Codigo Postal</label>
+                <input 
+                    type="cep" 
+                    placeholder="00000-000" 
+                    pattern="\d{5}[\-]?\d{3}"
+                >
+                <span data-validation-value>CEP invalido.</span>
+
+                <button onclick="formValidate()">Enviar</button>
+            </form>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

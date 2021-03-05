@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Campos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="container">
+            <form>
+                <h1>Validação Nativa com CSS & Regex</h1>
+               
+                <label>Nome</label>
+                <input type="text" pattern="^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)" placeholder="usuario usuario">
+                <span data-validation-value>nome invalido.</span>
+               
+                <label>Email</label>
+                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" placeholder="exemplo@exemplo.com">
+                <span data-validation-value>e-mail invalido.</span>
+               
+                <label>Telefone</label>
+                <input type="text" pattern="\(\d{2}\)\d{5}[\-]?\d{4}" placeholder="(00)99999-9999">
+                <span data-validation-value>somente números.</span>
+
+                <label>Data de Nascimento</label>
+                <input type="date" pattern="/^\d{2}\/\d{2}\/\d{4}$/">
+                <span data-validation-value>data de nascimento invalida.</span>
+
+                <label>Adicione uma url</label>
+                <input type="text" pattern="(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})" placeholder="https://exemplo.com.br">
+                <span data-validation-value>URL invalida.</span>
+
+                <label>Codigo Postal</label>
+                <input type="text" pattern="\d{5}[\-]?\d{3}" placeholder="00000-000">
+                <span data-validation-value>CEP invalido.</span>  
+            </form>
+
+        </div>
+    </main>    
+</body>
+</html>
