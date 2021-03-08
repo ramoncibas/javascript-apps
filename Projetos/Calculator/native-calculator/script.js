@@ -118,13 +118,13 @@ function showHistoric() {
         let calc_buttons = document.querySelector("#calculator-buttons")
         let show_historic = document.querySelector("#showHistoric")
         let input_historic = document.querySelector("#inputHistoric")
-        let clearHistoric = document.querySelectorAll(".inputRes")
+        let elementsHistoric = document.querySelectorAll(".inputRes")
 
         calc_buttons.classList.add("sectionUnder")
         show_historic.classList.add("historic")
 
         // Limpando todos os calculos presente até o momento para que o proximo for possa mostrar todos os calculos sem repetições.
-        for (e of clearHistoric) {
+        for (e of elementsHistoric) {
             e.remove()
         }
 
@@ -156,8 +156,8 @@ function clearHistoric() {
     if (window.confirm("Deseja deletar tudo?")) {
 
         // Removendo os campos do historico
-        let input_remove = document.querySelectorAll(".inputRes")
-        for (e of input_remove) {
+        let elementsHistoric = document.querySelectorAll(".inputRes")
+        for (e of elementsHistoric) {
             e.remove()
         }
 
