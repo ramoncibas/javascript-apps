@@ -112,7 +112,7 @@ function clearAll() {
 
 // Mostrar o historico da calculadora
 function showHistoric() {
-    if (resultadoFinal == "" || resultadoFinal == null) {
+    if (resultadoFinal == null) {
         alert("Histórioco vazio, faça um calculo!")
     } else {
         let calc_buttons = document.querySelector("#calculator-buttons")
