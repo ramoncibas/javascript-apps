@@ -1,4 +1,4 @@
-let appId; //apikey
+let appId = "fce363757e0685094f2578124caa1960"; //apikey
 let units = "imperial";
 let searchMethod = "zip";
 
