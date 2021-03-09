@@ -1,30 +1,69 @@
-## Java Script Apps <img src="https://user-images.githubusercontent.com/63371945/106048067-2c1e3b00-60c3-11eb-921a-a79203035178.png" height="25" width="25" align="center">
+# Java Script Apps <img src="../assets/js.png" height="25" width="25" align="center">
 
-![js](https://user-images.githubusercontent.com/63371945/106040433-39362c80-60b9-11eb-8ed6-0d9c5e6dbf72.png)
+![author](https://img.shields.io/badge/author-Ramon_Cibas-important)
+![license](https://img.shields.io/badge/license-MIT-blue)
+![language](https://img.shields.io/badge/language-JS-yellow)
+![contribuitors](https://img.shields.io/badge/contribuirtors-1-9cf)
 
- Aplicações desenvolvidas com Java Script, buscando melhorar minhas habilidades de codificação 🧠, e aprender melhor a linguagem 👌. 
+![banner](../assets/banner.png)
 
-## Projetos 📁
+<h4 align="center"> 
+	🚧 Em construção... 🚀 🚧
+</h4>
+
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-projetos">Projetos</a> •   
+ <a href="#-como-contribuir-para-o-projeto">Contribuição</a> •  
+ <a href="#-planos-para-o-futuro">Planos futuros</a> •  
+ <a href="#-licença">Licença</a> 
+</p>
+
+
+## 💻 Sobre o projeto 
+
+Aplicações desenvolvidas com Java Script, buscando melhorar minhas habilidades de codificação 🧠, e aprender melhor a linguagem 👌. 
+
+---
+
+## 📁 Projetos 
 
 | Nome             | Descrição                         | Nível     |
 |------------------|-----------------------------------|-----------|
-| [Number-Converter](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Bin2Dec)          | Conversor de Binário, Decimal e Hexadecimal | Iniciante |
-| [Calculator](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Calculator)       | Calculadora                       | Iniciante |
-| [Christmas-Lights](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Christmas-Lights) | Luzes de Natal                    | Iniciante |
-| [Dollar-and-Cents](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Dollar-and-Cents) | Conversor de Dólar e Cents       | Iniciante |
-| [Slide-Images](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Slides-Image) | Slider de imagens | Iniciante |
-| [ColorCycle](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/ColorCycle) | Cores RGB aleatorias | Iniciante |
-| [Countdown-Timer](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Countdown-Timer) | Cronômetro | Iniciante |
-| [Clock](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Clock/digital) | Relógio digital e Analógico| Iniciante | 
-| [Roman-Numerals](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Roman-Numbers) | Conversor para Algarismos Romanos | Iniciante |
-| [Input-Validation](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Input-validation) | Validando campos de formulário com Regex| Iniciante |
-| [Notes](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Notes) | Notas informativas | Iniciante |
+| [Number-Convert](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Number-Converter) | Conversor de Binário, Decimal e Hexadecimal | Iniciante |
+| [Calculator](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Calculator) | Calculadora                       | Iniciante |
+| [Christmas-Lights](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Christmas-Lights) | Luzes de Natal                    | Iniciante |
+| [Dollar-and-Cents](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Dollar-and-Cents) | Conversor de Dólar e Cents       | Iniciante |
+| [Slide-Images](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Slides-Image) | Slider de imagens | Iniciante |
+| [ColorCycle](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/ColorCycle) | Cores RGB aleatorias | Iniciante |
+| [Countdown-Timer](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Countdown-Timer) | Cronômetro | Iniciante |
+| [Clock](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Clock) | Relógio digital e Analógico| Iniciante | 
+| [Roman-Numerals](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Roman-Numbers) | Conversor para Algarismos Romanos | Iniciante |
+| [Input-Validations](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Input-validation) | Validando campos de formulário com Regex | Iniciante |
+| [Notes](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Notes) | Fazer anotações informativas | Iniciante |
+| [Weather-App](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Weather-App) | Verifica o clima de cidades ao redor do mundo | Iniciante |
 
-## Planos para o futuro ✍
-Criar um site aonde possa ser hospedado todos os projetos, tendo assim fácil acesso a suas funcionalidades 😃.
+---
 
-Adicionar mais projetos a esse repositório de diversos níveis, e que no futuro possa ser feito o mesmo com outra linguagem 🙏.
+## 💪 Como contribuir para o projeto
 
-## 2021 Project 📃
-O objetivo será adicionado no mínimo, um projeto por semana durante todo o ano, podendo ser de qualquer nível 👍.
+1. Faça um **fork** do projeto.
+2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
+3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
+4. Envie as suas alterações: `git push origin my-feature`
+> Caso tenha alguma dúvida acesse [a documentação do Github](https://docs.github.com/pt)
 
+---
+
+## ✍ Planos para o futuro 
+Criar um site aonde possa ser disponibilizado todos os projetos, tendo assim fácil acesso a suas funcionalidades 😃.
+
+---
+
+## 📝 Licença
+
+Este projeto esta sobe a licença [MIT](./LICENSE).
+
+Feito por Ramon Cibas 👋🏽 [Entre em contato!](https://www.linkedin.com/in/ramoncibas/)
+
+---
