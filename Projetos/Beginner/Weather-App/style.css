@@ -6,37 +6,48 @@
 
 body {
     font: 300 1rem 'Montserrat', sans-serif;
+    background-image: url(city.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;    
 }
 
 main {
-    background: #d48d0aa1;
-
     width: 100vw;
     height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: row;       
 }
 
 #container {
     position: relative;
-    width: 500px;
+    width: 400px;
     height: 500px;
 
     border-radius: 1rem;
 
-    background: #ffffff;
+    background: rgba(185, 185, 185, 0.548);
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    color: white;
+    text-shadow: 2px 2px 1px #000; 
+}
+
+#container .title {
+    position: absolute;
+    top: 2rem;
+    font-size: 22px;
 }
 
 #searchContainer {
     position: absolute;
-    top: 2rem;
+    top: 5rem;
 }
 
 #searchContainer input {
@@ -62,4 +73,28 @@ main {
     color: #fff;
 
     cursor: pointer;
+}
+
+#weatherContainer {
+    width: 100%;
+
+    display: flex;    
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#weatherMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;    
+}
+
+#weatherMain div{
+    margin: 0 10px;
+}
+
+.btn-details {
+    margin: 1rem 0;
 }
