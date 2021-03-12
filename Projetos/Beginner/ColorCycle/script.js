@@ -40,4 +40,4 @@ function run() {
 }
 
 // passando a funcao ao carregar a janela
-window.addEventListener("load", run)
+window.addEventListener("DOMContentLoaded", run)
