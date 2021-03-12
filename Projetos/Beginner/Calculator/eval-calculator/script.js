@@ -1,26 +1,33 @@
 // Adicionando o numero clicado ao input contendo seu respectivo valor
-function addValue(elementId) {     
+function addValue(elementId) {
+    let getNumber = document.getElementById("putValues")    
+
     // Tratando possiveis erros
     if (getNumber.value == "0" || getNumber.value == "Syntax error") { 
         getNumber.value = elementId
     } else {
         getNumber.value += elementId
-        console.log(elementId)       
+        console.log(elementId)                
+    }      
 }
 
 // Adicionando o operador clicado ao input contendo seu respectivo valor
-function addOperator(elementId) {    
+function addOperator(elementId) {
+    let getNumber = document.getElementById("putValues") 
+
     // Tratando possiveis erros
     if (getNumber.value == "0" || getNumber.value == "Syntax error") { 
         getNumber.value = "0"
     } else {
         getNumber.value += elementId        
-        console.log(elementId)
+        console.log(elementId)        
     }
 }
 
 // Incluindo valores decimais
-function setDecimal(elementId, status) {     
+function setDecimal(elementId, status) {  
+    let getNumber = document.getElementById("putValues") 
+
     getNumber.value += elementId.textContent
     //document.getElementById("dot").disable = status
     console.log(elementId.textContent)
@@ -28,11 +35,12 @@ function setDecimal(elementId, status) {
 
 // Removendo o ultimo valor digitado dentro do input
 function removeLastNumber() {     
+    let getNumber = document.getElementById("putValues") 
+
     if (getNumber.value.length == 1 || getNumber.value == "0") {
         getNumber.value = "0"
         document.getElementById("dot").disable = false
-    }else {
-        getNumber.value = getNumber.value.substring(0, getNumber.value.length - 1)
+    }else {        
         console.log("Last number deleted")
     }
 }
@@ -45,11 +53,13 @@ function clearAll() {
 
 // Calculando o resultado com os respectivos valores dentro do input
 function calculateResult() { 
+    let getNumber = document.getElementById("putValues") 
     try {
         if (getNumber.value != "") {
             let calculateResult = eval(getNumber.value);
             getNumber.value = calculateResult;
-            console.log(getNumber.value)                        
+            console.log(getNumber.value)            
+            
         }
     } catch (err) {    
         getNumber.value = "Syntax error";
@@ -68,9 +78,6 @@ function showHistoric() {
     for (e of elementsHistoric) {
         e.remove()
     }
-
-
-
 }
 
 // Função que fecha todo o historico e volta a calculadora
