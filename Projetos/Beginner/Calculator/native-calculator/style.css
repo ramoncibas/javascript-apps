@@ -154,10 +154,10 @@ button {
     border-radius: 0 0 1rem 1rem;
     background: #cecece;
 
-    margin-top: 79px;
+    
 
     width: 333px;
-    height: 510px;
+    height: 430px;
 
     overflow: auto;
 }
@@ -195,7 +195,6 @@ button {
 
 .clearButton {
     position: fixed;    
-    margin-top: -80px !important;
 
     width: 333px;
     border-radius: 0 0 1rem 1rem;

@@ -56,7 +56,7 @@ function calculateResult() {
                 let numbers = new String(expression.split("*"))
                 n1 = numbers.substring(0, numbers.indexOf(","))
                 n2 = numbers.substring(numbers.indexOf(",") + 1, numbers.length)
-                symbol = "X"
+                symbol = "*"
                 resultadoFinal = parseInt(n1) * parseInt(n2)
 
                 document.getElementById("putValues").value = resultadoFinal
@@ -79,7 +79,6 @@ function calculateResult() {
 
                 document.getElementById("putValues").value = resultadoFinal
             }
-
         }
 
         // Verificando sé o valor retornardo é valido
@@ -123,31 +122,30 @@ function showHistoric() {
         calc_buttons.classList.add("sectionUnder")
         show_historic.classList.add("historic")
 
-        // Limpando todos os calculos presente até o momento para que o proximo for possa mostrar todos os calculos sem repetições.
+        // Limpando todos os calculos presente até o momento, para que o proximo "for" não ocorra uma duplicação de calculos.
         for (e of elementsHistoric) {
             e.remove()
         }
 
         // Mostrando todos os calculos feitos que estao dento do objeto.
-        for(e of historicValues) {            
+        for(e of historicValues) {
+            let valor = `${e.firstValue} ${e.operator} ${e.secondValue}`
             // Criando elemento input
             let input = document.createElement("input")
             input.setAttribute(`class`, `inputRes`)
 
+
             // Atribuindo seu respectivo "value"
-            input.value = `${e.firstValue} ${e.operator} ${e.secondValue} = ${e.res}`
+            input.value = `${valor} = ${e.res}`
             
-            // Passando valore para calculadora ao clicar no resultado
-            input.addEventListener("click", () => {
-                let valor = `${e.firstValue}${e.operator}${e.firstValue}`
+            // Passando valore para calculadora ao clicar no resultado            
+            input.addEventListener("click", function()  {                
                 clearAll()
                 addValue(valor)
                 closeHistoric()
             })
             input_historic.appendChild(input)
         }
-
-        
     }
 }
 
