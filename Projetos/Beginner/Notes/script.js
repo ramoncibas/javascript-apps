@@ -1,6 +1,6 @@
 var typeOfNote;
 // abrindo o pop-up para adicionar a anotação
-const showPopUp = function () {
+const showPopUp = function() {
     let title_popup = document.getElementById("txtinput")
     let txt_popup = document.getElementById("txtarea")
     
@@ -17,7 +17,7 @@ const showPopUp = function () {
     
     // passando a funcao onde pega o tipo de anotacao para todos os botoes do popup
     for (e of btn_typeNote) {
-        e.addEventListener("click", function (event) {
+        e.addEventListener("click", function(event) {
             const button = event.currentTarget
             
             const buttons = document.querySelectorAll("#notes button")
@@ -59,7 +59,7 @@ const saveNote = function () {
 }
 
 // criando elemento dentro do campo notas
-const createNote = function ({ noteTitle, noteText, noteType, noteId }, noteStatus) {
+const createNote = function({ noteTitle, noteText, noteType, noteId }, noteStatus) {
     // criando elementos
     let content = document.getElementById("container")
     let div = document.createElement("div")
@@ -70,7 +70,7 @@ const createNote = function ({ noteTitle, noteText, noteType, noteId }, noteStat
     // atribuindo valores aos elementos
     div.id = "div" + randomId
     div.setAttribute("class", `note ${noteType}`)
-    div.addEventListener("click", function () {
+    div.addEventListener("click", function() {
         // passando o id correspondente da anotação                          
         if (noteId == "" || noteId == undefined) {
             let divId = this.id
@@ -181,7 +181,7 @@ function showPopOver(title, text, type, divId) {
 }
 
 // fehando popup/popover
-const closePopUp = function (e) {
+const closePopUp = function(e) {
     if (e == "popup") {
         document.getElementById("pop-up-bg").style.display = "none"
     } else if (e == "popover") {
@@ -195,7 +195,7 @@ window.addEventListener("DOMContentLoaded", () => {
         var noteStatus = true
         
         // pegando os itens do localstorage
-        const getItems = function () {
+        const getItems = function() {
             let notas = localStorage.getItem("notes") ? JSON.parse(localStorage.getItem("notes")) : [];
             const notes = {
                 noteTitle: "",
