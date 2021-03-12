@@ -5,17 +5,164 @@
 }
 
 body {
-    background: rgba(0, 0, 0, 0.120);
+    font: 300 1rem 'Montserrat', sans-serif;
 }
 
-header {
+main {
+    background: #2c2c2c;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    overflow-y: scroll;
+}
+
+#container {
+    width: 500px;
+    max-height: 1000px;
+
+    border-radius: 1rem;    
+
+    background: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    
+    transform: translateY(5%);      
+}
+
+#container h1:first-child {
     text-align: center;
     font: bold 18pt arial;
     letter-spacing: .5rem;
+    
     margin: 2rem;
 }
 
-footer {
+/* Container de Slides */
+#slide-section {
+    position: relative;
+
+    background: #8373c849;
+    border-radius: 1rem;
+
+    max-width: 400px;
+    max-height: 300px;
+    margin: auto;
+}
+
+#slide-container {
+    display: flex;
+    justify-content: center;
+}
+
+.slide-image {
+    margin-bottom: 1rem;
+}
+
+.slide-image img {
+    width: 100%;
+    height: 200px;
+    border-radius: 1rem 1rem 0 0;
+
+    object-fit: cover;
+
+    cursor: pointer;
+}
+
+.slide-image p {
+    text-align: center;
+    margin: 1rem 0;
+    font: bold 12pt arial;
+}
+
+/* Container ao clicar na imagem */
+#large-image-container {
+    margin-top: 2rem;
+
+    border-radius: 1rem;
+    width: 500px;
+    height: 250px;
+    background: #4724e249;
+
+    text-align: center;
+    border-radius: 0 0 .5rem .5rem;
+}
+
+#large-image img {
+    width: 500px;
+    height: 200px;
+
+    object-fit: cover;
+}
+
+#large-image h1 {
+    margin-top: .5rem;
+    font-size: 12pt;
+}
+
+#large-image a {
+    text-decoration: none;
+    color: rgba(130, 0, 0, 0.75);
+
+    transition: .3s linear;
+}
+
+#large-image a:hover {
+    color: rgba(130, 0, 0, 0.301);
+    transition: .3s linear;
+}
+
+#large-image p {
+    display: none;
+}
+
+/* Next e Prev Botoes */
+.prev,
+.next {
+    position: absolute;
+    top: 30%;
+
+    background: none;
+    outline: none;
+    border: none;
+
+    padding: 9px;
+
+    width: auto;
+
+    color: white;
+    /* font: bold 18pt arial; */
+    font-size: 18pt;
+    border-radius: 0 3px 3px 0;
+
+    transition: 0.6s ease;
+    user-select: none;
+
+    cursor: pointer;
+}
+
+.next {
+    right: 0;
+
+    border-radius: 3px 0 0 3px;
+}
+
+.next:hover,
+.prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+span {
     text-align: center;
     font: italic 9pt arial;
+
+    padding: 1rem 0;
 }
