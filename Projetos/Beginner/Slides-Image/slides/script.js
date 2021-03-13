@@ -11,10 +11,14 @@ function currentSlide(e) {
     showSlides(slideIndex = e)
 }
 
+// funcao mostrar slides
 function showSlides(e) {
-    let slides = document.getElementsByClassName('slide-image')
+    let slides = document.getElementsByClassName("slide-image")
     let namePlaces = document.getElementsByTagName("p")
-    let largeImg = document.getElementById('large-image')
+    let largeImg = document.getElementById("large-image")
+    let largeImgContainer = document.getElementById("large-image-container")
+
+    largeImgContainer.style.display = "none"
 
     if (e > slides.length)
         slideIndex = 1
@@ -24,7 +28,7 @@ function showSlides(e) {
     // esconder o ultimo slide
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none"
-        largeImg.innerHTML = ''
+        largeImg.innerHTML = ""
     }
 
     // mostra o slide respectivo
@@ -32,6 +36,7 @@ function showSlides(e) {
 
     // adicionando a imagem ao large-image (container)
     slides[slideIndex - 1].addEventListener("click", () => {
+        largeImgContainer.style.display = "block"
         let place = namePlaces[slideIndex - 1].innerText
         let images = slides[slideIndex - 1].innerHTML
 
