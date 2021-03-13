@@ -1,5 +1,5 @@
 body {
-    position: relative;    
+    position: relative;
 }
 
 /* Pop-up add anotações */
@@ -16,14 +16,13 @@ body {
     justify-content: center;
     align-items: center;
 
-    flex-direction: column;
-    display: none;
+    flex-direction: column;    
 }
 
 #pop-up-add {
     position: relative;
 
-    width: 400px;
+    width: 500px;
     height: 550px;
 
     border-radius: 1rem;
@@ -40,7 +39,7 @@ body {
 .btn-close,
 .btn-save {
     border: 0;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 .btn-close {
@@ -72,7 +71,7 @@ body {
     bottom: 0;
     left: 0;
 
-    width: 400px;
+    width: 100%;
     height: 50px;
 
     background: #0c9c0c;
@@ -175,9 +174,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    flex-direction: column;   
-    
-    display: none;
+    flex-direction: column;    
 }
 
 #content {
@@ -194,35 +191,77 @@ body {
     padding: 4rem 2rem;
 }
 
-#content-notes input {
-    border: 1px solid #c5c5c5;
-    
-    padding: 20px;
-    width: 100%;
-
-    font-size: 1.5rem;
-}
-
-#content-notes input::-webkit-input-placeholder {
-    font-size: 1.5rem;
-}
-
 #content-notes textarea {
+    border: 1px solid #c5c5c5;
+    resize: none;
+}
+
+#content-notes textarea.text {
     width: 100%;
     padding: 10px;
 
     font-size: 1rem;
-    
-    border: 1px solid #c5c5c5;
-    margin: 10px 0;
-
-    resize: none;
 }
 
-#buttons .btn-close {    
+#content-notes textarea.title {
+    border: 1px solid #c5c5c5;
+
+    padding: 20px;
+    width: 100%;
+
+    font-size: 1.5rem;    
+}
+
+/* Buttons popover */
+#buttons {
+    max-width: 600px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.btn-close {
     top: 1rem;
 }
-#buttons .btn-save {    
+
+.btn-popover-save,
+.btn-popover-delete {
     width: 100%;
+    height: 50px;
+
+    border: none;
+
+    color: #fff;
+    font-size: 12pt;
+    cursor: pointer;
+
+    transition: .3s ease-in;    
+}
+
+.btn-popover-save {
+    background: #0c9c0c;
+    border-radius: 0 .5rem .5rem 0;
     display: none;
+}
+
+.btn-popover-save:hover {
+    background: #118011;
+    transition: .3s ease-in;
+}
+
+.btn-popover-delete {
+    background: #c85656;
+    border-radius: .5rem 0 0 .5rem;  
+        
+}
+
+.btn-popover-delete:hover {
+    background: #eb2222e1;
+    transition: .3s ease-in;
+}
+
+.fullsize {
+    width: 100%;
+    border-radius: .5rem;
 }

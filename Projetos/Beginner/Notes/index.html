@@ -4,81 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notas
-
-    </title>
+    <title>Anotações</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="pop-up.css">    
+    <link rel="stylesheet" href="pop-up.css">
 </head>
 
 <body>
-    <section>
-        <h1>Notas</h1>
-        <div id="add-notes">
-            <button class="btn-add" onclick="addNote()"><i>+</i> Add</button>
-        </div>
+    <main id="notes-container">
+        <h1>Anotações</h1>
+        <button class="btn-add" onclick="showPopUp()"><i>+</i> Add</button>
 
         <div id="container"></div>
-       
-    </section>
 
-    
+        <span>&copy; ramon cibas</span>
+    </main>
+
+
+    <!-- Modal, so aparecera via JavaScript -->
     <div id="pop-up-bg">
         <div id="pop-up-add">
-            
+
             <div class="content">
-                <button class="btn-close" onclick="closePopUp()">X</button>
+                <button class="btn-close" onclick="closePopUp('popup')">X</button>
 
                 <div class="content-text">
-                    <h2>Adicione uma Nota</h2>
-                    <input type="text" name="txtpopup" id="txtpopup" placeholder="Titulo:">
+                    <h2>Adicione uma Anotação</h2>
+                    <input type="text" id="txtinput" placeholder="Titulo:">
 
-                    <textarea id="txtnote" cols="45" rows="5" placeholder="Deixe um lembrete..."></textarea>
+                    <textarea cols="45" rows="5" id="txtarea" placeholder="Deixe um lembrete..."></textarea>
                 </div>
 
                 <div id="notes">
-                    <p class="notes-type">Selecione o tipo de anotação:</p>                    
-                    
-                    <button class="danger" onclick="selectNote(event)">
+                    <p class="notes-type">Selecione o tipo de anotação:</p>
+
+                    <button class="danger">
                         <h4>Danger!</h4>
                         <p>Somente texto ...</p>
                     </button>
 
-                    <button class="success" onclick="selectNote(event)">
+                    <button class="success">
                         <h4>Success!</h4>
                         <p>Somente texto ...</p>
                     </button>
 
-                    <button class="warning" onclick="selectNote(event)">
+                    <button class="warning">
                         <h4>Warning!</h4>
-                        <p>Somente texto ...</p>                    
+                        <p>Somente texto ...</p>
                     </button>
 
-                    <button class="info" onclick="selectNote(event)">
+                    <button class="info">
                         <h4>Info!</h4>
                         <p>Somente texto ...</p>
                     </button>
-        
+
                 </div>
 
-                <button class="btn-save" onclick="saveNote()" >Salvar</button>
-            </div>            
+                <button class="btn-save">Salvar</button>
+            </div>
 
         </div>
     </div>
 
+    <!-- Modal, so aparecera via JavaScript -->
     <div id="popover-note">
-        <div id="content">        
+        <div id="content">
+            <button class="btn-close" onclick="closePopUp('popover')">X</button>
 
-            <div id="content-notes">                
-                <input type="text" id="txtpopover" placeholder="Titulo:" onchange="editNote(this.value)">
-                <textarea id="txtarea-popover" rows="20" onchange="editNote(this.value)"></textarea>
+            <div id="content-notes">
+                <textarea class="title" rows="1"></textarea>
+                <textarea class="text" rows="20"></textarea>
             </div>
 
             <div id="buttons">
-                <button class="btn-close" onclick="closePopUp()">X</button>
-            
-                <button class="btn-save" id="btnsave">Salvar</button>
+                <button class="btn-popover-delete fullsize" id="btndelete">Deletar</button>
+                <button class="btn-popover-save" id="btnsave">Editar</button>
+
             </div>
         </div>
     </div>
