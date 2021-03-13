@@ -15,11 +15,12 @@ function nextImage() {
     images[currentImageIndex].classList.add("selected")
 }
 
+// passando o intervalo de "refresh" de cada bannar/slide
 function start () {
     setInterval(() => {
         nextImage()
-    },time)    
+    },time) 
 }
 
 // inicia a funcao assim que a janela for carregada
-window.addEventListener("load", start)
+window.addEventListener("DOMContentLoaded", start)
