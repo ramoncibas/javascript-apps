@@ -11,25 +11,31 @@
 <body>
     <main>
         <div id="container">
-            <h1>Conversor</h1>
+            <h1>CONVERSOR</h1>
             <div class="res-convert">
                 <label>Selecione o tipo de converção:</label>
 
                 <select class="select-option" id="select1">
                     <option value="" selected disabled>Selecione</option>
-                    <option value="dec">Decimal</option>
-                    <option value="bin">Binario</option>
-                    <option value="hex">Hexadecimal</option>
+                    <option value="dec">Binario para Decimal</option>
+                    <option value="bin">Decimal para Binario</option>
+                    <option value="hex">Decimal para Hexadecimal</option>
                 </select>
 
-                <input type="text" maxlength="8" name="txtbin" id="txtbin" placeholder="11100101" />
+                <input type="text" maxlength="8" pattern="[0-9]{8}\.?" name="txtbin" id="txtbin" placeholder="11100101"
+                    onchange="maxNumber(this.value)" />
 
                 <button class="btn-convert">Converter</button>
             </div>
             <div id="res">
                 <h2></h2>
+                <div id="result">
+                    <input type="text" readonly>
+                    <span class="input-legend">Clique para copiar</span>
+                </div>
             </div>
 
+            <span>&copy; ramon cibas</span>
         </div>
     </main>
     <script src="script.js"></script>
