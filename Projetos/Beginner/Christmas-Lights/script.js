@@ -30,7 +30,7 @@ const off = function () {
 }
 
 // Alterando a velocidade das luzes
-function changeSpeed() {
+const changeSpeed = function() {
     var speed = document.getElementById('speed').value
 
     // Altera a velocidade da animação das luzes.
@@ -40,7 +40,7 @@ function changeSpeed() {
 }
 
 // Função Adicionar luzes
-function changeQuantity() {
+const changeQuantity = function() {
     let quantity = document.getElementById('quantity').value
     let lights = document.querySelector('#lights')
 
@@ -48,7 +48,9 @@ function changeQuantity() {
     //let random = color[Math.floor(Math.random() * color.length)];
     let next = makeCircular(color)
 
-    if (circle.length > 7 || quantity > 7) {
+    let lightsLength = (Number(circle.length) + Number(quantity))
+
+    if (circle.length > 8 || quantity > 7 || lightsLength > 8) {
         alert('Valor digitado fora do limite!')
 
     } else if (quantity == 0) {
@@ -56,7 +58,7 @@ function changeQuantity() {
 
     } else {
         // Adicionando um elemento.
-        for (i = 0; i < quantity; i++) {
+        for (i = 0; i < quantity; i++) {            
             let div = document.createElement("div")
             div.setAttribute('class', `circle ${next()}`)
             console.log(div)
@@ -76,7 +78,7 @@ function changeQuantity() {
 }
 
 // Função Remover Luzes
-function removeLight() {
+const removeLight = function() {
     let quantity = document.getElementById('quantity').value
 
     if (circle.lenght > 7 || quantity > 7) {

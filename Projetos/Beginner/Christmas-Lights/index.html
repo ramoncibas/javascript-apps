@@ -9,19 +9,17 @@
 </head>
 
 <body>
-    <header>
-        <div id="lights">
-            <div class="circle red"></div>
-        </div>
+    <header id="lights">
+        <div class="circle red"></div>        
     </header>
 
-    <section>
-        <div id="main">
+    <main>
+        <div id="container">
             <div class="title">
                 <h1 id="christmas" class="lightsOn">Luzes de Natal</h1>
             </div>
 
-            <div class="form">
+            <div id="content">
                 <button id="play">On</button>
                 <button id="stop">Off</button>
 
@@ -38,9 +36,10 @@
                     <input type="submit" class="btnsubmit" id="btnremove" value="Remover" onclick="removeLight()">
                 </div>
             </div>
+            <span>&copy; ramon cibas</span>
 
         </div>
-    </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
