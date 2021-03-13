@@ -46,6 +46,7 @@ function calculateTime(dates) {
     }, 1000)
 }
 
+// passando a funcao ao carregar o conteudo do "DOM"
 window.addEventListener("DOMContentLoaded", () => {
     calculateTime()
 })
