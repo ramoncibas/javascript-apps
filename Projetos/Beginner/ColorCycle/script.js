@@ -1,15 +1,16 @@
+// função que recebe valores aleatorios de cores RGB e aplica nos respectivos elementos
 function colorCycle() {
     let body = document.getElementsByTagName("body")[0]
     let btn = document.querySelector("#btncolor input")    
     let rgb = document.querySelector("#res input")
-    let section = document.querySelector("section")
-    let h1 = document.querySelector("section h1")
+    let section = document.querySelector("main")
+    let h1 = document.querySelector("main h1")
 
-    let backGround = randomRGB()
+    let randomRGBColor = randomRGB()
 
     // mudando cores de fundo
-    btn.style.background = backGround    
-    body.style.background = backGround
+    btn.style.background = randomRGBColor
+    body.style.background = randomRGBColor
 
     h1.style.color = randomRGB()
     section.style.border = `thick outset ${randomRGB()}`
@@ -18,10 +19,10 @@ function colorCycle() {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
   
-        navigator.clipboard.writeText(backGround);
+        navigator.clipboard.writeText(randomRGBColor);
     })
 
-    rgb.value = backGround
+    rgb.value = randomRGBColor
 
     console.log(randomRGB())
 }
@@ -38,4 +39,5 @@ function run() {
     },2000)
 }
 
-window.addEventListener("load", run)
+// passando a funcao ao carregar a janela
+window.addEventListener("DOMContentLoaded", run)
