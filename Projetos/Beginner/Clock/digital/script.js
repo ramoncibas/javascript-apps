@@ -1,4 +1,5 @@
-function digitalClock(params) {
+// funcao que passa os valores de segundos, minutos e horas para o html
+const digitalClock = function() {
     var hora = new Date().toLocaleTimeString('pt-br')
     document.getElementById("container").innerHTML = hora
     
@@ -8,4 +9,5 @@ function digitalClock(params) {
     }, 1000)
 }    
 
+// passando a funcao ao carregar o conteudo do DOM
 window.addEventListener("DOMContentLoaded", digitalClock)
