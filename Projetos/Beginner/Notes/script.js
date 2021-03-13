@@ -110,8 +110,7 @@ const createNote = function({ noteTitle, noteText, noteType, noteId }, noteStatu
 function showPopOver(title, text, type, divId) {
     document.getElementById("popover-note").style.display = "flex"
     let popoverTitle = document.querySelector(".title")
-    let popoverText = document.querySelector(".text")
-    let txtarea = document.querySelectorAll("#content-notes textarea")
+    let popoverText = document.querySelector(".text")    
     const btn_delete = document.getElementById("btndelete")
     let popoverValues = {
         popTitle: '',
@@ -139,10 +138,10 @@ function showPopOver(title, text, type, divId) {
         const btn_save = document.getElementById("btnsave")
         
         // passando funcionalidades aos botoes do popover
-        if (title == popTitle || text == popText) {            
+        if (title == popTitle || text == popText) {       
             btn_delete.classList.add("fullsize")
             btn_save.style.display = "none"
-        } else {                                    
+        } else {                           
             btn_delete.classList.remove("fullsize")
             btn_save.style.display = "inline-block"
             
@@ -153,7 +152,7 @@ function showPopOver(title, text, type, divId) {
         function saveEditedNote() {
             let notesEdit = JSON.parse(localStorage.getItem("notes")).filter(item => item.noteId !== divId)
             
-            notesEdit.push({
+            notesEdit.push({                
                 noteTitle: popTitle,
                 noteText: popText,
                 noteType: type,
@@ -190,6 +189,9 @@ const closePopUp = function(e) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
+    document.querySelector("#pop-up-bg").style.display = "none"
+    document.querySelector("#popover-note").style.display = "none"
+
     // verificando se tem alguma coisa no localStorage para ser renderizado
     if (localStorage.length >= 1) {
         var noteStatus = true

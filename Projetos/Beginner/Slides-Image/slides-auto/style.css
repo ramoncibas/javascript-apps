@@ -19,11 +19,11 @@ body {
 }
 
 header {
-    margin: 2rem 0;
+    margin-bottom: 2rem;
 }
 
 header hr {
-    border-color: #33333338;    
+    border-color: #33333338;
 }
 
 #slider {

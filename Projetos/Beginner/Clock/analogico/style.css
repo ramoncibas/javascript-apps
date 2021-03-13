@@ -5,12 +5,12 @@
 }
 
 body {
-    font: 300 1rem 'Montserrat', sans-serif;
+    font: 300 1rem 'Orbitron', sans-serif;
 
     width: 100vw;
     height: 100vh;
 
-    background: #d48d0aa1;
+    background: #0e1012;
 
     display: flex;
     justify-content: center;
@@ -18,12 +18,16 @@ body {
     flex-direction: row;
 }
 
-section {
-    width: 450px;
-    height: 450px;
+main {
+    width: 500px;
+    height: 500px;
 
     border-radius: 1rem;
-    background: #ffffff;
+    
+    background: #15181b;
+    box-shadow: 1px 1px 1px #242836;
+
+    color: #fff;
 
     display: flex;
     justify-content: center;
@@ -31,28 +35,38 @@ section {
     flex-direction: column;
 }
 
-section h1 {
+main h1 {
     margin-bottom: 2rem;
     text-transform: uppercase;
 }
 
+main span {
+    margin-top: 1.5rem;
+
+    font: italic 10pt arial;
+    color: #666666;
+}
+
 .clock {
     position: relative;
+    
+    background: #101113;
+    height: 250px;
+    width: 250px;
+
+    border-radius: 50%;
+    box-shadow: -3px -3px 7px #242836,
+        3px 3px 5px #242836;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #8fd8ee;
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    box-shadow: -3px -3px 7px #8fd8ee,
-        3px 3px 5px #8fd8ee;
 }
 
 .clock .porca-central {
     height: 9px;
     width: 9px;
-    background: #d1e26e;
+    background: #242836;
     border-radius: 50%;
     z-index: 15;
     position: absolute;
@@ -62,7 +76,7 @@ section h1 {
     position: absolute;
     width: 2px;
     height: 5px;
-    background: #404040;
+    background: #ffffff;
 }
 
 .pointers div:nth-child(1) {
@@ -153,7 +167,7 @@ section h1 {
     content: '';
     height: 110px;
     width: 3px;
-    background: #000;
+    background: #f3f5f7;
 }
 
 .seconds:after {
@@ -161,7 +175,7 @@ section h1 {
     content: '';
     height: 35px;
     width: 7px;
-    background: #000;
+    background: #f3f5f7;
     top: 105px;
     border-radius: 5px;
 }
@@ -173,7 +187,7 @@ section h1 {
     top: -15px;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
-    border-bottom: 60px solid #ff1900;
+    border-bottom: 60px solid #e2e2e2;
 }
 
 .minutes:after {
@@ -183,7 +197,7 @@ section h1 {
     top: 40px;
     border-left: 2px solid transparent;
     border-right: 2px solid transparent;
-    border-top: 30px solid #ff1900;
+    border-top: 30px solid #e2e2e2;
 }
 
 .hour:before {
@@ -192,7 +206,7 @@ section h1 {
     width: 1px;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
-    border-bottom: 35px solid #2600ff;
+    border-bottom: 35px solid #8d78d3;
 }
 
 .hour:after {
@@ -202,7 +216,7 @@ section h1 {
     top: 34px;
     border-left: 2px solid transparent;
     border-right: 2px solid transparent;
-    border-top: 25px solid #2600ff;
+    border-top: 25px solid #8d78d3;
 }
 
 .digital-hour {

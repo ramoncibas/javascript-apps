@@ -21,12 +21,16 @@ function maxNumber(e) {
 select1.addEventListener("change", (e) => {
     let txtbin = document.querySelector("input#txtbin")
     let res = document.querySelector("#res h2")
+    let inputValue = document.querySelector("#res input")
+
+    inputValue.value = ""
+    inputValue.style.display = "none"
 
     if (e.target.value == "dec") {
         btn_convert.addEventListener("click", bin2Dec)
 
         optValue = "Decimal"
-        console.log('decimal')
+        console.log("decimal")
         txtbin.value = ""
         res.textContent = ""
 
@@ -34,7 +38,7 @@ select1.addEventListener("change", (e) => {
         btn_convert.addEventListener("click", convertBin)
 
         optValue = "Binario"
-        console.log('binario')
+        console.log("binario")
         txtbin.value = ""
         res.textContent = ""
 
@@ -45,16 +49,17 @@ select1.addEventListener("change", (e) => {
         txtbin.value = ""
         res.textContent = ""
 
-        console.log('Hexadecimal convert')
-
+        console.log("Hexadecimal convert")
     }
 })
 
 // convertendo valores de binario para decimal
 function bin2Dec() {
-    let txtbin = document.querySelector("input#txtbin")
+    let txtbin = document.querySelector("#txtbin")
 
     let res = document.querySelector("#res h2")
+    let inputValue = document.querySelector("#res input")
+    inputValue.style.display = "flex"
 
     let binario = txtbin.value.split("").reverse()
     let decimal = 0
@@ -64,27 +69,49 @@ function bin2Dec() {
             decimal += Math.pow(2, c)
         }
     }
-    res.textContent = `${optValue}: ${decimal}`
+
+    res.textContent = optValue + ":"
+    inputValue.value = decimal
+    inputValue.addEventListener("click", () => {
+        clickToCopy(decimal)
+    })
 }
 
 // convertendo valores de decimal para binario
 function convertBin() {
     let txtbin = document.querySelector("input#txtbin")
     let res = document.querySelector("#res h2")
+    let inputValue = document.querySelector("#res input")
+    inputValue.style.display = "flex"
 
     let dec = Number(txtbin.value)
     let binary = dec.toString(2)
 
-    res.textContent = `${optValue}: ${binary}`
+    res.textContent = optValue + ":"
+    inputValue.value = binary
+    inputValue.addEventListener("click", () => {
+        clickToCopy(binary)
+    })
 }
 
 // convertendo valores de decimal para hexadecimal
 function convertHex() {
     let txtbin = document.querySelector("input#txtbin")
     let res = document.querySelector("#res h2")
+    let inputValue = document.querySelector("#res input")
+    inputValue.style.display = "flex"
 
     let dec = Number(txtbin.value)
     let hexadecimal = dec.toString(16)
 
-    res.textContent = `${optValue}: ${hexadecimal}`
+    res.textContent = optValue + ":"
+    inputValue.value = hexadecimal
+    inputValue.addEventListener("click", () => {
+        clickToCopy(hexadecimal)
+    })
+}
+
+// função que possibilita o usuario copiar o valor do input somente clicando nele
+function clickToCopy(e) {
+    navigator.clipboard.writeText(e);
 }

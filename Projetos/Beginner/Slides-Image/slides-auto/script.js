@@ -19,8 +19,8 @@ function nextImage() {
 function start () {
     setInterval(() => {
         nextImage()
-    },time)    
+    },time) 
 }
 
 // inicia a funcao assim que a janela for carregada
-window.addEventListener("load", start)
+window.addEventListener("DOMContentLoaded", start)

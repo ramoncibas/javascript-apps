@@ -1,10 +1,10 @@
 // trasfroma o valor digitado em centavos de dolar
 function toCents() {
-    let inputValues = document.querySelector('input#txtvalue').value
-    let res = document.querySelector('div#res')
+    let inputValues = document.querySelector("#txtvalue").value
+    let res = document.querySelector("#res")
 
-    if (inputValues == '') {
-        alert('Digite um valor a ser convertido em ¢!')
+    if (inputValues == "") {
+        alert("Digite um valor a ser convertido em ¢!")
 
     } else {
         function coins(number) {
@@ -40,11 +40,11 @@ function toCents() {
 
 // divide o valor que o usuario informar e retorna o respectivo valor jutamente com sua cedula
 function toDolar() {
-    let inputValues = document.querySelector('input#txtvalue').value
-    let res = document.querySelector('div#res')
+    let inputValues = document.querySelector("#txtvalue").value
+    let res = document.querySelector("#res")
 
-    if (inputValues == '') {
-        alert('Digite um valor a ser convertido em U$!')
+    if (inputValues == "") {
+        alert("Digite um valor a ser convertido em U$!")
     } else {
         function dolls(number) {
             let washington, tJefferson, lincoln, hamilton, jackson, grant, bFranklin;

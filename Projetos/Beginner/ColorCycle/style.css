@@ -20,7 +20,7 @@ body {
     transition: 600ms;
 }
 
-section {
+main {
     position: relative;
 
     width: 500px;
@@ -33,6 +33,15 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+main .copy {
+    position: absolute;
+    bottom: 0;
+
+    padding: 1rem 0;
+    
+    font: italic 10pt arial;
 }
 
 h1 {
@@ -70,5 +79,5 @@ h1 {
 }
 
 #btncolor span {
-    font: normal 10pt arial;
+    font: italic 10pt arial;
 }

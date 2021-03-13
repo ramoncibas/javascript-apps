@@ -6,9 +6,7 @@
 
 body {
     font: 300 1rem 'Montserrat', sans-serif;
-}
 
-main {
     background: #2c2c2c;
 
     width: 100vw;
@@ -20,29 +18,32 @@ main {
     flex-direction: row;
 
     overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+main {
+    transform: translateY(5%);
 }
 
 #container {
     width: 500px;
     max-height: 1000px;
 
-    border-radius: 1rem;    
+    border-radius: 1rem;
 
     background: #ffffff;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
-    
-    transform: translateY(5%);      
+    flex-direction: column;
+
 }
 
 #container h1:first-child {
     text-align: center;
     font: bold 18pt arial;
     letter-spacing: .5rem;
-    
     margin: 2rem;
 }
 

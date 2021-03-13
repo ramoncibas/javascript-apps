@@ -45,6 +45,15 @@ main {
     font-size: 22px;
 }
 
+#container span {
+    position: absolute;
+    bottom: 1rem;
+
+    font: italic 10pt arial;
+    color: #f3f5f7;
+    text-shadow: none;     
+}
+
 #searchContainer {
     position: absolute;
     top: 5rem;

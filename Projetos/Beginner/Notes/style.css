@@ -47,6 +47,14 @@ main h1 {
     color: #f50b0bda;
 }
 
+main span {
+    position: absolute;
+    bottom: 1rem;
+
+    font: italic 10pt arial;
+    color: #666666;
+}
+
 /* Notas da home */
 #container {
     width: 680px;

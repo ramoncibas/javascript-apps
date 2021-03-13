@@ -31,6 +31,17 @@ body {
     margin-bottom: 2rem;
 }
 
+#container span {
+    margin-top: 1rem;
+
+    font: italic 10pt arial;
+    color: #666666;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #content {
     display: flex;
     align-items: center;
