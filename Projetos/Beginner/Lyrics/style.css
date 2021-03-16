@@ -35,11 +35,61 @@ main {
     flex-direction: column;
 }
 
+#container h1 {
+    margin-bottom: 1rem;
+    
+    font-size: 20pt;
+    text-align: center;
+}
+
+.form_group {
+    display: flex; 
+    justify-content: center;
+    align-items: center;    
+}
+
+.form-column input {
+    padding: 10px;
+    margin: 5px;
+}
+
+.btnFindLyrics {
+    width: 185px;
+
+    margin: .5rem 5px 0;
+    padding: 10px;
+
+    float: right;
+
+    border: none;
+    border-radius: .2rem;
+    
+    background: #01a701;
+    
+    color: white;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s ease-in;
+}
+
+.btnFindLyrics:hover {
+    background: #006900b9;
+    transition: .3s ease-in;
+
+}
+
+.loading {
+    margin-left: 1.7rem;
+    font-size: 1rem;
+}
+
 .lyrics-container pre {
-    margin-top: 2rem;
+    margin-top: 10px;
 
     width: 300px;
-    max-height: 300px;
+    max-height: 200px;
 
     overflow-y: scroll;
 }
