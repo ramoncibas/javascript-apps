@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 300 1rem 'Montserrat', sans-serif;
+}
+
+main {
+    background: #424242;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#container {
+    width: 500px;
+    height: 500px;
+
+    border-radius: 1rem;
+
+    background: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.lyrics-container pre {
+    margin-top: 2rem;
+
+    width: 300px;
+    max-height: 300px;
+
+    overflow-y: scroll;
+}

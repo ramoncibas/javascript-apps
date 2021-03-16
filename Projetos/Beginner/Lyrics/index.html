@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letra de Musica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>        
+        <div id="container">
+            <form id="frm_lyrics">
+                <div class="form-row">
+                    <div class="from_group">
+                        <label for="artist">Artista</label>
+                        <input type="text" class="form-input" id="artist" placeholder="Artista">
+                    </div>
+                    <div class="form_group">
+                        <label for="song">Musica</label>
+                        <input type="text" class="form-input" id="song" placeholder="Musica">
+                    </div>
+                </div>
+                <button type="submit" class="btnFindLyrics">Buscar Música</button>
+            </form>
+
+            <div class="lyrics-container">
+                <pre id="lyrics"></pre>          
+            </div>
+        </div>
+
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
