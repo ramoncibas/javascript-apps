@@ -21,6 +21,8 @@ main {
 }
 
 #container {
+    position: relative;
+
     width: 500px;
     height: 500px;
 
@@ -31,4 +33,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#container span {
+    position: absolute;
+    bottom: 1rem;
 }
