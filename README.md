@@ -42,6 +42,7 @@ Aplicações desenvolvidas com Java Script, buscando melhorar minhas habilidades
 | [Input-Validations](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Input-validation) | Validando campos de formulário com Regex | Iniciante |
 | [Notes](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Notes) | Fazer anotações informativas | Iniciante |
 | [Weather-App](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Weather-App) | Verifica o clima de cidades ao redor do mundo | Iniciante |
+| [Lyrics](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Lyrics) | Procure por letras de musicas | Iniciante |
 
 ---
 
