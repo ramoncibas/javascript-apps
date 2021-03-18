@@ -12,10 +12,8 @@ body {
 
     background: #d48d0aa1;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    display: grid;
+    place-items: center;
 
     transition: 600ms;
 }

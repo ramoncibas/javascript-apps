@@ -14,10 +14,8 @@ main {
     width: 100vw;
     height: 100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    display: grid;
+    place-items: center;
 }
 
 #container {
@@ -40,26 +38,42 @@ main {
     
     font-size: 20pt;
     text-align: center;
+
+    letter-spacing: 2px;
 }
 
-.form_group {
+#frm_lyrics {
+    width: 400px;
+
     display: flex; 
     justify-content: center;
-    align-items: center;    
+    align-items: center;   
+    flex-direction: column; 
+}
+
+.form-column {
+    display: flex; 
+    justify-content: center;
+    align-items: center;   
+    flex-direction: column; 
 }
 
 .form-column input {
+    width: 250px;
+
     padding: 10px;
-    margin: 5px;
+    margin: 5px 0;
+}
+
+.from_group #artist {
+    margin-left: 5px !important;
 }
 
 .btnFindLyrics {
-    width: 185px;
+    width: 306px;
 
-    margin: .5rem 5px 0;
-    padding: 10px;
-
-    float: right;
+    margin-top: .5rem;
+    padding: 10px;    
 
     border: none;
     border-radius: .2rem;
