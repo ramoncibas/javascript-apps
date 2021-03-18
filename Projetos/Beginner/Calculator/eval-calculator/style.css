@@ -14,10 +14,8 @@ main {
 
     background: #333;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    display: grid;
+    place-items: center;
 }
 
 #calculator {
