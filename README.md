@@ -1,11 +1,11 @@
-# Java Script Apps <img src="./assets/js.png" height="25" width="25" align="center">
+# Java Script Apps <img src="js.png" height="25" width="25" align="center">
 
 ![author](https://img.shields.io/badge/author-Ramon_Cibas-important)
 ![license](https://img.shields.io/badge/license-MIT-blue)
 ![language](https://img.shields.io/badge/language-JS-yellow)
 ![contribuitors](https://img.shields.io/badge/contribuirtors-1-9cf)
 
-![banner](./assets/banner.png)
+![banner](banner.png)
 
 <h4 align="center"> 
 	🚧 Em construção... 🚀 🚧
@@ -14,7 +14,7 @@
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#-projetos">Projetos</a> •   
- <a href="#-como-contribuir-para-o-projeto">Contribuição</a> •  
+ <a href="#-como-contribuir-para-o-projeto">Contribuição</a> •
  <a href="#-planos-para-o-futuro">Planos futuros</a> •  
  <a href="#-licença">Licença</a> 
 </p>
