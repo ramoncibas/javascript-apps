@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer</title>
-    <link rel="stylesheet" href="style.css">        
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
 </head>
+
 <body>
     <main>
-        <div id="container">            
+        <div class="bg-modal">            
+        </div>
+
+        <div id="container">
             <div class="time-session">
-                <h1>Sessão</h1>
-                <h1 class="time">25:00</h1>
+                <h2>Sessão</h2>
+
+
+                <div class="session">
+                    <h1 class="minutes">25</h1>
+                    <h1 class="dots">:</h1>
+                    <h1 class="seconds">00</h1>
+                </div>
+                
 
                 <div class="buttons-pomodoro">
-                    <button class="play"><i class="fas fa-play-circle"></i>  Play</button>
+                    <button id="play" class="btn-pomodoro"><i class="fas fa-play-circle"></i><p>Play</p></button>
 
-                    <button class="reset"><i class="fas fa-undo-alt"></i> Reset</button>
+                    <button id="reset" class="btn-pomodoro"><i class="fas fa-undo-alt"></i><p>Reset</p></button>
                 </div>
             </div>
 
             <div class="session-config">
                 <div class="session-length">
                     <h3>Tempo da Sessão</h3>
-                    <button class="up"><i class="fas fa-arrow-up"></i></button>
-                    <input type="text" readonly value="25 min">
+                    <button class="up btn"><i class="fas fa-arrow-up"></i></button>
+                    <input type="text" id="inputSession" readonly value="25 min">
                     <button class="down"><i class="fas fa-arrow-down"></i></button>
                 </div>
                 <hr>
                 <div class="session-break_length">
-                    <h3>Tempo de Descanço</h3>            
+                    <h3>Tempo de Descanço</h3>
                     <button class="up"><i class="fas fa-arrow-up"></i></button>
-                    <input type="text" readonly value="5 min">
+                    <input type="text" id="inputBreakSession" readonly value="5 min">
                     <button class="down"><i class="fas fa-arrow-down"></i></button>
                 </div>
             </div>
@@ -41,4 +54,5 @@
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/bd15a40e05.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

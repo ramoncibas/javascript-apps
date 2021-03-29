@@ -6,6 +6,7 @@
 
 body {
     font: 300 1rem 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 
 main {
@@ -42,24 +43,36 @@ main {
 
     border-radius: 2rem 2rem 0 0;
 
-    background: linear-gradient(to right, rgb(189, 99, 113) ,rgb(235, 20, 76));
+    background: linear-gradient(to right, rgb(189, 99, 113), rgb(235, 20, 76));
 
     display: grid;
     place-items: center;
 
 }
 
-h1 {
+.time-session h2, h1 {
     color: #fff;
 }
 
-h1:first-child {
+.time-session h2 {
     margin-top: 2rem;
+}
+
+.session {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+    font-size: 3rem;
+}
+
+.session .dots {
+    padding-bottom: 10px;
 }
 
 .time {
     font-size: 7rem;
-    font-weight: normal;       
+    font-weight: normal;
 }
 
 .session-config {
@@ -68,7 +81,7 @@ h1:first-child {
 
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
 
     width: 400px;
     height: 200px;
@@ -76,23 +89,25 @@ h1:first-child {
 
 .session-config input {
     width: 100px;
-    
+
     border: none;
 
     text-align: center;
     margin-top: 1rem;
+
+    outline: none;
 }
 
 .session-length {
     text-align: center;
 }
 
-hr {    
-    position: absolute;    
-    left: 30%;    
+hr {
+    position: absolute;
+    left: 30%;
 
-    width: 150px;    
-    
+    width: 150px;
+
     transform: rotate(90deg);
     border: 1px solid #cecece;
 }
@@ -117,16 +132,15 @@ button {
     font-size: 1.1rem;
 }
 
-.play,
-.reset {
+.btn-pomodoro {
     width: 100px;
     height: 40px;
 
     border: none;
     border-radius: 5px;
     background: #fff;
-        
-    color: #000;    
+
+    color: #000;
 
     cursor: pointer;
 
@@ -147,18 +161,17 @@ button {
     border: none;
     border-radius: 50%;
 
-    background: linear-gradient(to right,  rgb(206, 111, 127), rgb(235, 20, 76));
+    background: linear-gradient(to right, rgb(206, 111, 127), rgb(235, 20, 76));
 
-    color: #fff;    
+    color: #fff;
 
     cursor: pointer;
-    
+
     transition: linear .3s;
 }
 
 /* Buttons Hover */
-.play:hover,
-.reset:hover {
+.btn-pomodoro:hover {
     background: #3a283f;
     color: #fff;
 
@@ -167,8 +180,8 @@ button {
 
 .up:hover,
 .down:hover {
-    background: linear-gradient(to right,rgb(235, 20, 76), rgb(206, 111, 127));
-     
+    background: linear-gradient(to right, rgb(235, 20, 76), rgb(206, 111, 127));
+
     transition: linear .3s;
     color: #cecece;
 }
