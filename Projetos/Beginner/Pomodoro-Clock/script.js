@@ -12,10 +12,6 @@ let initial, totalseconds, paused, mins, seconds;
 var focusTime = 25;
 var breakTime = 5;
 
-const stopPomodoro = () => {
-    clearInterval(updatePomodoro);
-}
-
 btnStartAndStop.addEventListener("click", () => {
     let btnText = document.querySelector(".buttons-pomodoro #play p");
     let icon = document.querySelector(".buttons-pomodoro #play i");
@@ -26,7 +22,6 @@ btnStartAndStop.addEventListener("click", () => {
         btnText.textContent = "Stop";
 
         startPomodoro();
-        console.log("Start pomodoro")
 
     } else {
         // Mudando o texto e a classe do botão para "Play"
@@ -34,7 +29,6 @@ btnStartAndStop.addEventListener("click", () => {
         btnText.textContent = "Play";
 
         stopPomodoro();
-        console.log("Stop pomodoro")
     }
 
     // Funções que inicia o pomodoro
@@ -72,7 +66,7 @@ btnStartAndStop.addEventListener("click", () => {
 btnReset.addEventListener("click", () => {
     clearTimeout(initial);    
 
-    minutesDiv.textContent = focusTime;
+    minutesDiv.textContent = localStorage.getItem("focusTime");
     secondDiv.textContent = "00";
 
     document.querySelector(".buttons-pomodoro #play i").classList.replace("fa-pause-circle","fa-play-circle");
@@ -92,8 +86,7 @@ function decremenT() {
         initial = window.setTimeout("decremenT()", 1000);
 
         if (seconds < 4) {
-            let audio =  new Audio("session-ended.mp3");
-            audio.play();
+            new Audio("session-ended.mp3").play();
         }
     } else {
         mins = 0;
@@ -138,6 +131,8 @@ document.querySelector(".session-length button.down").addEventListener("click", 
 document.querySelector(".session-break_length button.up").addEventListener("click", () => {
     breakTime += 1;
     document.querySelector(".session-break_length input").value = breakTime + " min";
+    document.querySelector(".break-minutes").textContent = breakTime
+
     localStorage.setItem("breakTime", breakTime);
 });
 
@@ -149,9 +144,20 @@ document.querySelector(".session-break_length button.down").addEventListener("cl
         breakTime = 2;
     } else {
         document.querySelector(".session-break_length input").value = breakTime + " min";
+        document.querySelector(".break-minutes").textContent = breakTime
+
         localStorage.setItem("breakTime", breakTime);
     }
 });
+
+// Sobre os ciclos no pomodoro
+document.querySelector("#btn-about-cicle").addEventListener("mouseenter", () => {
+    document.querySelector(".about-cicle").style.display = "flex"        
+})
+
+document.querySelector("#btn-about-cicle").addEventListener("mouseout", () => {
+    document.querySelector(".about-cicle").style.display = "none"
+})
 
 // Mostrar um modal quando o usuario acessar a pagina pela primeira vez.
 const showModal = function () {
