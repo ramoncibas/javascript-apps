@@ -7,9 +7,7 @@
 body {
     font: 300 1rem 'Montserrat', sans-serif;
     background: #0e1012;
-}
 
-main {
     width: 100vw;
     height: 100vh;
 
@@ -37,26 +35,20 @@ main {
     flex-direction: column;
 }
 
-#container h1 {
-    color: #ff3f5f7f;
-
+.container-header {
     position: absolute;
     top: 2rem;
 
-    font-size: 2rem;
-
-    text-align: center; 
+    text-align: center;
 }
 
-#container h1::after {
-    content: '';
-    display: block;
+.container-header h1 {
+    color: #ff3f5f7f;
+    font-size: 2rem;    
+}
 
-    width: 350px;
-    height: 1px;
-    
-    margin-top: 10px;
-    background: #ff3f5f7f;
+.container-header span {
+    color: #e69a9a;
 }
 
 #container p {
@@ -106,7 +98,7 @@ button:hover {
     transition: .3s ease-out;
 }
 
-span {
+span.copy {
     position: absolute;
     bottom: 1rem;
 

@@ -6,14 +6,23 @@
 
 body {
     font: 300 1rem 'Montserrat', sans-serif;
+<<<<<<< Updated upstream
 }
 
 main {
     background: #424242;
+=======
+
+    background: #19151a;
+>>>>>>> Stashed changes
 
     width: 100vw;
     height: 100vh;
 
+<<<<<<< Updated upstream
+=======
+    
+>>>>>>> Stashed changes
     display: grid;
     place-items: center;
 }
@@ -33,15 +42,20 @@ main {
     flex-direction: column;
 }
 
+<<<<<<< Updated upstream
 #container h1 {
     margin-bottom: 1rem;
     
+=======
+#container h1 {        
+>>>>>>> Stashed changes
     font-size: 20pt;
     text-align: center;
 
     letter-spacing: 2px;
 }
 
+<<<<<<< Updated upstream
 #frm_lyrics {
     width: 400px;
 
@@ -52,25 +66,44 @@ main {
 }
 
 .form-column {
+=======
+#container span {
+    margin-bottom: 1rem;
+}
+
+#frm_lyrics {
+    width: 250px;
+
+>>>>>>> Stashed changes
     display: flex; 
     justify-content: center;
     align-items: center;   
     flex-direction: column; 
 }
 
+<<<<<<< Updated upstream
 .form-column input {
     width: 250px;
+=======
+.from_group .form-input {
+    width: 100%;
+>>>>>>> Stashed changes
 
     padding: 10px;
     margin: 5px 0;
 }
 
+<<<<<<< Updated upstream
 .from_group #artist {
     margin-left: 5px !important;
 }
 
 .btnFindLyrics {
     width: 306px;
+=======
+.btnFindLyrics {
+    width: 100%;
+>>>>>>> Stashed changes
 
     margin-top: .5rem;
     padding: 10px;    
@@ -99,10 +132,17 @@ main {
     font-size: 1rem;
 }
 
+<<<<<<< Updated upstream
 .lyrics-container pre {
     margin-top: 10px;
 
     width: 300px;
+=======
+.lyrics-container #lyrics {
+    margin-top: 10px;
+
+    width: 250px;
+>>>>>>> Stashed changes
     max-height: 200px;
 
     overflow-y: scroll;

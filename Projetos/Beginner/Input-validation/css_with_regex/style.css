@@ -20,9 +20,15 @@ input:invalid:not(:placeholder-shown)+[data-validation-value] {
 body {
     font: 300 1rem 'Montserrat', sans-serif;
     background: #0e1012;
-}
 
+<<<<<<< Updated upstream
 main {
+<<<<<<< Updated upstream
+=======
+
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     width: 100vw;
     height: 100vh;
 

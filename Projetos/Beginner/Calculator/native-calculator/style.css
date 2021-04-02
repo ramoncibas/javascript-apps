@@ -5,17 +5,31 @@
 }
 
 body {
-    font: 300 12pt 'Montserrat', sans-serif;    
-}
+    font: 300 12pt 'Montserrat', sans-serif;
 
-main {
     width: 100vw;
     height: 100vh;
 
     background: #333;
+}
 
+<<<<<<< Updated upstream
     display: grid;
     place-items: center;
+=======
+<<<<<<< Updated upstream
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+=======
+main {
+    display: grid;
+    place-items: center;
+
+    margin: 1rem 0;
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 }
 
 #calculator {

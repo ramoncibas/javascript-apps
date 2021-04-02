@@ -9,15 +9,25 @@ body {
     background-image: url(city.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;    
-}
+    background-position: center center;
 
-main {
     width: 100vw;
     height: 100vh;
 
+<<<<<<< Updated upstream
     display: grid;
     place-items: center;   
+=======
+<<<<<<< Updated upstream
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;       
+=======
+    display: grid;
+    place-items: center; 
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 }
 
 #container {
