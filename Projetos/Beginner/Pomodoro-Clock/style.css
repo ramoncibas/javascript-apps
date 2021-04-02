@@ -6,20 +6,22 @@
 
 body {    
     font: 300 1rem 'Montserrat', sans-serif;
+    background: #19151a;
+    
+    width: 100vw;
+    height: 100vh;
+
     overflow-x: hidden;
 }
 
 main {
-    background: #19151a;
-
-    width: 100vw;
-    height: 100vh;
-
     display: grid;
     place-items: center;
 }
 
 #container {
+    margin: 2rem 0;
+
     position: relative;
     width: 700px;
     height: 700px;
@@ -131,7 +133,7 @@ hr {
 }
 
 /* Ciclos de sessões */
-.cicle {
+.cycle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,13 +147,13 @@ hr {
     width: 150px;
 }
 
-.count-cicle {
+.count-cycle {
     display: flex;
     justify-content: center;
     align-items: center;    
 }
 
-.count-cicle input {
+.count-cycle input {
     background: none;
     border: none;
     outline: none;
@@ -161,10 +163,10 @@ hr {
     color: #fff;
     font-size: 20px;
     font-weight: bold;    
-    padding-left: 5px;
+    padding-left: 10px;
 }
 
-.cicle button {
+.cycle button {
     background: none;    
     border: none;
 
@@ -174,7 +176,7 @@ hr {
     transition: .2s ease-in;
 }
 
-.about-cicle {
+.about-cycle {
     border: 1px solid #cecece;
     border-radius: 5px;
 
@@ -188,7 +190,7 @@ hr {
     display: none;
 }
 
-.about-cicle strong {
+.about-cycle strong {
     color: yellow;
 }
 
@@ -211,7 +213,7 @@ hr {
     width: 120px;
 }
 
-.cicle button:hover {
+.cycle button:hover {
     color: #3a283f;
 }
 

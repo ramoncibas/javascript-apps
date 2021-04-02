@@ -7,9 +7,8 @@
 body {
     font: 300 12pt 'Montserrat', sans-serif;
     background: #0e1012;
-}
 
-main {
+    
     width: 100vw;
     height: 100vh;
 
@@ -134,6 +133,10 @@ button.btn-convert:hover {
     text-transform: uppercase;
 }
 
+#result {
+    position: relative;
+}
+
 #result input {
     border: 1px solid #c5c5c5;
     border-radius: 5px;
@@ -163,7 +166,8 @@ button.btn-convert:hover {
 
 #result:hover span {
     position: absolute;
-    margin: .5rem 0 0 5rem;
+    top: 30px;
+    margin: .3rem 0 0 5rem;
 
     display: inline-block;
 }
