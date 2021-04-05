@@ -5,21 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fullsize.css">
 </head>
 <body>
-    <main>
+    <main>        
         <div id="container">
             <h1>Habilite seu video</h1>
-            <video id="video"  width="500" autoplay muted></video>
+            <div class="video">
+                <video id="video"  autoplay muted></video>
+            </div>
 
             <div id="turn-on">
                 <input type="checkbox" id="chk-on">
                 <input type="checkbox" id="chk-off">
             </div>
-        </div>
+        </div>        
+
+        <aside class="galery">
+            <div class="pictures">
+                <div class="picture"></div>
+                <div class="picture"></div>
+                <div class="picture"></div>
+                <div class="picture"></div>
+                <div class="picture"></div>
+                <div class="picture"></div>                
+
+                <button class="scroll-pictures btn"><i class="fas fa-angle-down"></i></button>
+            </div>
+
+            <div class="fullsize aside-content">
+                
+                <div class="content-buttons">
+                    <button class="delete">Delete &nbsp;<i class="fas fa-trash"></i></button>
+                    <button class="favorite">Favoritar &nbsp;<i class="far fa-star"></i></button>
+                    <button class="download">Download &nbsp;<i class="fas fa-file-download"></i></button>
+                </div>
+                
+            </div>
+            
+
+            <button class="clearAllPicture btn">Clear All &nbsp;<i class="fas fa-eraser"></i></button>
+            <button class="seeAllPicture btn">Galery &nbsp;<i class="fas fa-arrow-circle-right"></i></button>
+        </aside>
 
     </main>
 
     <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/bd15a40e05.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
