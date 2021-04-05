@@ -9,3 +9,7 @@ function startVideo() {
 }
 
 startVideo()
+
+document.querySelector(".seeAllPicture").addEventListener("click", (event) => {
+    document.querySelector(".galery").classList.toggle("fullsize");
+});
