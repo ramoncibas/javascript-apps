@@ -2,12 +2,11 @@ const minutesDiv = document.querySelector(".minutes");
 const secondDiv = document.querySelector(".seconds");
 
 const btnStartAndStop = document.querySelector(".buttons-pomodoro #play");
-const btnStop = document.querySelector(".buttons-pomodoro #stop");
 const btnReset = document.querySelector(".buttons-pomodoro #reset");
 
 localStorage.setItem("btn", "focus");
 
-let initial, totalseconds, paused, mins, seconds, cycle = 0;
+let initial, paused, mins, seconds, cycle = 0;
 
 var focusTime = 25;
 var breakTime = 5;
@@ -52,7 +51,6 @@ function startPomodoro() {
         mins = +localStorage.getItem("breakTime") || 1;
 
     seconds = mins * 60;
-    totalseconds = mins * 60;
 
     setTimeout(decremenT(), 60);
     paused = false;
@@ -60,26 +58,26 @@ function startPomodoro() {
 
 // Função que inicia o tempo de descaço a cada sessão
 function startBreakTime(param) {
-    let breakMinutes = document.querySelector(".break-minutes");
-    let breakSeconds = document.querySelector(".break-seconds");
+    let breakMinutesElement = document.querySelector(".break-minutes");
+    let breakSecondsElement = document.querySelector(".break-seconds");
 
     var timer = param * 60;
-    let timeout = setInterval(function irineu() {
-        bminutes = parseInt(timer / 60, 10);
-        bseconds = parseInt(timer % 60, 10);
+    let initialBreakTime = setInterval(() => {
+        let breakMinutes = parseInt(timer / 60, 10);
+        let breakSeconds = parseInt(timer % 60, 10);
 
-        bminutes = bminutes < 10 ? "0" + bminutes : bminutes;
-        bseconds = bseconds < 10 ? "0" + bseconds : bseconds;
+        breakMinutes = breakMinutes < 10 ? "0" + breakMinutes : breakMinutes;
+        breakSeconds = breakSeconds < 10 ? "0" + breakSeconds : breakSeconds;
 
-        breakMinutes.textContent = bminutes;
-        breakSeconds.textContent = bseconds;
+        breakMinutesElement.textContent = breakMinutes;
+        breakSecondsElement.textContent = breakSeconds;
 
         if (--timer < 0) {
             timer = param * 60;
 
         } else if (timer <= 0){
-            clearTimeout(timeout);
-            timer, breakMinutes.textContent = param;
+            clearTimeout(initialBreakTime);
+            timer, breakMinutesElement.textContent = param;
             startPomodoro();
         }
 
@@ -126,7 +124,9 @@ function decremenT() {
         
         // Tocando audio quando estiver restando somente 3 seg
         if (seconds == 3) new Audio("session-ended.mp3").play();
-        if (seconds == 0) {             
+
+        // Tratando os ciclos do pomodoro
+        if (seconds == 0) {
             cycle += 1;
             let inputCycle = document.querySelector(".count-cycle input");
             inputCycle.value = cycle + "/4";
@@ -146,8 +146,7 @@ function decremenT() {
             } else {
                 resetPomodoro();
                 startBreakTime(breakTime);
-            }
-            
+            }            
         }
 
     } else {
@@ -171,7 +170,7 @@ function decremenT() {
 document.querySelector(".session-length button.up").addEventListener("click", () => {
     focusTime += 1;
     document.querySelector(".session-length #inputSession").value = focusTime + " min";
-    document.querySelector(".minutes").innerText = focusTime;
+    document.querySelector(".minutes").innerText = focusTime < 10 ? "0" + focusTime : focusTime;
 
     localStorage.setItem("focusTime", focusTime);
 });
@@ -184,7 +183,7 @@ document.querySelector(".session-length button.down").addEventListener("click", 
         focusTime = 5;
     } else {
         document.querySelector(".session-length #inputSession").value = focusTime + " min";
-        document.querySelector(".minutes").innerText = focusTime;
+        document.querySelector(".minutes").innerText = focusTime < 10 ? "0" + focusTime : focusTime;
         localStorage.setItem("focusTime", focusTime);
     }
 });
@@ -193,7 +192,7 @@ document.querySelector(".session-length button.down").addEventListener("click", 
 document.querySelector(".session-break_length button.up").addEventListener("click", () => {
     breakTime += 1;
     document.querySelector(".session-break_length input").value = breakTime + " min";
-    document.querySelector(".break-minutes").textContent = breakTime;
+    document.querySelector(".break-minutes").textContent = breakTime < 10 ? "0" + breakTime : brakTime;
 
     localStorage.setItem("breakTime", breakTime);
 });
@@ -206,7 +205,7 @@ document.querySelector(".session-break_length button.down").addEventListener("cl
         breakTime = 2;
     } else {
         document.querySelector(".session-break_length input").value = breakTime + " min";
-        document.querySelector(".break-minutes").textContent = breakTime;
+        document.querySelector(".break-minutes").textContent = breakTime < 10 ? "0" + breakTime :  breakTime;
 
         localStorage.setItem("breakTime", breakTime);
     }
