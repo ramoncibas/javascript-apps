@@ -1,0 +1,103 @@
+/* fullsize aside */
+.fullsize {
+    width: 100vw !important;
+    z-index: 3;
+
+    transition: all .3s;
+}
+
+.fullsize .pictures {
+    position: absolute;
+    top: 0;
+    
+    width: 100%;
+    height: 150px;
+
+    background: #c5c5c5;
+    
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    flex-direction: row;
+}
+
+.fullsize .picture {
+    width: 150px;
+    height: 100px;
+
+    margin: 0 1rem 0 1rem;
+}
+
+
+/* aside content */
+.fullsize .aside-content {
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    width: 80% !important;
+    height: 50%;
+
+    border-radius: 1rem;
+
+    background: #c5c5c5;
+}
+
+/* Botões */
+
+.fullsize .content-buttons {
+    position: absolute;
+    bottom: -2.5rem;
+
+    background: #535353;
+
+    border-radius: 0 0 1rem 1rem;
+
+    width: 50%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.fullsize .content-buttons button {  
+    border: none;
+    outline: none;
+
+    width: 100%;
+    height: 40px;
+
+    color: #fff;
+    cursor: pointer;
+    opacity: .6;
+
+    transition: all .3s;
+}
+
+.fullsize .content-buttons .delete {
+    border-end-start-radius: 1rem;
+    background: #e01b1b;
+}
+
+.fullsize .content-buttons .favorite {
+    background: #a5a515;
+}
+
+.fullsize .content-buttons .download {
+    border-end-end-radius: 1rem;
+    background: #6a6ab3;
+}
+
+.fullsize .seeAllPicture {
+    width: 80px;
+    top: 1rem;
+    left: 1rem;
+}
+
+.fullsize .content-buttons .delete:hover,
+.fullsize .content-buttons .favorite:hover,
+.fullsize .content-buttons .download:hover{
+    opacity: 1;
+}
