@@ -105,6 +105,7 @@ function resetPomodoro() {
     minutesDiv.textContent = localStorage.getItem("focusTime");
     secondDiv.textContent = "00";
 
+    // Alterando o icone e o texto de "Pause" do botão para "Play" ao clicar em resetar
     document.querySelector(".buttons-pomodoro #play i").classList.replace("fa-pause-circle","fa-play-circle");
     document.querySelector(".buttons-pomodoro #play p").textContent = "Play";
 }
