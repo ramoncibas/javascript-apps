@@ -11,8 +11,16 @@
     <main>        
         <div id="container">
             <h1>Habilite seu video</h1>
-            <div class="video">
-                <video id="video" autoplay muted></video>
+            <div id="screenshot">
+                <video autoplay muted></video>
+                <img src="" alt="">
+                <canvas style="display:none;"></canvas>
+
+                <input type="file" accept="image/*;capture=camera">
+
+                <button class="capture-video">Capture Video</button>
+                <button class="disable-video">Turn off Video</button>
+                <button class="take-picture">Take a Picture</button>
             </div>
 
             <div id="turn-on">
