@@ -30,7 +30,7 @@ btnStartAndStop.addEventListener("click", () => {
 
         stopPomodoro();
 
-    } else if(btnText.textContent == "Resume") {
+    } else if (btnText.textContent == "Resume") {
         icon.classList.replace("fa-play-circle", "fa-pause-circle");
         btnText.textContent = "Stop";
 
@@ -75,7 +75,7 @@ function startBreakTime(param) {
         if (--timer < 0) {
             timer = param * 60;
 
-        } else if (timer <= 0){
+        } else if (timer <= 0) {
             clearTimeout(initialBreakTime);
             timer, breakMinutesElement.textContent = param;
             startPomodoro();
@@ -106,7 +106,7 @@ function resetPomodoro() {
     secondDiv.textContent = "00";
 
     // Alterando o icone e o texto de "Pause" do botão para "Play" ao clicar em resetar
-    document.querySelector(".buttons-pomodoro #play i").classList.replace("fa-pause-circle","fa-play-circle");
+    document.querySelector(".buttons-pomodoro #play i").classList.replace("fa-pause-circle", "fa-play-circle");
     document.querySelector(".buttons-pomodoro #play p").textContent = "Play";
 }
 
@@ -122,7 +122,7 @@ function decremenT() {
 
         // Decrementando 1 segundo, fazendo de forma circular: 0 -> 59
         initial = window.setTimeout("decremenT()", 1000);
-        
+
         // Tocando audio quando estiver restando somente 3 seg
         if (seconds == 3) new Audio("session-ended.mp3").play();
 
@@ -131,10 +131,10 @@ function decremenT() {
             cycle += 1;
             let inputCycle = document.querySelector(".count-cycle input");
             inputCycle.value = cycle + "/4";
-            
+
             // Verificando se ja foram completo 4 ciclos, e sugerir ao usuario um tempo de descanco de 30 minutos
             if (cycle > 4) {
-                if(window.confirm("Você acaba de completar 4 ciclos, faça uma pausa de 30 minutos!")) {
+                if (window.confirm("Você acaba de completar 4 ciclos, faça uma pausa de 30 minutos!")) {
                     cycle = 0;
                     inputCycle.value = 0 + "/4";
                     startBreakTime(30);
@@ -147,7 +147,7 @@ function decremenT() {
             } else {
                 resetPomodoro();
                 startBreakTime(breakTime);
-            }            
+            }
         }
 
     } else {
@@ -163,7 +163,7 @@ function decremenT() {
             localStorage.setItem("btn", "focus");
 
             paused = true;
-        }        
+        }
     }
 }
 
@@ -193,7 +193,7 @@ document.querySelector(".session-length button.down").addEventListener("click", 
 document.querySelector(".session-break_length button.up").addEventListener("click", () => {
     breakTime += 1;
     document.querySelector(".session-break_length input").value = breakTime + " min";
-    document.querySelector(".break-minutes").textContent = breakTime < 10 ? "0" + breakTime : brakTime;
+    document.querySelector(".break-minutes").textContent = breakTime < 10 ? "0" + breakTime : breakTime;
 
     localStorage.setItem("breakTime", breakTime);
 });
@@ -206,7 +206,7 @@ document.querySelector(".session-break_length button.down").addEventListener("cl
         breakTime = 2;
     } else {
         document.querySelector(".session-break_length input").value = breakTime + " min";
-        document.querySelector(".break-minutes").textContent = breakTime < 10 ? "0" + breakTime :  breakTime;
+        document.querySelector(".break-minutes").textContent = breakTime < 10 ? "0" + breakTime : breakTime;
 
         localStorage.setItem("breakTime", breakTime);
     }
@@ -214,7 +214,7 @@ document.querySelector(".session-break_length button.down").addEventListener("cl
 
 // Sobre os ciclos no pomodoro
 document.querySelector("#btn-about-cycle").addEventListener("mouseenter", () => {
-    document.querySelector(".about-cycle").style.display = "flex";      
+    document.querySelector(".about-cycle").style.display = "flex";
 });
 
 document.querySelector("#btn-about-cycle").addEventListener("mouseout", () => {
