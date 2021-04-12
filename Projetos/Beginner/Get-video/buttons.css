@@ -1,0 +1,159 @@
+/* Botões */
+.btn {
+    background: none;
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+    transition: all .3s;
+
+    outline: none;
+}
+
+button.seeAllPicture {
+    position: absolute;
+
+    top: 1rem;
+
+    width: 80px;
+    height: 40px;
+
+    background: #46436b;
+    color: #fff;
+}
+
+button.clearAllPicture {    
+    position: absolute;
+    
+    bottom: 1rem;
+
+    width: 80px;
+    height: 40px;
+
+    background: #ce2626;
+    color: #fff;
+}
+
+button.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    color: #fff;
+    font-size: 16pt;
+}
+
+button.scroll-pictures {
+    position: fixed;
+    bottom: 4rem;
+    left: 0;
+    right: 0;
+
+    width: 100px;
+    height: 30px;
+
+    z-index: 3;
+
+    background: none;
+
+    font-size: 1.5rem;
+}
+
+.screenshot-buttons {
+    width: 100%;
+    background: #cecece;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.screenshot-buttons button {
+    width: 100px;
+    height: 40px;
+    
+    
+    color: #fff;
+
+    transition: all .3s;
+    opacity: .7;    
+}
+
+button.capture-video {
+    background: #da5a5a;
+}
+
+button.disable-video {
+    background: #202020;
+}
+
+button.take-picture {
+    background: #be800c;
+}
+
+.screenshot-buttons button:hover {
+    opacity: 1;
+}
+
+
+/* Botões */
+.fullsize .content-buttons {
+    position: absolute;
+    bottom: -2.5rem;
+
+    background: #535353;
+
+    border-radius: 0 0 1rem 1rem;
+
+    width: 50%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.fullsize .content-buttons button{  
+    border: none;
+    outline: none;
+
+    width: 100%;
+    height: 40px;
+
+    color: #fff;
+    cursor: pointer;
+    opacity: .6;
+
+    transition: all .3s;
+}
+
+.fullsize .content-buttons button.delete {
+    border-end-start-radius: 1rem;
+    background: #e01b1b;
+}
+
+.fullsize .content-buttons button.favorite {
+    background: #a5a515;
+}
+
+.fullsize .content-buttons button.download {
+    border-end-end-radius: 1rem;
+    background: #6a6ab3;
+}
+
+.fullsize button.seeAllPicture {
+    width: 80px;
+    top: 1rem;
+    left: 1rem;
+}
+
+.fullsize button.clearAllPicture {
+    width: 90%;
+}
+
+.fullsize .content-buttons button.delete:hover,
+.fullsize .content-buttons button.favorite:hover,
+.fullsize .content-buttons button.download:hover{
+    opacity: 1;
+}
