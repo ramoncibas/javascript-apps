@@ -6,6 +6,7 @@
     <title>Exemplo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fullsize.css">
+    <link rel="stylesheet" href="buttons.css">
 </head>
 <body>
     <main>        
@@ -13,44 +14,20 @@
             <h1>Habilite seu video</h1>
             <div id="screenshot">
                 <video autoplay muted></video>
-                <img src="" alt="">
-                <canvas style="display:none;"></canvas>
 
-                <input type="file" accept="image/*;capture=camera">
+                <!-- <input type="file" accept="image/*;capture=camera"> -->
 
-                <button class="capture-video">Capture Video</button>
-                <button class="disable-video">Turn off Video</button>
-                <button class="take-picture">Take a Picture</button>
-            </div>
-
-            <div id="turn-on">
-                <input type="checkbox" id="chk-on">
-                <input type="checkbox" id="chk-off">
+                <div class="screenshot-buttons">
+                    <button class="capture-video btn"><i class="fas fa-video"></i></button>
+                    <button class="disable-video btn"><i class="fas fa-video-slash"></i></button>
+                    <button class="take-picture btn"><i class="fas fa-camera"></i></button>
+                </div>
+                
             </div>
         </div>        
 
         <aside class="galery">
             <div class="pictures">
-                <div class="picture">
-                    <img src="https://images.unsplash.com/photo-1535745122259-f1e187953c4c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=753&q=80" alt="">
-                    <button class="close btn"><i class="far fa-times-circle"></i></button>
-                </div>
-                <div class="picture">
-                    <img src="https://images.unsplash.com/photo-1525538182201-02cd1909effb?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cGxhY2VzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="">
-                    <button class="close btn"><i class="far fa-times-circle"></i></button>
-
-                </div>
-                <div class="picture">
-                    <img src="https://images.unsplash.com/photo-1520132108877-a600a22e602a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8cGxhY2VzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="">
-                    <button class="close btn"><i class="far fa-times-circle"></i></button>
-
-                </div>
-                <div class="picture">4</div>
-                <div class="picture">5</div>
-                <div class="picture">6</div>                
-                <div class="picture">7</div>                
-                <div class="picture">8</div>                
-
                 <button class="scroll-pictures btn"><i class="fas fa-angle-down"></i></button>
             </div>
 
