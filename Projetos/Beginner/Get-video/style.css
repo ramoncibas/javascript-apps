@@ -32,9 +32,10 @@ body {
     flex-direction: column;
 }
 
-#container video {
-    height: 200px;
-    border-radius: 50%;
+#screenshot video {
+    width: 400px;
+    height: 300px;
+    background: #000;   
 }
 
 /* Galeria */
@@ -69,23 +70,8 @@ aside.galery {
     width: 1px;    
 }
 
-.pictures button.scroll-pictures {    
-    position: fixed;
-    bottom: 4rem;
-    left: 0;
-    right: 0;
-
-    width: 100px;
-    height: 30px;
-
-    z-index: 3;
-
-    background: none;
-
-    font-size: 1.5rem;
-}
-
 .picture {
+    position: relative;
     width: 80px;
     height: 50px;
     
@@ -94,8 +80,7 @@ aside.galery {
 
     cursor: pointer;
 
-    transition: all .3s;
-    z-index: 2;
+    transition: all .3s;    
 }
 
 .picture + .picture {
@@ -105,51 +90,6 @@ aside.galery {
 .picture img {
     width: 100%;
     height: 100%;
-}
-
-/* Botões */
-.btn {
-    background: none;
-    border: none;
-    border-radius: 5px;
-
-    cursor: pointer;
-    transition: all .3s;
-
-    outline: none;
-}
-
-button.seeAllPicture {
-    position: absolute;
-
-    top: 1rem;
-
-    width: 80px;
-    height: 40px;
-
-    background: #46436b;
-    color: #fff;
-}
-
-button.clearAllPicture {    
-    position: absolute;
-    
-    bottom: 1rem;
-
-    width: 80px;
-    height: 40px;
-
-    background: #ce2626;
-    color: #fff;
-}
-
-button.close {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-
-    color: #fff;
-    font-size: 16pt;
 }
 
 /* Classes adicionadas via JavaScript */
