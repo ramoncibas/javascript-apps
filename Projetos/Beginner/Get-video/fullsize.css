@@ -16,7 +16,7 @@
     background: #c5c5c5;
     
     display: flex;
-    justify-content: center;  
+    justify-content: center;
     align-items: center;
     flex-direction: row;
 }
@@ -40,4 +40,14 @@
     border-radius: 1rem;
 
     background: #c5c5c5;
+}
+
+/* Classe from js */
+.large {
+    max-width: 100% !important;
+}
+
+.elementHidden {
+    opacity: 0;
+    transition: all .3s;
 }
