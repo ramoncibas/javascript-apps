@@ -85,7 +85,13 @@ document.querySelector(".seeAllPicture").addEventListener("click", () => {
     let icon = document.querySelector(".seeAllPicture i");
     let buttonText = document.querySelector(".seeAllPicture p");
     
+    // Arrumando a estilização da tela ao usuario abrir a galeria
     document.querySelector(".galery").classList.toggle("fullsize");
+    document.querySelector(".pictures").classList.toggle("large");
+    document.querySelector(".scroll-pictures").classList.toggle("elementHidden");
+    document.querySelector(".buttons-pictures").classList.toggle("elementHidden");
+
+    // Alterando icones do botão "Galeria"
     if (buttonText.textContent == "Galery") {
         icon.classList.replace("fa-arrow-circle-right", "fa-arrow-circle-left");
         buttonText.textContent = "Back";
