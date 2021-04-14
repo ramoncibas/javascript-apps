@@ -80,7 +80,7 @@ aside.galery {
 
     cursor: pointer;
 
-    transition: all .3s;    
+    transition: all .3s;     
 }
 
 .picture + .picture {
