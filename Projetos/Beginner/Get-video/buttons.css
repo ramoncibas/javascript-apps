@@ -152,6 +152,22 @@ button.take-picture {
     width: 90%;
 }
 
+.fullsize .buttons-pictures {
+    position: absolute;
+    width: 80%;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;    
+}
+
+.fullsize .buttons-pictures button {
+    font-size: 1.5rem;
+    color: #fff;
+    z-index: 2;
+}
+
 .fullsize .content-buttons button.delete:hover,
 .fullsize .content-buttons button.favorite:hover,
 .fullsize .content-buttons button.download:hover{
