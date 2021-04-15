@@ -35,13 +35,31 @@ disableVideoButton.addEventListener("click", function () {
 
 screenshotButton.addEventListener("click", function () {
     const canvas = document.createElement("canvas");        
+    const arquivoDownload = document.querySelector("#imgDownload")
     
+    // Canvas com o mesmo tamanho da imagem
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
+
+    // "Desenhando" a imagem
     canvas.getContext("2d").drawImage(video, 0, 0);
     
     // Em outros browsers ira falhar a volta do img/pgn
-    createElement(canvas.toDataURL("image/webp"))
+    let imgDataUrl = canvas.toDataURL("image/webp");
+    arquivoDownload.href = imgDataUrl;
+
+    // Criando a imagem no html
+    createElement(imgDataUrl);
+
+    // Adicionando a a imagem no localStorage
+    try {
+        var images = localStorage["image"] ? JSON.parse(localStorage["image"]) : []
+        images.push({ imageUrl: imgDataUrl });
+        localStorage.setItem("image", JSON.stringify(images));
+
+    } catch(e) {
+        console.log("Storage failed: " + e);
+    }
     
     // Função que adiciona as fotos tiradas no html
     function createElement(source) {
