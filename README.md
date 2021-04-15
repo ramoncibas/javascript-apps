@@ -30,20 +30,21 @@ Aplicações desenvolvidas com Java Script, buscando melhorar minhas habilidades
 
 | Nome             | Descrição                         | Nível     |
 |------------------|-----------------------------------|-----------|
-| [Number-Convert](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Number-Converter) | Conversor de Binário, Decimal e Hexadecimal | Iniciante |
+| [Number Convert](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Number-Converter) | Conversor de Binário, Decimal e Hexadecimal | Iniciante |
 | [Calculator](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Calculator) | Calculadora                       | Iniciante |
-| [Christmas-Lights](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Christmas-Lights) | Luzes de Natal                    | Iniciante |
-| [Dollar-and-Cents](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Dollar-and-Cents) | Conversor de Dólar e Cents       | Iniciante |
-| [Slide-Images](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Slides-Image) | Slider de imagens | Iniciante |
-| [ColorCycle](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/ColorCycle) | Cores RGB aleatorias | Iniciante |
-| [Countdown-Timer](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Countdown-Timer) | Cronômetro | Iniciante |
+| [Christmas Lights](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Christmas-Lights) | Luzes de Natal                    | Iniciante |
+| [Dollar and Cents](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Dollar-and-Cents) | Conversor de Dólar e Cents       | Iniciante |
+| [Slide Images](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Slides-Image) | Slider de imagens | Iniciante |
+| [Color Cycle](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/ColorCycle) | Cores RGB aleatorias | Iniciante |
+| [Countdown Timer](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Countdown-Timer) | Cronômetro | Iniciante |
 | [Clock](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Clock) | Relógio digital e Analógico| Iniciante | 
-| [Roman-Numerals](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Roman-Numbers) | Conversor para Algarismos Romanos | Iniciante |
-| [Input-Validations](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Input-validation) | Validando campos de formulário com Regex | Iniciante |
+| [Roman Numerals](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Roman-Numbers) | Conversor para Algarismos Romanos | Iniciante |
+| [Input Validations](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Input-validation) | Validando campos de formulário com Regex | Iniciante |
 | [Notes](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Notes) | Fazer anotações informativas | Iniciante |
-| [Weather-App](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Weather-App) | Verifica o clima de cidades ao redor do mundo | Iniciante |
+| [Weather App](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Weather-App) | Verifica o clima de cidades ao redor do mundo | Iniciante |
 | [Lyrics](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Lyrics) | Procure por letras de musicas | Iniciante |
-| [Pomodoro-Clock](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Pomodoro-Clock) | Organize seu tempo com a tecnica de Pomodoro | Iniciante |
+| [Pomodoro Clock](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Pomodoro-Clock) | Organize seu tempo com a tecnica de Pomodoro | Iniciante |
+| [Take a Picture](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Get-video) | Tire fotos e salve-as em seu dispositivo | Iniciante |
 
 ---
 
