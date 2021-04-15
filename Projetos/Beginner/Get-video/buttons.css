@@ -106,7 +106,7 @@ button.take-picture {
 
     border-radius: 0 0 1rem 1rem;
 
-    width: 50%;
+    width: 60%;
 
     display: flex;
     justify-content: space-around;
@@ -115,7 +115,8 @@ button.take-picture {
 
 }
 
-.fullsize .content-buttons button{  
+.fullsize .content-buttons a {
+    text-decoration: none;
     border: none;
     outline: none;
 
@@ -124,21 +125,25 @@ button.take-picture {
 
     color: #fff;
     cursor: pointer;
-    opacity: .6;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     transition: all .3s;
+    opacity: .6;
 }
 
-.fullsize .content-buttons button.delete {
+.fullsize .content-buttons a.delete {
     border-end-start-radius: 1rem;
     background: #e01b1b;
 }
 
-.fullsize .content-buttons button.favorite {
+.fullsize .content-buttons a.favorite {
     background: #a5a515;
 }
 
-.fullsize .content-buttons button.download {
+.fullsize .content-buttons a.download {
     border-end-end-radius: 1rem;
     background: #6a6ab3;
 }
@@ -169,8 +174,8 @@ button.take-picture {
     z-index: 2;
 }
 
-.fullsize .content-buttons button.delete:hover,
-.fullsize .content-buttons button.favorite:hover,
-.fullsize .content-buttons button.download:hover{
+.fullsize .content-buttons a.delete:hover,
+.fullsize .content-buttons a.favorite:hover,
+.fullsize .content-buttons a.download:hover{
     opacity: 1;
 }
