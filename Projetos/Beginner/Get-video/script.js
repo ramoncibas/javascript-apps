@@ -59,6 +59,11 @@ screenshotButton.addEventListener("click", function () {
         div.appendChild(img)
         div.appendChild(button)
         pictures.appendChild(div)
+
+        button.addEventListener("click", () => {
+            document.querySelector(".galery .picture").classList.remove("large")
+            button.classList.remove("large")
+        })
     }
 
     // Adicionando evento para as imagens
@@ -73,10 +78,9 @@ screenshotButton.addEventListener("click", function () {
                 picture.classList.remove("large")
             }
             
-            picture.classList.add("large")
+            picture.parentNode.classList.add("large")
             document.querySelector(".galery").classList.add("width");
-            document.querySelector(".scroll-pictures").classList.add("width");
-            console.log(e.target)
+            document.querySelector(".scroll-pictures").classList.add("width");            
         });
     }
 });
