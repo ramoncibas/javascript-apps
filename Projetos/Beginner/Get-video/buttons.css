@@ -59,6 +59,7 @@ button.scroll-pictures {
     font-size: 1.5rem;
 }
 
+/* Screenshot Botões */
 .screenshot-buttons {
     width: 100%;
     background: #cecece;
@@ -96,7 +97,7 @@ button.take-picture {
 }
 
 
-/* Botões */
+/* Fullsize Botões */
 .fullsize .content-buttons {
     position: absolute;
     bottom: -2.5rem;
