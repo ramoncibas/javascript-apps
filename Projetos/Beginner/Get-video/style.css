@@ -108,3 +108,7 @@ aside.galery {
 .width {
     width: 170px !important;
 }
+
+.elementHidden {
+    display: none;
+}
