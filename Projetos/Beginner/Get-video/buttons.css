@@ -10,7 +10,7 @@
     outline: none;
 }
 
-button.seeAllPicture {
+button.see-all-picture {
     position: absolute;
 
     top: 1rem;
@@ -148,7 +148,7 @@ button.take-picture {
     background: #6a6ab3;
 }
 
-.fullsize button.seeAllPicture {
+.fullsize button.see-all-picture {
     width: 80px;
     top: 1rem;
     left: 1rem;
