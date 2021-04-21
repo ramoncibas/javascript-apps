@@ -38,7 +38,6 @@ disableVideoButton.addEventListener("click", function () {
 
 screenshotButton.addEventListener("click", function () {
     const canvas = document.createElement("canvas");
-    const arquivoDownload = document.querySelector("#imgDownload")
 
     // Canvas com o mesmo tamanho da imagem
     canvas.width = video.videoWidth;
@@ -49,40 +48,47 @@ screenshotButton.addEventListener("click", function () {
 
     // Em outros browsers ira falhar a volta do img/pgn
     let imgDataUrl = canvas.toDataURL("image/webp");
-    arquivoDownload.href = imgDataUrl;
 
     // Criando a imagem no html
     createElement(imgDataUrl);
 
     // Adicionando a a imagem no localStorage
     try {
-        var images = localStorage["image"] ? JSON.parse(localStorage["image"]) : []
+        var images = localStorage["image"] ? JSON.parse(localStorage["image"]) : [];
+        let randomId = Math.floor(Math.random() * 9999);
         images.push({
-            imageUrl: imgDataUrl
+            imgUrl: imgDataUrl,
+            imgId: randomId,
+            imgFavorite: false
         });
         localStorage.setItem("image", JSON.stringify(images));
 
     } catch (e) {
         console.log("Storage failed: " + e);
-    }    
+    }
 });
 
 // Função que adiciona as fotos tiradas no html
-function createElement(source) {
+function createElement(source, imgUrl) {
     const div = document.createElement("div");
     const button = document.createElement("button");
     const img = document.createElement("img");
 
-    const pictures = document.querySelector(".galery .pictures");    
+    const pictures = document.querySelector(".galery .pictures");
 
     div.setAttribute("class", "picture");
     button.setAttribute("class", "close btn");
-    button.innerHTML = '<i class="far fa-times-circle"></i>';
-    img.src = source;
+    button.innerHTML = '<i class="far fa-times-circle"></i>';    
+
+    if (imgUrl == "" || imgUrl == undefined) {
+        img.src = source;
+    } else {
+        img.src = imgUrl
+    }
 
     div.appendChild(img);
     div.appendChild(button);
-    pictures.appendChild(div);      
+    pictures.appendChild(div);
 
     button.addEventListener("click", () => {
         document.querySelector(".galery .picture").classList.remove("large");
@@ -93,21 +99,48 @@ function createElement(source) {
         let picture = e.target;
         const container = document.querySelector(".aside-content .container");
         const pictures = document.querySelectorAll(".picture");
+        const downloadButton = document.querySelector("#downloadIMG")
+        const deleteButton = document.querySelector("#deleteIMG")
+        const favoriteButton = document.querySelector("#favoriteIMG")
 
         // Colocando o elemento no container assim que eu o usuario seleciona-lo
-        const img = document.createElement("img");    
+        const img = document.createElement("img");
         img.src = picture.src;
         container.appendChild(img);
-        
+
         // Removendo a classe "large" e a imagem do "container" assim que clicada
-        pictures.forEach(removeLargeClassAndImg);
+        pictures.forEach(removeLargeClassAndImg);        
         function removeLargeClassAndImg(picture) {
-            picture.classList.remove("large");   
+            picture.classList.remove("large");
+
             const photo = document.querySelectorAll(".aside-content .container img");
-            for(e of photo) {
-                if(photo.length > 1) e.remove();
+            for (e of photo) {
+                if (photo.length > 1) e.remove();
             }
         }
+
+        // Passando a url de download da imagem
+        downloadButton.href = picture.src;
+
+        // Butão de deletar imagem
+        deleteButton.addEventListener("click", () => {
+            if (window.confirm("Tem certeza que deseja excluir essa imagem??")) {
+                e.remove();
+
+                // Remove o item de acordo com a url
+                const data = JSON.parse(localStorage.getItem("image")).filter(item => item.imgUrl !== picture.src);                
+                localStorage.setItem("image", JSON.stringify(data));
+
+                // Atualizando a pagina
+                location.reload(false);
+            }
+        });
+
+        // Botão de favoritar imagem
+        favoriteButton.addEventListener("click", () => {
+            let favoriteIcon = document.querySelector(".favorite i");
+            favoriteIcon.classList.replace("far", "fas") || favoriteIcon.classList.replace("fas", "far");
+        });
 
         // Adicionando classes dinamicamente
         picture.parentNode.classList.add("large")
@@ -139,10 +172,26 @@ galeryButton.addEventListener("click", () => {
     }
 });
 
-document.querySelector(".favorite").addEventListener("click", () => {
-    let favoriteIcon = document.querySelector(".favorite i");
+window.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.length >= 1) {
+        (() => {
+            let images = localStorage.getItem("image") ? JSON.parse(localStorage.getItem("image")) : [];
 
-    favoriteIcon.classList.replace("far", "fas") || favoriteIcon.classList.replace("fas", "far");
+            const image = {
+                imgrl:"",
+                imgId:"",
+                imgFavorite:""
+            };
+
+            for (i in images) {
+                image.imgUrl = images[i]["imgUrl"];
+                image.imgId = images[i]["imgId"];
+                image.imgFavorite = images[i]["imgFavoite"];              
+
+                createElement(image.imgUrl);
+            }
+        })();
+    } else {
+        console.log("Empty localStorage!");
+    }
 });
-
-window.addEventListener("DOMContentLoaded", () => {});
