@@ -22,18 +22,6 @@ button.see-all-picture {
     color: #fff;
 }
 
-button.clearAllPicture {    
-    position: absolute;
-    
-    bottom: 1rem;
-
-    width: 80px;
-    height: 40px;
-
-    background: #ce2626;
-    color: #fff;
-}
-
 button.close {
     position: absolute;
     top: 5px;
@@ -154,10 +142,6 @@ button.take-picture {
     left: 1rem;
 }
 
-.fullsize button.clearAllPicture {
-    width: 90%;
-}
-
 .fullsize .buttons-pictures {
     position: absolute;
     width: 80%;
@@ -178,22 +162,4 @@ button.take-picture {
 .fullsize .content-buttons a.favorite:hover,
 .fullsize .content-buttons a.download:hover{
     opacity: 1;
-}
-
-.fullsize .buttons-container {
-    position: absolute;
-
-    width: 90%;
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;   
-
-}
-
-.fullsize .buttons-container button {
-    font-size: 2rem;
-    color: #fff;
-    z-index: 1;
 }
