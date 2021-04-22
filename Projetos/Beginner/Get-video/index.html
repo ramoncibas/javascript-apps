@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo</title>
+    <title>Galeria de Fotos</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fullsize.css">
     <link rel="stylesheet" href="buttons.css">
@@ -14,62 +14,64 @@
     <main>
         <div id="container">
             <h1>Habilite seu video</h1>
-
+            
             <div id="screenshot">
                 <video autoplay muted></video>
-
+                
                 <!-- <input type="file" accept="image/*;capture=camera"> -->
-
+                
                 <div class="screenshot-buttons">
                     <button class="capture-video btn"><i class="fas fa-video"></i></button>
                     <button class="disable-video btn"><i class="fas fa-video-slash"></i></button>
                     <button class="take-picture btn"><i class="fas fa-camera"></i></button>
                 </div>
-
+                
             </div>
         </div>
-
+        
         <aside class="galery">
             <div class="pictures">
+                <div class="slide"></div>
+                
                 <button class="scroll-pictures btn"><i class="fas fa-angle-down"></i></button>
-
+                
                 <div class="buttons-pictures elementHidden">
-                    <button class="btn"><i class="fas fa-angle-left"></i></button>
-                    <button class="btn"><i class="fas fa-angle-right"></i></button>
+                    <button class="prev btn"></button>
+                    <button class="next btn"></button>
                 </div>
             </div>
-
+            
             <div class="fullsize aside-content">
                 <div class="container elementHidden"></div>
-
+                
                 <div class="content-buttons">
                     <a href="#" id="deleteIMG" class="delete">
                         Delete &nbsp;
                         <i class="fas fa-trash"></i>
                     </a>
-
+                    
                     <a href="#" id="favoriteIMG" class="favorite">
                         Favoritar &nbsp;
                         <i class="far fa-star"></i>
                     </a>
-
+                    
                     <a href="#" id="downloadIMG" class="download" download="">
                         Download &nbsp;
                         <i class="fas fa-file-download"></i>
                     </a>
                 </div>
-
+                
             </div>
             <button class="see-all-picture btn">
                 <p>Galery</p> &nbsp;<i class="fas fa-arrow-circle-right"></i>
             </button>
         </aside>
-
+        
     </main>
-
-    <script defer src="script.js"></script>
+    
+    <script defer src="script.js"></script>    
     <script src="https://kit.fontawesome.com/bd15a40e05.js" crossorigin="anonymous"></script>
-
+    
 </body>
 
 </html>
