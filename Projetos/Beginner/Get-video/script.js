@@ -74,11 +74,11 @@ function createElement(source, imgUrl) {
     const button = document.createElement("button");
     const img = document.createElement("img");
 
-    const pictures = document.querySelector(".galery .pictures");
+    const pictures = document.querySelector(".galery .pictures .slide");
 
     div.setAttribute("class", "picture");
     button.setAttribute("class", "close btn");
-    button.innerHTML = '<i class="far fa-times-circle"></i>';    
+    button.innerHTML = '<i class="far fa-times-circle"></i>';
 
     if (imgUrl == "" || imgUrl == undefined) {
         img.src = source;
@@ -91,8 +91,8 @@ function createElement(source, imgUrl) {
     pictures.appendChild(div);
 
     button.addEventListener("click", () => {
-        document.querySelector(".galery .picture").classList.remove("large");
-        button.classList.remove("large");
+        document.querySelector(".galery .picture").classList.remove("largeAside");
+        button.classList.remove("largeAside");
     });
 
     div.addEventListener("click", function (e) {
@@ -109,9 +109,10 @@ function createElement(source, imgUrl) {
         container.appendChild(img);
 
         // Removendo a classe "large" e a imagem do "container" assim que clicada
-        pictures.forEach(removeLargeClassAndImg);        
+        pictures.forEach(removeLargeClassAndImg);
+
         function removeLargeClassAndImg(picture) {
-            picture.classList.remove("large");
+            picture.classList.remove("largeAside");
 
             const photo = document.querySelectorAll(".aside-content .container img");
             for (e of photo) {
@@ -128,7 +129,7 @@ function createElement(source, imgUrl) {
                 e.remove();
 
                 // Remove o item de acordo com a url
-                const data = JSON.parse(localStorage.getItem("image")).filter(item => item.imgUrl !== picture.src);                
+                const data = JSON.parse(localStorage.getItem("image")).filter(item => item.imgUrl !== picture.src);
                 localStorage.setItem("image", JSON.stringify(data));
 
                 // Atualizando a pagina
@@ -139,11 +140,24 @@ function createElement(source, imgUrl) {
         // Botão de favoritar imagem
         favoriteButton.addEventListener("click", () => {
             let favoriteIcon = document.querySelector(".favorite i");
+            let favoriteImage = JSON.parse(localStorage.getItem("image")).filter(item => item.imgFavorite !== true);
+
+            favoriteImage.push({
+                imageUrl: picture.src,
+                imgFavorite: true
+            });
+
+            localStorage.setItem("image", JSON.stringify(favoriteImage));
+            //location.reload(false)
+
+            console.log("Favorite image");
+
+
             favoriteIcon.classList.replace("far", "fas") || favoriteIcon.classList.replace("fas", "far");
         });
 
         // Adicionando classes dinamicamente
-        picture.parentNode.classList.add("large")
+        picture.parentNode.classList.add("largeAside")
         document.querySelector(".galery").classList.add("width");
         document.querySelector(".scroll-pictures").classList.add("width");
     });
@@ -156,7 +170,8 @@ galeryButton.addEventListener("click", () => {
 
     // Arrumando a estilização da tela ao usuario abrir a galeria
     document.querySelector(".galery").classList.toggle("fullsize");
-    document.querySelector(".pictures").classList.toggle("large");
+    document.querySelector(".pictures").classList.toggle("large-fullsize");
+    //document.querySelector(".picture").classList.toggle("large-fullsize");
     document.querySelector(".scroll-pictures").classList.toggle("elementHidden");
     document.querySelector(".container").classList.toggle("elementHidden");
     document.querySelector(".buttons-pictures").classList.toggle("elementHidden");
@@ -178,15 +193,15 @@ window.addEventListener("DOMContentLoaded", () => {
             let images = localStorage.getItem("image") ? JSON.parse(localStorage.getItem("image")) : [];
 
             const image = {
-                imgrl:"",
-                imgId:"",
-                imgFavorite:""
+                imgrl: "",
+                imgId: "",
+                imgFavorite: ""
             };
 
             for (i in images) {
                 image.imgUrl = images[i]["imgUrl"];
                 image.imgId = images[i]["imgId"];
-                image.imgFavorite = images[i]["imgFavoite"];              
+                image.imgFavorite = images[i]["imgFavoite"];
 
                 createElement(image.imgUrl);
             }
@@ -194,4 +209,20 @@ window.addEventListener("DOMContentLoaded", () => {
     } else {
         console.log("Empty localStorage!");
     }
+
+    // Galeria de Slides
+    var slideImages = document.querySelector(".slide");
+    var items = document.querySelectorAll(".slide .picture");
+    var prevButton = document.querySelector(".buttons-pictures .prev");
+    var nextButton = document.querySelector(".buttons-pictures .next");
+
+    prevButton.addEventListener("click", () => {
+        slideImages.insertBefore(items[items.length - 1], items[0]);
+        items = document.querySelectorAll(".slide .picture");
+    });
+
+    nextButton.addEventListener("click", () => {
+        slideImages.appendChild(items[0]);
+        items = document.querySelectorAll(".slide .picture");
+    });
 });
