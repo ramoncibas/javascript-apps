@@ -22,9 +22,9 @@
 }
 
 /* Galeria de Slide de Imagens */
-.fullsize .pictures .slide {
+.fullsize .pictures .slide {    
     position: relative;
-    width: 100%;
+    width: 60%;
     height: 100%;
 
     display: flex;
@@ -45,7 +45,7 @@
 .fullsize .pictures .slide .picture:nth-child(1) {
     left: 0;
     z-index: 1;
-    transform: translateX(-100%) scale(.8);
+    transform: translateX(100%) scale(.8);
 }
 
 .fullsize .pictures .slide .picture:nth-child(2) {
@@ -112,16 +112,6 @@
 }
 
 /* Estilizando as imagens */
-.fullsize .pictures .slide > .picture img{
-    width: 150px !important;
-}
-
-.fullsize .picture {
-    width: 150px;
-    height: 100px;
-
-    margin: 0 1rem 0 1rem;
-}
 
 /* aside content */
 .fullsize .aside-content {
