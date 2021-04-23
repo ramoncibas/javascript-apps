@@ -94,7 +94,7 @@ aside.galery {
 }
 
 /* Classes adicionadas via JavaScript */
-.large {
+.largeAside {
     position: relative;
     
     width: 150px;
