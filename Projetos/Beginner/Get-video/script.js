@@ -160,7 +160,7 @@ function createElement(source, imgUrl) {
         picture.parentNode.classList.add("largeAside")
         document.querySelector(".galery").classList.add("width");
         document.querySelector(".scroll-pictures").classList.add("width");
-    });
+    });    
 }
 
 // Botão que disponibiliza acesso a galeria
@@ -217,12 +217,20 @@ window.addEventListener("DOMContentLoaded", () => {
     var nextButton = document.querySelector(".buttons-pictures .next");
 
     prevButton.addEventListener("click", () => {
-        slideImages.insertBefore(items[items.length - 1], items[0]);
+        try {
+            slideImages.insertBefore(items[items.length - 1], items[0]);            
+        } catch(err) {
+            console.log(err)
+        }
         items = document.querySelectorAll(".slide .picture");
     });
-
+    
     nextButton.addEventListener("click", () => {
-        slideImages.appendChild(items[0]);
+        try {
+            slideImages.appendChild(items[0]);
+        } catch(err) {
+            console.log(err)
+        }
         items = document.querySelectorAll(".slide .picture");
     });
 });
