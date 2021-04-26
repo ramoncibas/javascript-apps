@@ -44,7 +44,7 @@ Aplicações desenvolvidas com Java Script, buscando melhorar minhas habilidades
 | [Weather App](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Weather-App) | Verifica o clima de cidades ao redor do mundo | Iniciante |
 | [Lyrics](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Lyrics) | Procure por letras de musicas | Iniciante |
 | [Pomodoro Clock](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Pomodoro-Clock) | Organize seu tempo com a tecnica de Pomodoro | Iniciante |
-| [Take a Picture](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Get-video) | Tire fotos e salve-as em seu dispositivo | Iniciante |
+| [Photo Gallery](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Photo-Gallery) | Tire fotos e salve-as em seu dispositivo | Iniciante |
 
 ---
 
