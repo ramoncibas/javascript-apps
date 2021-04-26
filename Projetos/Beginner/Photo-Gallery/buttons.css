@@ -5,7 +5,7 @@
     border-radius: 5px;
 
     cursor: pointer;
-    transition: all .3s;
+    transition: all 0.3s;
 
     outline: none;
 }
@@ -26,6 +26,8 @@ button.close {
     position: absolute;
     top: 5px;
     right: 5px;
+
+    z-index: 5;
 
     color: #fff;
     font-size: 16pt;
@@ -49,8 +51,7 @@ button.scroll-pictures {
 
 /* Screenshot Botões */
 .screenshot-buttons {
-    width: 100%;
-    background: #cecece;
+    width: 100%;    
 
     display: flex;
     justify-content: space-between;
@@ -60,12 +61,10 @@ button.scroll-pictures {
 .screenshot-buttons button {
     width: 100px;
     height: 40px;
-    
-    
+
     color: #fff;
 
-    transition: all .3s;
-    opacity: .7;    
+    transition: all 0.3s;    
 }
 
 button.capture-video {
@@ -79,11 +78,6 @@ button.disable-video {
 button.take-picture {
     background: #be800c;
 }
-
-.screenshot-buttons button:hover {
-    opacity: 1;
-}
-
 
 /* Fullsize Botões */
 .fullsize .content-buttons {
@@ -100,7 +94,6 @@ button.take-picture {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-
 }
 
 .fullsize .content-buttons a {
@@ -113,22 +106,17 @@ button.take-picture {
 
     color: #fff;
     cursor: pointer;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    transition: all .3s;
-    opacity: .6;
+    transition: all 0.3s;
 }
 
 .fullsize .content-buttons a.delete {
     border-radius: 0 0 0 1rem;
     background: #e01b1b;
-}
-
-.fullsize .content-buttons a.favorite {
-    background: #a5a515;
 }
 
 .fullsize .content-buttons a.download {
@@ -143,25 +131,13 @@ button.take-picture {
 
     z-index: 5;
 }
-/* 
-.fullsize .buttons-pictures {
-    position: absolute;
-    width: 80%;
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;    
-}
-
-.fullsize .buttons-pictures button {
-    font-size: 1.5rem;
-    color: #fff;
-    z-index: 2;
-} */
 
 .fullsize .content-buttons a.delete:hover,
-.fullsize .content-buttons a.favorite:hover,
-.fullsize .content-buttons a.download:hover{
-    opacity: 1;
+.fullsize .content-buttons a.download:hover,
+.btn:hover {
+    filter: brightness(0.8);
+}
+
+.see-all-picture:hover {
+    filter: brightness(1.1);
 }

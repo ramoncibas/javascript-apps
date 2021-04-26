@@ -58,8 +58,7 @@ screenshotButton.addEventListener("click", function () {
         let randomId = Math.floor(Math.random() * 9999);
         images.push({
             imgUrl: imgDataUrl,
-            imgId: randomId,
-            imgFavorite: false
+            imgId: randomId            
         });
         localStorage.setItem("image", JSON.stringify(images));
 
@@ -88,20 +87,14 @@ function createElement(source, imgUrl) {
 
     div.appendChild(img);
     div.appendChild(button);
-    pictures.appendChild(div);
-
-    button.addEventListener("click", () => {
-        document.querySelector(".galery .picture").classList.remove("largeAside");
-        button.classList.remove("largeAside");
-    });
+    pictures.appendChild(div);    
 
     div.addEventListener("click", function (e) {
         let picture = e.target;
         const container = document.querySelector(".aside-content .container");
         const pictures = document.querySelectorAll(".picture");
-        const downloadButton = document.querySelector("#downloadIMG")
-        const deleteButton = document.querySelector("#deleteIMG")
-        const favoriteButton = document.querySelector("#favoriteIMG")
+        const downloadButton = document.querySelector("#downloadIMG");
+        const deleteButton = document.querySelector("#deleteIMG");        
 
         // Colocando o elemento no container assim que eu o usuario seleciona-lo
         const img = document.createElement("img");
@@ -137,30 +130,16 @@ function createElement(source, imgUrl) {
             }
         });
 
-        // Botão de favoritar imagem
-        favoriteButton.addEventListener("click", () => {
-            let favoriteIcon = document.querySelector(".favorite i");
-            let favoriteImage = JSON.parse(localStorage.getItem("image")).filter(item => item.imgFavorite !== true);
-
-            favoriteImage.push({
-                imageUrl: picture.src,
-                imgFavorite: true
-            });
-
-            localStorage.setItem("image", JSON.stringify(favoriteImage));
-            //location.reload(false)
-
-            console.log("Favorite image");
-
-
-            favoriteIcon.classList.replace("far", "fas") || favoriteIcon.classList.replace("fas", "far");
-        });
-
         // Adicionando classes dinamicamente
-        picture.parentNode.classList.add("largeAside")
+        picture.parentNode.classList.add("largeAside");
+        button.classList.remove("largeAside");
         document.querySelector(".galery").classList.add("width");
         document.querySelector(".scroll-pictures").classList.add("width");
-    });    
+    });   
+    
+    button.addEventListener("click", () => {
+        button.classList.remove("largeAside");
+    });
 }
 
 // Botão que disponibiliza acesso a galeria
@@ -200,8 +179,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
             for (i in images) {
                 image.imgUrl = images[i]["imgUrl"];
-                image.imgId = images[i]["imgId"];
-                image.imgFavorite = images[i]["imgFavoite"];
+                image.imgId = images[i]["imgId"];                
 
                 createElement(image.imgUrl);
             }

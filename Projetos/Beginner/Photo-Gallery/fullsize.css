@@ -9,12 +9,12 @@
 .fullsize .pictures {
     position: absolute;
     top: 0;
-    
+
     width: 100%;
     height: 150px;
 
-    background: #c5c5c5;
-    
+    background: #ec5e5b;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@
 }
 
 /* Galeria de Slide de Imagens */
-.fullsize .pictures .slide {    
+.fullsize .pictures .slide {
     position: relative;
     width: 60%;
     height: 100%;
@@ -39,7 +39,7 @@
     transition: all 1s ease;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;    
+    background-position: center center;
 }
 
 .fullsize .pictures .slide .picture:nth-child(1) {
@@ -72,7 +72,7 @@
     transform: scale(.8);
 }
 
-.fullsize .pictures .buttons-pictures button{
+.fullsize .pictures .buttons-pictures button {
     position: absolute;
     top: 50%;
     z-index: 4;
@@ -103,17 +103,15 @@
 
 .galery::before {
     left: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0,) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0, ) 100%);
 }
 
 .galery::after {
     right: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0,) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0, ) 100%);
 }
 
-/* Estilizando as imagens */
-
-/* aside content */
+/* Aside content */
 .fullsize .aside-content {
     position: relative;
     display: grid;
@@ -125,10 +123,10 @@
 
     border-radius: 1rem;
 
-    background: #c5c5c5;    
+    background: rgba(255, 255, 255, 0.115);
 }
 
-.fullsize .aside-content .container { 
+.fullsize .aside-content .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,11 +136,13 @@
     overflow-x: auto;
 }
 
-.fullsize .aside-content .container > img {
-    width: 60%;
-    margin: 0 2rem;
+.fullsize .aside-content .container>img {
+    position: absolute;
+    width: 99%;
+    height: 99%;    
 
     transition: all .5s;
+    border-radius: 1rem;
 }
 
 /* Classe from js */
@@ -158,7 +158,7 @@
 .firstElementFromSlide {
     width: 250px;
     height: 250px;
-    
+
     box-shadow: 10px 3px 3px rgba(0, 0, 0, 0.65);
 
     transform: rotate3d(-1, 2, 0, 40deg);
