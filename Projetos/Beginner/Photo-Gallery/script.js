@@ -142,6 +142,19 @@ function createElement(source, imgUrl) {
     });
 }
 
+function scrollPictures(y) {
+    let slide = document.querySelector(".pictures");
+    let btn = document.querySelector(".scroll-pictures-up");
+
+    if (y.value >= 1) {
+        slide.scrollTop -= y;
+        
+    } else {
+        slide.scrollTop += y;
+        btn.style.display = "inline-block";
+    }
+}
+
 // Botão que disponibiliza acesso a galeria
 galeryButton.addEventListener("click", () => {
     let icon = document.querySelector(".see-all-picture i");
@@ -151,7 +164,8 @@ galeryButton.addEventListener("click", () => {
     document.querySelector(".galery").classList.toggle("fullsize");
     document.querySelector(".pictures").classList.toggle("large-fullsize");
     //document.querySelector(".picture").classList.toggle("large-fullsize");
-    document.querySelector(".scroll-pictures").classList.toggle("elementHidden");
+    document.querySelector(".scroll-pictures-up").classList.toggle("elementHidden");
+    document.querySelector(".scroll-pictures-down").classList.toggle("elementHidden");
     document.querySelector(".container").classList.toggle("elementHidden");
     document.querySelector(".buttons-pictures").classList.toggle("elementHidden");
 
