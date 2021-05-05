@@ -11,10 +11,10 @@
 <body>
     <main>
         <div id="container">
+            <h1>Gerador de Texto</h1>
             <form class="lorem-form">
-                <h1>Gerador de Lorem Ipsum</h1>
-                <input type="text" id="numofParagraph" placeholder="Numero de Paragrafos:">
-                <button type="submit">Gerar Texto</button>
+                <input type="number" min="1" max ="10" id="numofParagraph">
+                <button type="submit" class="generator-txt btn">Gerar Texto</button>
             </form>
 
             <article class="lorem-text"></article>
