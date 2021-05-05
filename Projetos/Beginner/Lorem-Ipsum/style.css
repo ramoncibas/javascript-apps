@@ -9,7 +9,7 @@ body {
 }
 
 main {
-    background: #d48d0aa1;
+    background: #070313;
 
     width: 100vw;
     height: 100vh;
@@ -40,10 +40,43 @@ main {
     bottom: 1rem;
 }
 
+#container h1 {
+    position: absolute;
+    top: 2rem;
+}
+
+form.lorem-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
 article.lorem-text {
     width: 400px;
     max-height: 200px;
     overflow: auto;
 
     margin-top: 2rem;
+}
+
+.btn {
+    width: 100px;
+    height: 30px;
+
+    border: none;
+    border-radius: 5px;    
+}
+
+input#numofParagraph {
+    width: 40px;
+    height: 30px;
+
+    text-align: center;
+}
+
+button.generator-txt {
+    background: #ce094b;
+    color: #fff;
+
+    margin-left: 5px;
 }
