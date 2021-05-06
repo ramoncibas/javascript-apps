@@ -3,15 +3,32 @@ const text = [
 ];
 
 const form = document.querySelector(".lorem-form");
-const numoflorem = document.querySelector("#numofParagraph");
+const numOfLorem = document.querySelector(".numofParagraph");
+const numOfLoremRange = document.querySelector(".rangeParagraph");
 const result = document.querySelector(".lorem-text");
 
 form.addEventListener("submit", e => {
     e.preventDefault();
     
-    const value = parseInt(numoflorem.value);
+    const value = parseInt(numOfLorem.value);
     let allText = text.slice(0, value);
     
     allText = allText.map(item => `<p class="lorem-result">${item}</p>`).join("");
     result.innerHTML = allText;
 });
+
+function syncElements(e) {
+    const vall = e.target.value;
+
+    numOfLorem.value = vall;
+    numOfLoremRange.value = vall;    
+}
+
+numOfLorem.addEventListener("input", syncElements);
+numOfLoremRange.addEventListener("input", syncElements);
+
+
+
+
+// https://github.com/nabendu82/JS-Projects/blob/master/LoremIpsum/main.js 
+// referencia
