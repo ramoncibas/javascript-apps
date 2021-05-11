@@ -13,12 +13,35 @@
         <div id="container">
             <h1>Gerador de Texto</h1>
             <form class="lorem-form">
-                <input type="number" min="1" max ="10" class="numofParagraph">
-                <input type="range" min="1" max="10" class="rangeParagraph">
+                <div class="paragraph-number">
+                    <label>Numero de paragrafos:</label>
+                    <input type="number" min="1" max ="10" class="numofParagraph" name="irineu">
+                </div>
+
+                <div class="paragraph-ranger">
+                    <input type="range" min="1" max="10" class="rangeParagraph" list="values">
+
+                    <datalist id="values">                        
+                        <option value="1" label="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                        <option value="5" label="5"></option>
+                        <option value="6"></option>
+                        <option value="7"></option>
+                        <option value="8"></option>
+                        <option value="9"></option>
+                        <option value="10" label="10"></option>
+                    </datalist>
+                </div>
                 <button type="submit" class="generator-txt btn">Gerar Texto</button>
             </form>
 
-            <article class="lorem-text"></article>
+            <article class="lorem-text">
+            
+            </article>
+            <button class="copy-button btn">Copiar Texto</button>
+
             <span>&copy; ramon cibas</span>
         </div>
     </main>
