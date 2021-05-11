@@ -46,6 +46,12 @@ main {
 }
 
 form.lorem-form {
+    width: 400px;
+    height: 120px;
+
+    border: 1px solid #cecece;
+    border-radius: 5px;
+
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -53,20 +59,15 @@ form.lorem-form {
     flex-direction: column;
 }
 
-article.lorem-text {
-    width: 400px;
-    max-height: 200px;
-    overflow: auto;
-
-    margin-top: 2rem;
+form.lorem-form > * {
+    margin-top: 5px;
 }
 
-.btn {
-    width: 110px;
-    height: 30px;
-
-    border: none;
-    border-radius: 5px;    
+form .paragraph-number {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 input.numofParagraph {
@@ -77,12 +78,46 @@ input.numofParagraph {
 }
 
 input.rangeParagraph {
-    width: 100px;
+    width: 380px;
+}
+
+article.lorem-text {
+    width: 400px;
+    max-height: 150px;
+    overflow: auto;
+
+    margin-top: 2rem;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    transition: .3s all;
 }
 
 button.generator-txt {
-    background: #ce094b;
+    width: 95%;
+    height: 30px;
+
+    background: linear-gradient(to right, #ce094b, #db6387);
+
+    color: #fff;
+}
+
+button.copy-button {
+    width: 80%;
+    height: 30px;
+
+    margin-top: 1rem;
+
+    background: linear-gradient(to right, #db6387, #ce094b);
     color: #fff;
 
-    margin-left: 5px;
+    display: none;
+}
+
+.btn:hover {
+    filter: brightness(.8);
 }
