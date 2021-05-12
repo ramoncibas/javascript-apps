@@ -7,27 +7,24 @@
 body {
     font: 300 1rem 'Montserrat', sans-serif;
     background-image: url(city.jpg);
+    
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 
+
     width: 100vw;
     height: 100vh;
 
-<<<<<<< Updated upstream
     display: grid;
-    place-items: center;   
-=======
-<<<<<<< Updated upstream
+    place-items: center; 
+}
+
+#weatherContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;       
-=======
-    display: grid;
-    place-items: center; 
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+    flex-direction: row;
 }
 
 #container {
@@ -36,8 +33,9 @@ body {
     height: 500px;
 
     border-radius: 1rem;
+    border: 2px solid #cecece;
 
-    background: rgba(185, 185, 185, 0.548);
+    background: #dccae0;
 
     display: flex;
     justify-content: center;
