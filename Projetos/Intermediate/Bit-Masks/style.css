@@ -34,10 +34,15 @@ main {
     flex-direction: column;
 }
 
-#container .search {
+#container .clock {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    font-size: 30pt;
+}
+
+#container .search {
+    position: absolute;
+    top: 5rem;
 
     display: flex;
     justify-content: center;
@@ -46,6 +51,8 @@ main {
 }
 
 .search .input-search {
+    width: 380px;
+    
     border: 1px solid #c3c3c3;
     border-radius: 5px;
 
