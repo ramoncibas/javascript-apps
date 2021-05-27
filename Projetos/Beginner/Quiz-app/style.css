@@ -35,10 +35,7 @@ main {
 
 #container .container-header {
     position: absolute;
-    top: 2rem;
-
-    width: 600px;
-    height: 100px;
+    top: 5rem;
 
     display: flex;
     justify-content: space-between;
@@ -46,29 +43,35 @@ main {
     flex-direction: row;
 }
 
-#container .container-header h1 {
+#container .container-header h1 {   
     text-transform: uppercase;
     text-shadow:#a12b2b6b -1px -2px;
     
     color: #a12b2b;
 }
 
-.answers {
-    position: absolute;
-    bottom: 5rem;
+.question-container {
+    width: 60%;
+    height: 60%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.answers-buttons {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    justify-items: stretch;
-    align-items: stretch;
-
 }
 
-.answer {
+.answer-button {
     position: relative;
-    width: 350px;
-    height: 50px;
+    width: 100%;
+    height: 100px;
 
     background: #a12b2b;
     display: grid;
@@ -79,10 +82,10 @@ main {
     cursor: pointer;
 
     transition: .3s all;
-}
 
-.answer-text {
+    border: none;
     color: #fff;
+    font-size: 14pt;
 }
 
 .letter {
@@ -107,11 +110,58 @@ main {
     bottom: 1rem;
 }
 
-.answer:hover {
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1rem;
+    border: none;
+
+    cursor: pointer;
+    color: #fff;
+    font-size: 14pt;
+
+    transition: .3s all;
+}
+
+.start {
+    width: 50%;
+    height: 200px;
+
+    background: #a12b2b;
+
+    font-size: 22pt;
+}
+
+.next {    
+    width: 100%;
+    height: 100px;
+
+    background: #a12b2b;
+    
+    margin-top: 2rem;
+}
+
+.answer-button:hover {
     background: #00bd58;
 }
 
-.answer:hover .letter {
+.answer-button:hover .letter,
+.start:hover,
+.next:hover {
     background: #007500;
     color: #fff;
+}
+
+.hide {
+    display: none;
+}
+
+.correct {
+    background: green;
+}
+
+.wrong {
+    background: red;    
 }
