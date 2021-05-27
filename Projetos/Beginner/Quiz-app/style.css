@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 300 1rem 'Montserrat', sans-serif;
+}
+
+main {
+    background: #0c0016;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+}
+
+#container {
+    position: relative;
+
+    width: 70%;
+    height: 90%;
+
+    border-radius: 1rem;
+
+    background: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container .container-header {
+    position: absolute;
+    top: 2rem;
+
+    width: 600px;
+    height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+#container .container-header h1 {
+    text-transform: uppercase;
+    text-shadow:#a12b2b6b -1px -2px;
+    
+    color: #a12b2b;
+}
+
+.answers {
+    position: absolute;
+    bottom: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+
+}
+
+.answer {
+    position: relative;
+    width: 350px;
+    height: 50px;
+
+    background: #a12b2b;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1rem;
+    cursor: pointer;
+
+    transition: .3s all;
+}
+
+.answer-text {
+    color: #fff;
+}
+
+.letter {
+    position: absolute;
+    left: 0;
+    background: #ffffff;
+    width: 15%;
+    height: 100%;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1rem 0 0 1rem;
+    border: 1px solid #c3c3c3;
+
+    transition: .3s all;
+}
+
+#container .copy {
+    position: absolute;
+    bottom: 1rem;
+}
+
+.answer:hover {
+    background: #00bd58;
+}
+
+.answer:hover .letter {
+    background: #007500;
+    color: #fff;
+}
