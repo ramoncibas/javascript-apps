@@ -46,6 +46,7 @@ Aplicações desenvolvidas com Java Script, buscando melhorar minhas habilidades
 | [Pomodoro Clock](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Pomodoro-Clock) | Organize seu tempo com a tecnica de Pomodoro | Iniciante |
 | [Photo Gallery](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Photo-Gallery) | Tire fotos e salve-as em seu dispositivo | Iniciante |
 | [Lorem Ipsum Generator](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Lorem-Ipsum) | Gerador de Texto | Iniciante |
+| [Quiz App](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Quiz-app) | Teste seu Conhecimento | Iniciante |
 
 ---
 
