@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar por Repositórios</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="modal.css">
+  <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+  <header>
+    <div class="avatar-user">
+      <img
+        src="https://images.unsplash.com/photo-1543486958-d783bfbf7f8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+        alt="Avatar Gh" class="avatar-gh">
+
+      <div class="user-info">
+        <h4>Ramon Cibas</h4>
+        <button class="change-user btn hover-dark">Alterar</button>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li class="hover-dark">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="hover-dark">
+          <a href="repositories.html">
+            <i class="fab fa-github"></i>
+            Repositórios
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="container">
+      <div class="search-repos">
+        <h1>Busque por repositórios</h1>
+        <input type="text" placeholder="Usuario...">
+        <button class="search-button btn hover-dark">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div class="container-repos">
+
+        <div class="user-repos">
+          <div class="repos-content">
+
+            <div class="user-profile">
+              <img src="https://images.unsplash.com/photo-1543486958-d783bfbf7f8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="avatar-gh">
+              <h2>Ramon Cibas</h2>
+            </div>
+
+            <div class="repos-info">
+              <h5 class="repos">Repositório: agendamentoApp</h5>
+              <h5 class="text">Descrição: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio id pariatur, exercitationem ducimus nisi soluta eum vitae beatae. Atque aut ea accusantium consectetur tempore necessitatibus expedita praesentium tenetur explicabo labore?</h5>
+              <h5 class="language">Language: TypeScript</h5>
+              <h5 class="created">Criado em: 2021-05-21</h5>
+            </div>
+
+            <button class="see-repos btn hover-white">Ver repositorio
+              <i class="fab fa-github"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <span>&copy; ramon cibas</span>
+    </div>
+  </main>
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/bd15a40e05.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
