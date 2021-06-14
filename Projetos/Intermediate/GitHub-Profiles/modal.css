@@ -1,0 +1,74 @@
+body {
+    overflow: hidden;
+}
+
+.bg-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    width: 100vw;
+    height: 100vh;
+    background: #e8e8e8;
+    z-index: 10;
+
+    display: grid;
+    place-items: center;
+    
+    z-index: 10;
+    
+    display: none;
+}
+
+.modal-ghprofile {
+    width: 300px;
+    height: 300px;
+    background: #fff;
+
+    border-radius: var(--border-radius-max);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 5%);
+    border: var(---border-primary);
+}
+
+.modal-ghprofile .fab.fa-github {
+    font-size: 4rem;
+    color: var(--color-text-dark);
+}
+
+.modal-ghprofile h2 {
+    margin: 5px 0;
+}
+
+input.profile-text {
+    width: 90%;
+    height: 40px;
+
+    padding: 5px;
+    margin: 15px 0;
+
+    font-size: 11pt;
+    border: var(--border-primary);
+
+    outline: none;
+}
+
+button.search-profile {
+    width: 90%;
+    height: 40px;
+
+    border: var(--border-primary);
+    border-radius: var(--border-radius-min);
+
+    background: #0d1117;
+    color: #fff;
+
+    cursor: pointer;
+}

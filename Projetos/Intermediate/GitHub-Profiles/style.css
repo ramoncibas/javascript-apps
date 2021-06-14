@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-text-dark: #0d1117;
+    
+    --border-primary: 1px solid #cecece;
+    --border-secondary: 1px solid #efefef;
+    --border-radius-min: 5px;
+    --border-radius-max: 10px;
+
+    --background-dark-hover: #0d1117;    
+}
+
+body {
+    font: 300 1rem 'Montserrat', sans-serif;
+}
+
+main {
+    background: #efefef;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;    
+}
+
+#container {
+    width: 100vw;
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 3rem;
+}
+
+#container span {
+    position: absolute;
+    bottom: 1rem;
+}
+
+.search-repos {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.search-repos input {
+    width: 90%;
+    height: 40px;
+
+    padding: 10px;
+    margin-top: 10px;
+    
+    border: var(--border-primary);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    outline: none;
+}
+
+button.search-button {
+    width: 10%;
+    height: 40px;
+
+    margin-left: -6px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    background: #fff;
+}
+
+/* Seus Repositorios */
+.container-repos {
+    width: 80%;
+    max-height: 70%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1fr, 1fr);
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 5%);
+
+    overflow-y: auto;
+}
+
+.user-repos {
+    height: 250px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border: var(--border-primary);
+    border-radius: var(--border-radius-max);
+}
+
+.user-profile {
+    display: flex;    
+    align-items: baseline;
+    margin-bottom: 5px;
+}
+
+.repos-info .text {
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.repos-info .language {}
+.repos-info .created {}
+
+button.see-repos {
+    width: 100%;
+    height: 30px;
+
+    margin-top: 10px;
+    
+    color: #fff;
+    background: var(--background-dark-hover);
+
+    border-radius: var(--border-radius-min);
+}
+
+/* Global classes */
+.btn {
+    border: var(--border-primary);
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.hover-white:hover {
+    background: #fff;
+    color: var(--color-text-dark);
+    transition: all .3s;
+}
+
+.hover-dark:hover {
+    background: var(--background-dark-hover);
+    color: #fff;
+    transition: all .3s;
+}
