@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buscar por Repositórios</title>
   <link rel="stylesheet" href="style.css">
@@ -17,7 +18,6 @@
 
       <div class="user-info">
         <h4></h4>
-        <button class="change-user btn hover-dark">Alterar</button>
       </div>
     </div>
 
@@ -37,11 +37,11 @@
   </header>
 
   <main>
-    <div id="container">
+    <div id="container">      
       <div class="search-repos">
         <h1>Busque por repositórios</h1>
         <input type="text" placeholder="Usuario...">
-        <button class="search-button btn hover-dark" onclick="searchRepositories()">
+        <button class="search-repositories btn hover-dark" onclick="searchAndCreateRepositories()">
           <i class="fas fa-search"></i>
         </button>
       </div>
