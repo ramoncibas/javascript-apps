@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="modal.css">
   <link rel="stylesheet" href="menu.css">
-
 </head>
 
 <body>
@@ -19,7 +18,7 @@
 
       <div class="user-info">
         <h4></h4>
-        <button class="change-user btn hover-dark">Alterar</button>
+        <button class="change-user btn hover-dark" onclick="showModal()">Alterar</button>
       </div>
     </div>
 
@@ -39,7 +38,15 @@
   </header>
 
   <main>
-    <div id="container">      
+    <div id="container">
+      <div class="bg-modal">
+        <div class="modal-ghprofile">
+          <i class="fab fa-github"></i>
+          <h2>GitHub</h2>
+          <input type="text" class="profile-text" placeholder="Digite o nome do seu perfil">
+          <button class="search-profile btn hover-white" onclick="searchAndCreateUser()">Buscar</button>
+        </div>
+      </div>
       <div class="repos">
         <h1>Seus repósitorios
           <i class="fab fa-github"></i>
