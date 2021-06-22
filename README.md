@@ -48,10 +48,10 @@ Aplicações desenvolvidas com Java Script, buscando melhorar minhas habilidades
 | [Lorem Ipsum Generator](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Lorem-Ipsum) | Gerador de Texto | Iniciante |
 | [Quiz App](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Quiz-app) | Teste seu Conhecimento | Iniciante |
 
-### Nivel 2 - Intermediario
+### Nivel 2 - intermediário
 | Nome             | Descrição                         | Nível     |
 |------------------|-----------------------------------|-----------|
-| [GitHub Profiles](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Intermediate/GitHub-Profiles) | Busque por repositórios do GitHub | Intermediario |
+| [GitHub Profiles](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Intermediate/GitHub-Profiles) | Busque por repositórios do GitHub | intermediário |
 ---
 
 ## 💪 Como contribuir para o projeto
