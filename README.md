@@ -27,7 +27,7 @@ Aplicações desenvolvidas com Java Script, buscando melhorar minhas habilidades
 ---
 
 ## 📁 Projetos 
-
+### Nivel 1 - Iniciantes
 | Nome             | Descrição                         | Nível     |
 |------------------|-----------------------------------|-----------|
 | [Number Convert](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Number-Converter) | Conversor de Binário, Decimal e Hexadecimal | Iniciante |
@@ -48,6 +48,10 @@ Aplicações desenvolvidas com Java Script, buscando melhorar minhas habilidades
 | [Lorem Ipsum Generator](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Lorem-Ipsum) | Gerador de Texto | Iniciante |
 | [Quiz App](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Beginner/Quiz-app) | Teste seu Conhecimento | Iniciante |
 
+### Nivel 2 - Intermediario
+| Nome             | Descrição                         | Nível     |
+|------------------|-----------------------------------|-----------|
+| [GitHub Profiles](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Intermediate/GitHub-Profiles) | Busque por repositórios do GitHub | Intermediario |
 ---
 
 ## 💪 Como contribuir para o projeto
