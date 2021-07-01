@@ -69,7 +69,6 @@ function toDolar() {
 
             washington = Math.floor(res / 1)
 
-
             // retornando valores para o html
             return `
                 <p class="p_output"> President Dolls:
