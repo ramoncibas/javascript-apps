@@ -65,26 +65,3 @@ function calculateResult() {
         getNumber.value = "Syntax error";
     }    
 }
-
-function showHistoric() {
-    let calc_buttons = document.querySelector("#calculator-buttons")
-    let show_historic = document.querySelector("#showHistoric")
-    let input_historic = document.querySelector("#inputHistoric")
-    let elementsHistoric = document.querySelectorAll(".inputRes")
-
-    calc_buttons.classList.add("sectionUnder")
-    show_historic.classList.add("historic")
-
-    for (e of elementsHistoric) {
-        e.remove()
-    }
-}
-
-// Função que fecha todo o historico e volta a calculadora
-function closeHistoric() {
-    let calc_buttons = document.querySelector("#calculator-buttons")
-    let historic = document.querySelector("#showHistoric")
-    
-    calc_buttons.classList.remove("sectionUnder")
-    historic.classList.remove("historic")
-}

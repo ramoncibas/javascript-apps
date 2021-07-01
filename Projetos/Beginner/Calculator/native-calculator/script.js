@@ -1,3 +1,6 @@
+var resultadoFinal;
+var historicValues = [];
+
 // Passando valores para o Input
 function addValue(elementId) {
     let inputValues = document.getElementById("putValues");
@@ -13,9 +16,6 @@ function addOperator(elementId) {
     let inputOperator = document.getElementById("putValues")
     inputOperator.value += elementId
 }
-
-var resultadoFinal;
-var historicValues = [];
 
 // Calculando o resultado presente no Input
 function calculateResult() {
@@ -91,8 +91,7 @@ function calculateResult() {
             }) 
         } else {
             alert("Valor invalido!") 
-        }               
-        console.log(historicValues)
+        }
     }
 }
 
@@ -100,8 +99,7 @@ function calculateResult() {
 function removeLastNumber() {
     let inputValues = document.getElementById("putValues")
 
-    inputValues.value = inputValues.value.substring(0, inputValues.value.length - 1)
-    console.log("Last number deleted")
+    inputValues.value = inputValues.value.substring(0, inputValues.value.length - 1)    
 }
 
 // Limpando todo o campo Input
@@ -122,10 +120,8 @@ function showHistoric() {
         calc_buttons.classList.add("sectionUnder")
         show_historic.classList.add("historic")
 
-        // Limpando todos os calculos presente até o momento, para que o proximo "for" não ocorra uma duplicação de calculos.
-        for (e of elementsHistoric) {
-            e.remove()
-        }
+        // Limpando todos os calculos presente até o momento, para que o proximo "for" não ocorra uma duplicação de calculos.        
+        input_historic.innerHTML = "";
 
         // Mostrando todos os calculos feitos que estao dento do objeto.
         for(e of historicValues) {
@@ -133,7 +129,6 @@ function showHistoric() {
             // Criando elemento input
             let input = document.createElement("input")
             input.setAttribute(`class`, `inputRes`)
-
 
             // Atribuindo seu respectivo "value"
             input.value = `${valor} = ${e.res}`
@@ -152,9 +147,9 @@ function showHistoric() {
 // Limpara o historico - remove todos os calculos
 function clearHistoric() {
     if (window.confirm("Deseja deletar tudo?")) {
-
         // Removendo os campos do historico
         let elementsHistoric = document.querySelectorAll(".inputRes")
+        
         for (e of elementsHistoric) {
             e.remove()
         }
