@@ -25,7 +25,15 @@ function searchWeather(searchTerm) {
 }
 
 function init(resultFromServer) {
-    console.log(resultFromServer)
+    let weatherDescriptionHeader = document.querySelector("#weatherDescriptionHeader"),
+        temperatureElement = document.querySelector("#temperature"),
+        humidityElement = document.querySelector("#humidaty"),
+        windSpeedElement = document.querySelector("#windSpeed"),
+        cityHeader = document.querySelector("#cityHeader"),
+        weatherIcon = document.querySelector("#documentIconImg");
+    
+    let resultDescription = resultFromServer.weather[0].description;
+    
     switch (resultFromServer.weather[0].main) {
         case "Clear":
             document.body.style.backgroundImage = 'url("clear.jpg")'
@@ -52,16 +60,6 @@ function init(resultFromServer) {
         default:
             break;
     }
-    
-    let weatherDescriptionHeader = document.querySelector("#weatherDescriptionHeader"),
-        temperatureElement = document.querySelector("#temperature"),
-        humidityElement = document.querySelector("#humidaty"),
-        windSpeedElement = document.querySelector("#windSpeed"),
-        cityHeader = document.querySelector("#cityHeader"),
-        weatherIcon = document.querySelector("#documentIconImg");
-    
-    let resultDescription = resultFromServer.weather[0].description;
-    
     
     // Passando o icone vindo da api
     weatherIcon.src = "http://openweathermap.org/img/wn/" + resultFromServer.weather[0].icon + ".png";
