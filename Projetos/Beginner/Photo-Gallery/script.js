@@ -4,11 +4,12 @@ const screenshotButton = document.querySelector("#screenshot .take-picture");
 const galeryButton = document.querySelector(".galery .see-all-picture");
 
 const video = document.querySelector("#screenshot video");
+const deleteButton = document.querySelector("#deleteIMG");
 
 captureVideoButton.addEventListener("click", function () {
     navigator.mediaDevices.getUserMedia({
-            video: true
-        })
+        video: true
+    })
         .then(stream => {
             screenshotButton.disabled = false;
             video.srcObject = stream;
@@ -58,7 +59,7 @@ screenshotButton.addEventListener("click", function () {
         let randomId = Math.floor(Math.random() * 9999);
         images.push({
             imgUrl: imgDataUrl,
-            imgId: randomId            
+            imgId: randomId
         });
         localStorage.setItem("image", JSON.stringify(images));
 
@@ -67,8 +68,13 @@ screenshotButton.addEventListener("click", function () {
     }
 });
 
+// Deletando a imagem correspondente
+deleteButton.addEventListener("click", deletePhoto)
+
 // Função que adiciona as fotos tiradas no html
 function createElement(source, imgUrl) {
+    const galery = document.querySelector(".galery");
+
     const div = document.createElement("div");
     const button = document.createElement("button");
     const img = document.createElement("img");
@@ -78,6 +84,9 @@ function createElement(source, imgUrl) {
     div.setAttribute("class", "picture");
     button.setAttribute("class", "close btn");
     button.innerHTML = '<i class="far fa-times-circle"></i>';
+    button.addEventListener("click", () => {
+        button.classList.remove("largeAside");
+    });
 
     if (imgUrl == "" || imgUrl == undefined) {
         img.src = source;
@@ -87,14 +96,14 @@ function createElement(source, imgUrl) {
 
     div.appendChild(img);
     div.appendChild(button);
-    pictures.appendChild(div);    
+    pictures.appendChild(div);
 
     div.addEventListener("click", function (e) {
         let picture = e.target;
         const container = document.querySelector(".aside-content .container");
         const pictures = document.querySelectorAll(".picture");
         const downloadButton = document.querySelector("#downloadIMG");
-        const deleteButton = document.querySelector("#deleteIMG");        
+        const scrollButtons = document.querySelectorAll(".scroll-pictures");
 
         // Colocando o elemento no container assim que eu o usuario seleciona-lo
         const img = document.createElement("img");
@@ -104,54 +113,50 @@ function createElement(source, imgUrl) {
         // Removendo a classe "large" e a imagem do "container" assim que clicada
         pictures.forEach(removeLargeClassAndImg);
 
-        function removeLargeClassAndImg(picture) {
-            picture.classList.remove("largeAside");
-
-            const photo = document.querySelectorAll(".aside-content .container img");
-            for (e of photo) {
-                if (photo.length > 1) e.remove();
-            }
-        }
-
         // Passando a url de download da imagem
         downloadButton.href = picture.src;
-
-        // Butão de deletar imagem
-        deleteButton.addEventListener("click", () => {
-            if (window.confirm("Tem certeza que deseja excluir essa imagem??")) {
-                e.remove();
-
-                // Remove o item de acordo com a url
-                const data = JSON.parse(localStorage.getItem("image")).filter(item => item.imgUrl !== picture.src);
-                localStorage.setItem("image", JSON.stringify(data));
-
-                // Atualizando a pagina
-                location.reload(false);
-            }
-        });
 
         // Adicionando classes dinamicamente
         picture.parentNode.classList.add("largeAside");
         button.classList.remove("largeAside");
-        document.querySelector(".galery").classList.add("width");
-        document.querySelector(".scroll-pictures").classList.add("width");
-    });   
-    
-    button.addEventListener("click", () => {
-        button.classList.remove("largeAside");
+        galery.classList.toggle("width");
+        scrollButtons.forEach(button => button.classList.add("width"));
     });
+
+    function removeLargeClassAndImg(picture) {
+        picture.classList.remove("largeAside");
+
+        const photo = document.querySelectorAll(".aside-content .container img");
+        for (e of photo) {
+            if (photo.length > 1) e.remove();
+        }
+    }
+}
+
+function deletePhoto() {
+    const containerPhoto = document.querySelector(".fullsize.aside-content .container img");
+    if (window.confirm("Tem certeza que deseja excluir essa imagem??")) {
+        containerPhoto.remove();
+
+        // Remove o item de acordo com a url
+        const data = JSON.parse(localStorage.getItem("image")).filter(item => item.imgUrl !== containerPhoto.src);
+        localStorage.setItem("image", JSON.stringify(data));
+
+        // Atualizando a pagina
+        location.reload(false);
+    }
 }
 
 function scrollPictures(y) {
     let slide = document.querySelector(".pictures");
-    let btn = document.querySelector(".scroll-pictures-up");
+    let scrollTopButton = document.querySelector(".scroll-pictures.up");
 
     if (y.value >= 1) {
         slide.scrollTop -= y;
-        
+
     } else {
         slide.scrollTop += y;
-        btn.style.display = "inline-block";
+        scrollTopButton.style.display = "inline-block";
     }
 }
 
@@ -164,8 +169,8 @@ galeryButton.addEventListener("click", () => {
     document.querySelector(".galery").classList.toggle("fullsize");
     document.querySelector(".pictures").classList.toggle("large-fullsize");
     //document.querySelector(".picture").classList.toggle("large-fullsize");
-    document.querySelector(".scroll-pictures-up").classList.toggle("elementHidden");
-    document.querySelector(".scroll-pictures-down").classList.toggle("elementHidden");
+    document.querySelector(".scroll-pictures.up").classList.toggle("elementHidden");
+    document.querySelector(".scroll-pictures.down").classList.toggle("elementHidden");
     document.querySelector(".container").classList.toggle("elementHidden");
     document.querySelector(".buttons-pictures").classList.toggle("elementHidden");
 
@@ -193,7 +198,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
             for (i in images) {
                 image.imgUrl = images[i]["imgUrl"];
-                image.imgId = images[i]["imgId"];                
+                image.imgId = images[i]["imgId"];
 
                 createElement(image.imgUrl);
             }
@@ -208,19 +213,21 @@ window.addEventListener("DOMContentLoaded", () => {
     var prevButton = document.querySelector(".buttons-pictures .prev");
     var nextButton = document.querySelector(".buttons-pictures .next");
 
+    // Button que volta para a imagem anterior do slide
     prevButton.addEventListener("click", () => {
         try {
-            slideImages.insertBefore(items[items.length - 1], items[0]);            
-        } catch(err) {
+            slideImages.insertBefore(items[items.length - 1], items[0]);
+        } catch (err) {
             console.log(err)
         }
         items = document.querySelectorAll(".slide .picture");
     });
-    
+
+    // Button que passa para a proxima imagem no slide
     nextButton.addEventListener("click", () => {
         try {
             slideImages.appendChild(items[0]);
-        } catch(err) {
+        } catch (err) {
             console.log(err)
         }
         items = document.querySelectorAll(".slide .picture");
