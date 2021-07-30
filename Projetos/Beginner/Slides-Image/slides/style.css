@@ -12,23 +12,9 @@ body {
     width: 100vw;
     height: 100vh;
 
-<<<<<<< Updated upstream
-    display: grid;
-    place-items: center;
-=======
-<<<<<<< Updated upstream
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
->>>>>>> Stashed changes
-
-    overflow-y: scroll;
-=======
     display: grid;
     place-items: center;
     
->>>>>>> Stashed changes
     overflow-x: hidden;
 }
 
