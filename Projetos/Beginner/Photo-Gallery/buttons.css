@@ -33,9 +33,9 @@ button.close {
     font-size: 16pt;
 }
 
-button.scroll-pictures-up {
+button.scroll-pictures.up {
     position: fixed;
-    top: 6rem;
+    top: 5rem;
     left: 0;
     right: 0;
 
@@ -50,9 +50,9 @@ button.scroll-pictures-up {
     display: none;
 }
 
-button.scroll-pictures-down {
+button.scroll-pictures.down {
     position: fixed;
-    bottom: 6rem;
+    bottom: 2rem;
     left: 0;
     right: 0;
 
@@ -64,6 +64,10 @@ button.scroll-pictures-down {
     background: none;
 
     font-size: 1.5rem;
+}
+
+.scroll-pictures {
+    color: #fff;
 }
 
 /* Screenshot Botões */
