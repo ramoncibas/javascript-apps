@@ -4,6 +4,10 @@ const box = 32;
 const snake = [];
 snake[0] = { x: 8 * box, y: 8 * box }
 var direction = "right";
+const food = {
+    x: Math.floor(Math.random() * 15 + 1) * box,
+    y: Math.floor(Math.random() * 15 + 1) * box
+}
 
 // Criando background no Canvas
 function createBackground() {
@@ -15,11 +19,16 @@ function createBackground() {
 }
 
 // Passando a cor e o tamanho da cobrinha
-function crearSnake() {
+function creatSnake() {
     for (i = 0; i < snake.length; i++) {
         context.fillStyle = "green"
         context.fillRect(snake[i].x, snake[i].y, box, box)
     }
+}
+
+function drawFood() {
+    context.fillStyle = "red"
+    context.fillRect(food.x, food.y, box, box);
 }
 
 // Passando o evento de atualizar direção quando a tecla for precionada
@@ -41,14 +50,22 @@ function updateDirection(event) {
 
 // Função que da inicio ao game, adicionando o canvas na pagina, criando a cobrinha e tratando as margens do canvas.
 function startGame() {
-    // tratando margens da tela, se ela encostar em alguma margin aparecera na outra
+    // Tratando margens da tela, se ela encostar em alguma margin aparecera na outra
     if(snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
     if(snake[0].x < 0 && direction == "left") snake[0].x = 16 * box;
     if(snake[0].y > 15 * box & direction == "down") snake[0].y = 0;
     if(snake[0].y < 0 && direction == "up") snake[0].y = 16 * box;
 
+    for(i = 1; i < snake.length; i++){
+        if(snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
+            clearInterval(jogo)
+            alert("Fim de Jogo ;-;")
+        }
+    }
+
     createBackground();
-    crearSnake();
+    // creatSnake();
+    // drawFood();
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
@@ -58,9 +75,15 @@ function startGame() {
     if (direction == "left") snakeX -= box;
     if (direction == "up") snakeY -= box;
     if (direction == "down") snakeY += box;
-    
-    // Removendo o primeiro quadradinho da "cobrinha"
-    snake.pop();
+
+    if(snakeX != food.x || snakeY != food.y) {
+        // Removendo o primeiro quadradinho da "cobrinha"
+        snake.pop();
+    } else {
+        // Passando novamente posicoes aleatoria para a comida
+        food.x = Math.floor(Math.random() * 15 + 1) * box;
+        food.y = Math.floor(Math.random() * 15 + 1) * box;
+    }
 
     // Novo quadradinho da cobrinha 
     let newHead = { x: snakeX, y: snakeY }    
