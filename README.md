@@ -51,7 +51,8 @@ Aplicações desenvolvidas com Java Script, buscando melhorar minhas habilidades
 ### Nivel 2 - intermediário
 | Nome             | Descrição                         | Nível     |
 |------------------|-----------------------------------|-----------|
-| [GitHub Profiles](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Intermediate/GitHub-Profiles) | Busque por repositórios do GitHub | intermediário |
+| [GitHub Profiles](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Intermediate/GitHub-Profiles) | Busque por repositórios do GitHub | Intermediário |
+| [Snake Game](https://github.com/ramoncibas/JavaScript-Apps/tree/main/Projetos/Intermediate/Snake-Game) | Jogo da Cobrinha | Intermediário |
 ---
 
 ## 💪 Como contribuir para o projeto
