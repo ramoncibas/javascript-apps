@@ -13,7 +13,23 @@
 <body>
     <main>
         <div id="container">
-            <canvas id="snake" width="406" height="406"></canvas>
+            <div class="game">
+                <canvas id="snake" width="512" height="512"></canvas>
+                <div class="buttons-and-gameover">
+                    <div class="background-game">
+                        <!-- <img src="./assets/snake-logo.png" alt="Snake Logo" style="width: 512px;"> -->
+                        <img src="assets/gameover.png" alt="Você perdeu!" class="game-over-img">
+                    </div>
+                    <div class="buttons">
+                        <button class="start large-button">
+                            <img src="./assets/start.png" alt="Start Game">
+                        </button>        
+                        <button class="restart">
+                            <img src="./assets/restart.png" alt="Restart Game">
+                        </button>
+                    </div>                    
+                </div>
+            </div>
             <span>&copy; ramon cibas</span>
         </div>
     </main>
