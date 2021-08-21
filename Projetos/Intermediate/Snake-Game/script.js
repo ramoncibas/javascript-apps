@@ -7,7 +7,29 @@ var direction = "right";
 const food = {
     x: Math.floor(Math.random() * 15 + 1) * box,
     y: Math.floor(Math.random() * 15 + 1) * box
-}
+};
+const btnStart = document.querySelector(".start")
+const btnRestart = document.querySelector(".restart")
+
+// Atualizando o jogo a cada 100mls
+let interval = null;
+const initGame = () => {
+    interval = setInterval(() => {
+        startGame();
+    }, 100)
+};
+
+const stopGame = () => {
+    clearInterval(interval);
+};
+
+// Adicionando o evento Iniciar Jogo
+btnStart.addEventListener("click", initGame);
+
+btnRestart.addEventListener("click", restartGame);
+
+// Passando o evento de atualizar direção quando a tecla for precionada
+document.addEventListener("keydown", updateDirection);
 
 // Criando background no Canvas
 function createBackground() {
@@ -21,18 +43,16 @@ function createBackground() {
 // Passando a cor e o tamanho da cobrinha
 function creatSnake() {
     for (i = 0; i < snake.length; i++) {
-        context.fillStyle = "green"
-        context.fillRect(snake[i].x, snake[i].y, box, box)
+        context.fillStyle = "green";
+        context.fillRect(snake[i].x, snake[i].y, box, box);
     }
 }
 
+// Desenhando a comida no canvas
 function drawFood() {
-    context.fillStyle = "red"
+    context.fillStyle = "red";
     context.fillRect(food.x, food.y, box, box);
 }
-
-// Passando o evento de atualizar direção quando a tecla for precionada
-document.addEventListener("keydown", updateDirection);
 
 /**
  * KeyCode: 
@@ -50,6 +70,10 @@ function updateDirection(event) {
 
 // Função que da inicio ao game, adicionando o canvas na pagina, criando a cobrinha e tratando as margens do canvas.
 function startGame() {
+    let gameOverBackground = document.querySelector(".game-over-img");
+
+    btnStart.style.display = "none";
+
     // Tratando margens da tela, se ela encostar em alguma margin aparecera na outra
     if(snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
     if(snake[0].x < 0 && direction == "left") snake[0].x = 16 * box;
@@ -57,15 +81,18 @@ function startGame() {
     if(snake[0].y < 0 && direction == "up") snake[0].y = 16 * box;
 
     for(i = 1; i < snake.length; i++){
-        if(snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
-            clearInterval(jogo)
-            alert("Fim de Jogo ;-;")
+        if(snake[0].x == snake[i].x && snake[0].y == snake[i].y) {            
+            alert("Fim de Jogo ;-;");
+            stopGame();
+            gameOverBackground.style.display = "flex";
+            btnRestart.style.display = "flex"
+            //location.reload()
         }
     }
 
     createBackground();
-    // creatSnake();
-    // drawFood();
+    creatSnake();
+    drawFood();
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
@@ -90,6 +117,3 @@ function startGame() {
     //Adicionando um "cobrina" no comeco
     snake.unshift(newHead);
 }
-
-// Atualizando o jogo a cada 100mls
-const jogo = setInterval(startGame, 100);
