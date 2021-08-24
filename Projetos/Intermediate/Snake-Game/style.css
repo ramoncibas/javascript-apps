@@ -10,38 +10,37 @@ body {
 
     display: grid;
     place-items: center;
+    overflow: hidden;
 }
 
-#container {    
-    width: 100vw;
-    height: 100vh;
-
-    border-radius: 1rem;
-    background-image: url(./assets/background.png);
-    background-size: 100vw;
-    background-repeat: round;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
 }
 
 #container span {
     position: absolute;
-    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    bottom: -2rem;
 }
 
 .game {
     position: relative;
 }
 
-.background-game {
-    margin-top: -3rem;
+.buttons-and-gameover {
+    position: absolute;    
+    top: 0;
+    background: #fff;
+    height: 100vh;
 }
 
-#container .buttons-and-gameover {
-    position: absolute;    
-    top: 5rem;
+.background-game {
+    margin: 1rem 0;
 }
 
 .buttons {
@@ -81,14 +80,80 @@ button {
 
 .restart {
     display: none;
+    animation: .3s ease-in gameoverzoom;
 }
 
 .large-button img {
-    width: 350px;
-    height: 100px;
+    width: 450px;
+    height: 80px;
 }
 
 .game-over-img {
-    width: 512px;
+    width: 514px;    
     display: none;
+    animation: .3s ease-in gameoverzoom;
+}
+
+.snake-logo {
+    width: 512px;
+}
+
+/* Animação para os boões ficare "Pulando" infinitamente na tela*/
+.animation {
+    animation: jumpbutton .9s linear infinite;    
+}
+
+.background-img {
+    z-index: 1;
+
+    position: relative;    
+    background-size: 100vw;
+    background-repeat: round;
+    animation: infinitscroll 5s linear infinite;
+}
+
+.background-img img {
+    width: 100vw;
+    height: 100vh;
+}
+
+.background-img::after {
+    z-index: 1;
+    content: "";
+    height: 500%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    background-image: url(./assets/background.png);
+    background-size: 100% 20%;
+}
+
+@keyframes gameoverzoom {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes jumpbutton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes infinitscroll {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(-200%);
+    }
 }
