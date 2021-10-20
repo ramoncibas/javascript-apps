@@ -8,8 +8,16 @@ async function searchUser(username) {
 // Chamando a função que busca por novos repositorios
 async function searchAndCreateRepositories() {
   let inputUserName = document.querySelector(".search-repos input");
-  let dataApi = await searchUser(inputUserName.value);
-  createElementsOfOtherRepos(dataApi);
+  if(!inputUserName.value) {
+    alert("Digite o nome do usuario!");
+    return;
+  }
+  try {
+    let dataApi = await searchUser(inputUserName.value);
+    createElementsOfOtherRepos(dataApi);
+  } catch(error) {
+    console.log(error);
+  }
 }
 
 // Função do Modal que busca o usuario
@@ -35,13 +43,20 @@ function showModal() {
 
 // Função que retorna os cards com informaçoes do repositorio do "usuario"
 function createElementsOfMyRepos(dataApi) {
+  // Destruct Array
+  let [{
+    owner: {
+      login,
+      avatar_url
+    },
+  }] = [...dataApi];
   let container = document.querySelector(".container-repos.my");
   let userProfileName = document.querySelector(".user-info h4");
   let userProfileImg = document.querySelector(".avatar-user img");
 
   // Atribuindo nome e a o avatar do usuario
-  userProfileName.textContent = dataApi[0].owner.login;
-  userProfileImg.src = dataApi[0].owner.avatar_url;
+  userProfileName.textContent = login;
+  userProfileImg.src = avatar_url;
 
   // Limpando o container caso haja uma mudança do "perfil" do usuario
   container.innerHTML = "";
@@ -98,9 +113,9 @@ function createElementsOfOtherRepos(dataApi) {
 }
 
 // Função que insere nome do usuario e se é a primeira visita no site do usuario no local storage
-function insertingDataIntoLocalStorage(username, firsaccess) {
+function insertingDataIntoLocalStorage(username, firtsAccess) {
   var data = {
-    firstAccess: firsaccess,
+    firstAccess: firtsAccess,
     userName: username
   }
 
@@ -109,7 +124,7 @@ function insertingDataIntoLocalStorage(username, firsaccess) {
 
 window.addEventListener("DOMContentLoaded", () => {
   var localData = localStorage.getItem("first-access");
-  
+
   // Verificando se o localStorage esta vazio, se sim retorna o modal para procurar o usuario no github.
   if (!localData) {
     showModal();
