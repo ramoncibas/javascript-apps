@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+#container span {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    bottom: -2rem;
+}
+
+.game {
+    position: relative;
+}
+
+.buttons-and-gameover {
+    position: absolute;    
+    top: 0;
+    background: #fff;
+    height: 100vh;
+}
+
+.background-game {
+    margin: 1rem 0;
+}
+
+.buttons {
+    width: 100%;
+
+    margin-top: 2rem;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button {
+    outline: none;
+}
+
+.start,
+.restart {
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.start img,
+.restart img {
+    width: 230px;
+    height: 70px;
+    transition: transform .3s ease;
+}
+
+.start img:hover,
+.restart img:hover {
+    transform: scale(1.1);
+    transition: transform .3s ease;
+}
+
+.restart {
+    display: none;
+    animation: .3s ease-in gameoverzoom;
+}
+
+.large-button img {
+    width: 450px;
+    height: 80px;
+}
+
+.game-over-img {
+    width: 514px;    
+    display: none;
+    animation: .3s ease-in gameoverzoom;
+}
+
+.snake-logo {
+    width: 512px;
+}
+
+/* Animação para os boões ficare "Pulando" infinitamente na tela*/
+.animation {
+    animation: jumpbutton .9s linear infinite;    
+}
+
+.background-img {
+    z-index: 1;
+
+    position: relative;    
+    background-size: 100vw;
+    background-repeat: round;
+    animation: infinitscroll 5s linear infinite;
+}
+
+.background-img img {
+    width: 100vw;
+    height: 100vh;
+}
+
+.background-img::after {
+    z-index: 1;
+    content: "";
+    height: 500%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    background-image: url(./assets/background.png);
+    background-size: 100% 20%;
+}
+
+@keyframes gameoverzoom {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes jumpbutton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes infinitscroll {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(-200%);
+    }
+}
